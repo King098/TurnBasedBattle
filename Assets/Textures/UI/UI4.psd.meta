@@ -1,0 +1,2137 @@
+fileFormatVersion: 2
+guid: d745caac7c0a47547b736172b9561cdd
+timeCreated: 1491124014
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: UI4_0
+    21300002: UI4_1
+    21300004: UI4_2
+    21300006: UI4_3
+    21300008: UI4_4
+    21300010: UI4_5
+    21300012: UI4_6
+    21300014: UI4_7
+    21300016: UI4_8
+    21300018: UI4_9
+    21300020: UI4_10
+    21300022: UI4_11
+    21300024: UI4_12
+    21300026: UI4_13
+    21300028: UI4_14
+    21300030: UI4_15
+    21300032: UI4_16
+    21300034: UI4_17
+    21300036: UI4_18
+    21300038: UI4_19
+    21300040: UI4_20
+    21300042: UI4_21
+    21300044: UI4_22
+    21300046: UI4_23
+    21300048: UI4_24
+    21300050: UI4_25
+    21300052: UI4_26
+    21300054: UI4_27
+    21300056: UI4_28
+    21300058: UI4_29
+    21300060: UI4_30
+    21300062: UI4_31
+    21300064: UI4_32
+    21300066: UI4_33
+    21300068: UI4_34
+    21300070: UI4_35
+    21300072: UI4_36
+    21300074: UI4_37
+    21300076: UI4_38
+    21300078: UI4_39
+    21300080: UI4_40
+    21300082: UI4_41
+    21300084: UI4_42
+    21300086: UI4_43
+    21300088: UI4_44
+    21300090: UI4_45
+    21300092: UI4_46
+    21300094: UI4_47
+    21300096: UI4_48
+    21300098: UI4_49
+    21300100: UI4_50
+    21300102: UI4_51
+    21300104: UI4_52
+    21300106: UI4_53
+    21300108: UI4_54
+    21300110: UI4_55
+    21300112: UI4_56
+    21300114: UI4_57
+    21300116: UI4_58
+    21300118: UI4_59
+    21300120: UI4_60
+    21300122: UI4_61
+    21300124: UI4_62
+    21300126: UI4_63
+    21300128: UI4_64
+    21300130: UI4_65
+    21300132: UI4_66
+    21300134: UI4_67
+    21300136: UI4_68
+    21300138: UI4_69
+    21300140: UI4_70
+    21300142: UI4_71
+    21300144: UI4_72
+    21300146: UI4_73
+    21300148: UI4_74
+    21300150: UI4_75
+    21300152: UI4_76
+    21300154: UI4_77
+    21300156: UI4_78
+    21300158: UI4_79
+    21300160: UI4_80
+    21300162: UI4_81
+    21300164: UI4_82
+    21300166: UI4_83
+    21300168: UI4_84
+    21300170: UI4_85
+    21300172: UI4_86
+    21300174: UI4_87
+    21300176: UI4_88
+    21300178: UI4_89
+    21300180: UI4_90
+    21300182: UI4_91
+    21300184: UI4_92
+    21300186: UI4_93
+    21300188: UI4_94
+    21300190: UI4_95
+    21300192: UI4_96
+    21300194: UI4_97
+    21300196: UI4_98
+    21300198: UI4_99
+    21300200: UI4_100
+    21300202: UI4_101
+    21300204: UI4_102
+    21300206: UI4_103
+    21300208: UI4_104
+    21300210: UI4_105
+    21300212: UI4_106
+    21300214: UI4_107
+    21300216: UI4_108
+    21300218: UI4_109
+    21300220: UI4_110
+    21300222: UI4_111
+    21300224: UI4_112
+    21300226: UI4_113
+    21300228: UI4_114
+    21300230: UI4_115
+    21300232: UI4_116
+    21300234: UI4_117
+    21300236: UI4_118
+    21300238: UI4_119
+    21300240: UI4_120
+    21300242: UI4_121
+    21300244: UI4_122
+    21300246: UI4_123
+    21300248: UI4_124
+    21300250: UI4_125
+    21300252: UI4_126
+    21300254: UI4_127
+    21300256: UI4_128
+    21300258: UI4_129
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: UI4_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 469
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 469
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 469
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_3
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 469
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 20}
+        - {x: -20.5, y: -20}
+        - {x: 20.5, y: -20}
+        - {x: 20.5, y: 20}
+    - name: UI4_4
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 469
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_5
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 469
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 469
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_7
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 469
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_8
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 469
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_9
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 469
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_10
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 469
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_11
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 469
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 426
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_13
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 425
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 20.5}
+        - {x: -20.5, y: -20.5}
+        - {x: 20.5, y: -20.5}
+        - {x: 20.5, y: 20.5}
+    - name: UI4_14
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 426
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_15
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 426
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_16
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 426
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_17
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 425
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20.5}
+        - {x: -20, y: -20.5}
+        - {x: 20, y: -20.5}
+        - {x: 20, y: 20.5}
+    - name: UI4_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 426
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_19
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 427
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_20
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 426
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_21
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 426
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_22
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 426
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_23
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 426
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_24
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 382
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20.5}
+        - {x: -20, y: -20.5}
+        - {x: 20, y: -20.5}
+        - {x: 20, y: 20.5}
+    - name: UI4_25
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 383
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_26
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 383
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_27
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 383
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_28
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 383
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_29
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 383
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_30
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 383
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_31
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 383
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_32
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 383
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_33
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 383
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_34
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 383
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_35
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 383
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_36
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 340
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_37
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 340
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_38
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 340
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_39
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 340
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_40
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 340
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 20.5}
+        - {x: -20.5, y: -20.5}
+        - {x: 20.5, y: -20.5}
+        - {x: 20.5, y: 20.5}
+    - name: UI4_41
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 340
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_42
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 340
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_43
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 340
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_44
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 339
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_45
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 339
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_46
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 339
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_47
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 339
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_48
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 298
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 20}
+        - {x: -20.5, y: -20}
+        - {x: 20.5, y: -20}
+        - {x: 20.5, y: 20}
+    - name: UI4_49
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 298
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_50
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 298
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_51
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 298
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_52
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 298
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_53
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 298
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_54
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 298
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_55
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 297
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 20}
+        - {x: -20.5, y: -20}
+        - {x: 20.5, y: -20}
+        - {x: 20.5, y: 20}
+    - name: UI4_56
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 298
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_57
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 298
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 20}
+        - {x: -20.5, y: -20}
+        - {x: 20.5, y: -20}
+        - {x: 20.5, y: 20}
+    - name: UI4_58
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 298
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_59
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 298
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_60
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 256
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_61
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 256
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_62
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 256
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_63
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 256
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_64
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 256
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_65
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 255
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 20.5}
+        - {x: -20.5, y: -20.5}
+        - {x: 20.5, y: -20.5}
+        - {x: 20.5, y: 20.5}
+    - name: UI4_66
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 256
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_67
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 255
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_68
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 214
+        width: 82
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 40.5}
+        - {x: -41, y: -40.5}
+        - {x: 41, y: -40.5}
+        - {x: 41, y: 40.5}
+    - name: UI4_69
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 255
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_70
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 255
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_71
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 214
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_72
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 214
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_73
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 214
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_74
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 214
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_75
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 214
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_76
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 213
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 20.5}
+        - {x: -20.5, y: -20.5}
+        - {x: 20.5, y: -20.5}
+        - {x: 20.5, y: 20.5}
+    - name: UI4_77
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 214
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_78
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 214
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_79
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 173
+        width: 41
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 40.5}
+        - {x: -20.5, y: -40.5}
+        - {x: 20.5, y: -40.5}
+        - {x: 20.5, y: 40.5}
+    - name: UI4_80
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 214
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_81
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 172
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_82
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 172
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_83
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 172
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_84
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 172
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_85
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 172
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_86
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 172
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 20}
+        - {x: -20.5, y: -20}
+        - {x: 20.5, y: -20}
+        - {x: 20.5, y: 20}
+    - name: UI4_87
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 172
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_88
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 172
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_89
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 173
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_90
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 173
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_91
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 173
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_92
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 90
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_93
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 131
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_94
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 131
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_95
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 131
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_96
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 131
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_97
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 90
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_98
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 131
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_99
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 90
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_100
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 131
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_101
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 90
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_102
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 131
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_103
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 130
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20.5}
+        - {x: -20, y: -20.5}
+        - {x: 20, y: -20.5}
+        - {x: 20, y: 20.5}
+    - name: UI4_104
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 42
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_105
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 42
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_106
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 42
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_107
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 42
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_108
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 42
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_109
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_110
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_111
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_112
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_113
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_114
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1
+        width: 81
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40.5, y: 20}
+        - {x: -40.5, y: -20}
+        - {x: 40.5, y: -20}
+        - {x: 40.5, y: 20}
+    - name: UI4_115
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_116
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_117
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_118
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 1
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_119
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_120
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 131
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_121
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 131
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_122
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 90
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_123
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 90
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_124
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 90
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_125
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 131
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_126
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 131
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_127
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 90
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_128
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 90
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    - name: UI4_129
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 90
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 20}
+        - {x: -20, y: -20}
+        - {x: 20, y: -20}
+        - {x: 20, y: 20}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
