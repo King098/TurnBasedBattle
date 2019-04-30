@@ -118,7 +118,7 @@ namespace King.TurnBasedCombat
                 {
                     _CurrentHero.CurrentLife.Value = _CurrentHero.MaxLife.Value;
                 }
-                if (_CurrentHero.CurrentLife.Value > 0)
+                if (_CurrentHero.CurrentLife.Value == 0)
                 {
                     //血量增加后
                     IsDeath = false;
