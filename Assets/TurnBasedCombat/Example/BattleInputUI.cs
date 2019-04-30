@@ -128,7 +128,7 @@ namespace King.TurnBasedCombat
         /// </summary>
         void OnSkillChooseClick(GameObject button)
         {
-            Debug.Log("选择了" + button.name);
+            BattleController.Instance.DebugLog(LogType.INFO,"选择了" + button.name);
             foreach (BaseSkill skill in _CurHero.Skills.Values)
             {
                 if (skill.Name == button.name)

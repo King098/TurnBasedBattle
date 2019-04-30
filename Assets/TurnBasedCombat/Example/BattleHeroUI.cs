@@ -47,7 +47,7 @@ namespace King.TurnBasedCombat
         /// </summary>
         public override void OnAddBuff(Buff buff)
         {
-            Debug.Log("增加一个Buff：" + buff.Name);
+            BattleController.Instance.DebugLog(LogType.INFO,"增加一个Buff：" + buff.Name);
         }
 
         /// <summary>
@@ -55,14 +55,14 @@ namespace King.TurnBasedCombat
         /// </summary>
         public override void OnRemoveBuff(Buff buff)
         {
-            Debug.Log("移除一个Buff：" + buff.Name);
+            BattleController.Instance.DebugLog(LogType.INFO,"移除一个Buff：" + buff.Name);
         }
 
         /// <summary>
         /// 当一个buff或者debuff执行一次的时候将会回调
         public override void OnBuffAction(Buff buff)
         {
-            Debug.Log("执行一个Buff：" + buff.Name + " 剩余回合数:"+buff.StayTurn);
+            BattleController.Instance.DebugLog(LogType.INFO,"执行一个Buff：" + buff.Name + " 剩余回合数:"+buff.StayTurn);
         }
     }
 }

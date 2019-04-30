@@ -74,7 +74,7 @@ namespace King.TurnBasedCombat
             }
             else
             {
-                Debug.LogError("Skill effect register failed! No effect found or effect is exist!");
+                BattleController.Instance.DebugLog(LogType.ERROR,"Skill effect register failed! No effect found or effect is exist!");
             }
         }
 
@@ -91,7 +91,7 @@ namespace King.TurnBasedCombat
             result = hero.gameObject.AddComponent(type) as BaseSkill;
             if (result == null)
             {
-                Debug.LogError(skill.SkillMono + " Can't find,Please Check SkillMono is vaild or not!");
+                BattleController.Instance.DebugLog(LogType.ERROR,skill.SkillMono + " Can't find,Please Check SkillMono is vaild or not!");
                 return null;
             }
             result.Init(skill, hero);
@@ -229,7 +229,7 @@ namespace King.TurnBasedCombat
                     break;
                 case Global.BuffType.ActiveTurn:
                     hero.CurrentTurnLast += buff.ChangeHeroProperty.Turn;
-                    Debug.Log(hero.Name + "回合数增加:" + buff.ChangeHeroProperty.Turn);
+                    BattleController.Instance.DebugLog(LogType.INFO,hero.Name + "回合数增加:" + buff.ChangeHeroProperty.Turn);
                     break;
             }
         }

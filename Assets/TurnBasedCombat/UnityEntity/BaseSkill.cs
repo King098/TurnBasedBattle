@@ -305,7 +305,7 @@ namespace King.TurnBasedCombat
                 IsUsingSkill = false;
                 if (!IsPassiveSkill)
                 {
-                    Debug.Log("Actioning");
+                    BattleController.Instance.DebugLog(LogType.INFO,"Actioning");
                     //如果不是被动技能，则进入下一阶段，否则不处理
                     BattleController.Instance.ToActionState();
                 }
@@ -358,7 +358,7 @@ namespace King.TurnBasedCombat
                 //表示buff或者debuff预测成功，则进行添加
                 if (this.IsInPercent(_Skill.SkillBuff[i].SuccessChance))
                 {
-                    Debug.Log("添加一个buff");
+                    BattleController.Instance.DebugLog(LogType.INFO,"添加一个buff");
                     if (_Skill.SkillBuff[i].TargetType == Global.BuffTargetType.Attacker)
                     {
                         attacker.AddBuff(_Skill.SkillBuff[i]);

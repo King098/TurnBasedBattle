@@ -111,13 +111,13 @@ namespace King.TurnBasedCombat
             BattleHeroUI hero_UI = null;
             if (UnityStaticTool.CreateObjectReletiveTo<BattleHeroUI>(BattleHeroUIPrefab, PlayerHeroParent, out hero_UI))
             {
-                Debug.Log("Register player hero in UI successfully!");
+                BattleController.Instance.DebugLog(LogType.INFO,"Register player hero in UI successfully!");
                 hero_UI.Init(hero);
                 _HeroUI.Add(hero, hero_UI);
             }
             else
             {
-                Debug.Log("Failed to register player hero!");
+                BattleController.Instance.DebugLog(LogType.INFO,"Failed to register player hero!");
             }
         }
 
@@ -130,13 +130,13 @@ namespace King.TurnBasedCombat
             BattleHeroUI hero_UI = null;
             if (UnityStaticTool.CreateObjectReletiveTo<BattleHeroUI>(BattleHeroUIPrefab, EnemyHeroParent, out hero_UI))
             {
-                Debug.Log("Register enemy hero in UI successfully!");
+                BattleController.Instance.DebugLog(LogType.INFO,"Register enemy hero in UI successfully!");
                 hero_UI.Init(hero);
                 _HeroUI.Add(hero, hero_UI);
             }
             else
             {
-                Debug.Log("Failed to register enemy hero!");
+                BattleController.Instance.DebugLog(LogType.INFO,"Failed to register enemy hero!");
             }
         }
 
@@ -191,7 +191,7 @@ namespace King.TurnBasedCombat
         /// </summary>
         public override void HeroDead(HeroMono hero)
         {
-            Debug.LogWarning("英雄" + hero.Name + "死亡");
+            BattleController.Instance.DebugLog(LogType.WARNING,"英雄" + hero.Name + "死亡");
         }
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace King.TurnBasedCombat
         /// </summary>
         public override void OnAddBuff(HeroMono hero,Buff buff)
         {
-            Debug.Log("英雄 "+ hero.Name + " 增加了一个buff " + buff.Name);
+            BattleController.Instance.DebugLog(LogType.INFO,"英雄 "+ hero.Name + " 增加了一个buff " + buff.Name);
         }
 
         /// <summary>
@@ -207,7 +207,7 @@ namespace King.TurnBasedCombat
         /// </summary>
         public override void OnRemoveBuff(HeroMono hero,Buff buff)
         {
-            Debug.Log("英雄 "+ hero.Name + " 移除了一个buff " + buff.Name);
+            BattleController.Instance.DebugLog(LogType.INFO,"英雄 "+ hero.Name + " 移除了一个buff " + buff.Name);
         }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace King.TurnBasedCombat
         /// </summary>
         public override void OnBuffAction(HeroMono hero,Buff buff)
         {
-            Debug.Log("英雄 "+ hero.Name + " 执行了一个buff " + buff.Name);
+            BattleController.Instance.DebugLog(LogType.INFO,"英雄 "+ hero.Name + " 执行了一个buff " + buff.Name);
         }
     }
 }

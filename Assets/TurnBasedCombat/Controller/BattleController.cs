@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 namespace King.TurnBasedCombat
 {
+    public enum LogType
+    {
+        INFO = 1,
+        WARNING = 2,
+        ERROR = 3,
+    }
     /// <summary>
     /// 回合制战斗控制器（单例模式）
     /// </summary>
@@ -33,6 +39,10 @@ namespace King.TurnBasedCombat
         /// 是否自动战斗
         /// </summary>
         public bool IsAutoBattle;
+        /// <summary>
+        /// 是否是调试模式
+        /// </summary>
+        public bool DebugMode;
 
         #region 战斗系统数值变量定义及初始化系统
         /// <summary>
@@ -83,6 +93,27 @@ namespace King.TurnBasedCombat
         }
 
         /// <summary>
+        /// 系统中输出使用这个接口统一管理
+        /// </summary>
+        public void DebugLog(LogType type,string msg)
+        {
+            if(!DebugMode)
+                return;
+            if(type == LogType.WARNING)
+            {
+                Debug.LogWarning(msg);
+            }
+            else if(type == LogType.ERROR)
+            {
+                Debug.LogError(msg);
+            }
+            else
+            {
+                Debug.Log(msg);
+            }
+        }
+
+        /// <summary>
         /// 初始化系统数据
         /// </summary>
         void Init()
@@ -94,7 +125,7 @@ namespace King.TurnBasedCombat
                 {
                     CurrentBattleUI = this.gameObject.AddComponent<BaseBattleUI>();
                 }
-                Debug.LogError("Not found Battle UI,Use BaseBattleUI instead!");
+                DebugLog(LogType.ERROR,"Not found Battle UI,Use BaseBattleUI instead!");
             }
             _SystemState = Global.CombatSystemType.ExitSystem;
             _PlayerTeam = new List<HeroMono>();
@@ -117,7 +148,7 @@ namespace King.TurnBasedCombat
             //播放一些开场动画之类的，或者需要穿插剧情，就在这里进行判断
             StartCoroutine(WaitForNext(SystemSetting.BattlePerTurnStartGapTime, () =>
             {
-                Debug.Log("InitSystem");
+                DebugLog(LogType.INFO,"InitSystem");
                 //初始化完毕进入下一状态
                 ToActionState();
             }));
@@ -141,7 +172,7 @@ namespace King.TurnBasedCombat
             //接着判断一下当前回合的英雄有没有回合开始前发动的技能，然后处理一下
             if (!_CurTurnHero.ExcuteSkill(Global.BuffActiveState.BeforeAction))
             {
-                Debug.Log("BeforeAction");
+                DebugLog(LogType.INFO,"BeforeAction");
                 //如果没有技能执行，则手动进入下一状态
                 ToActionState();
             }
@@ -216,7 +247,7 @@ namespace King.TurnBasedCombat
                 {
                     //关闭英雄高亮
                     CurrentBattleUI.DeselectHero(_CurTurnHero);
-                    Debug.Log("AfterAction");
+                    DebugLog(LogType.INFO,"AfterAction");
                     //切换状态
                     ToActionState();
                 }
@@ -230,11 +261,11 @@ namespace King.TurnBasedCombat
         {
             if (CheckPlayerFailed())
             {
-                Debug.Log("玩家失败");
+                DebugLog(LogType.INFO,"玩家失败");
             }
             else if (CheckEnemyFailed())
             {
-                Debug.Log("玩家胜利");
+                DebugLog(LogType.INFO,"玩家胜利");
             }
             //战斗结束，根据胜利失败显示结算画面
             ToActionState();
