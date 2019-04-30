@@ -291,11 +291,29 @@ namespace King.TurnBasedCombat
                                 GUILayout.EndHorizontal();
                                 //分隔
                                 GUILayout.Space(10f);
+                                //基础物理攻击
+                                GUILayout.BeginHorizontal();
+                                {
+                                    GUILayout.Label("英雄物理防御 : ", GUILayout.Width(HeroTableLabelWidth));
+                                    h.BaseDefense = EditorGUILayout.LongField(h.BaseDefense);
+                                }
+                                GUILayout.EndHorizontal();
+                                //分隔
+                                GUILayout.Space(10f);
                                 //基础魔法攻击
                                 GUILayout.BeginHorizontal();
                                 {
                                     GUILayout.Label("英雄魔法攻击 : ", GUILayout.Width(HeroTableLabelWidth));
                                     h.BaseMagicAttack = EditorGUILayout.LongField(h.BaseMagicAttack);
+                                }
+                                GUILayout.EndHorizontal();
+                                //分隔
+                                GUILayout.Space(10f);
+                                //基础魔法攻击
+                                GUILayout.BeginHorizontal();
+                                {
+                                    GUILayout.Label("英雄魔法防御 : ", GUILayout.Width(HeroTableLabelWidth));
+                                    h.BaseMagicDefense = EditorGUILayout.LongField(h.BaseMagicDefense);
                                 }
                                 GUILayout.EndHorizontal();
                                 //分隔
@@ -967,6 +985,15 @@ namespace King.TurnBasedCombat
                             GUILayout.EndHorizontal();
                             //分隔
                             GUILayout.Space(10f);
+                            //是否是增益buff
+                            GUILayout.BeginHorizontal();
+                            {
+                                GUILayout.Label("是否是增益buff : ", GUILayout.Width(BuffTableLabelWidth));
+                                h.IsBuff = EditorGUILayout.Toggle(new GUIContent("是否是增益buff"), h.IsBuff);
+                            }
+                            GUILayout.EndHorizontal();
+                            //分隔
+                            GUILayout.Space(10f);
                             //buff造成的属性变化
                             GUILayout.BeginHorizontal();
                             {
@@ -974,6 +1001,15 @@ namespace King.TurnBasedCombat
                                 BuffTableFoldShow = HeroPropertyGUI("增益状态使用正数，负面状态使用负数", h.ChangeHeroProperty, BuffTableFoldShow);
                             }
                             GUILayout.EndHorizontal();
+                            //分隔
+                            GUILayout.Space(10f);
+                            //技能暴击率
+                             GUILayout.BeginHorizontal();
+                            {
+                                GUILayout.Label("buff成功率(单位为百分比) : ", GUILayout.Width(BuffTableLabelWidth));
+                                h.SuccessChance = EditorGUILayout.IntSlider(h.SuccessChance,0,100);
+                            }
+                             GUILayout.EndHorizontal();
                             //分隔
                             GUILayout.Space(10f);
                             //英雄描述
@@ -1121,6 +1157,7 @@ namespace King.TurnBasedCombat
             }
             //写入数据
             System.IO.File.WriteAllText(Global.TablePath + "HeroTable.txt", result);
+            AssetDatabase.SaveAssets();
         }
 
         /// <summary>
@@ -1277,7 +1314,7 @@ namespace King.TurnBasedCombat
         /// </summary>
         void SaveBuffTable()
         {
-            string[] titles = new string[] { "ID", "buff名字", "buff类型（Global查询）", "目标类型（Global查询）", "buff激活的阶段", "buff造成的属性变化", "是否是增益buff", "buff描述" };
+            string[] titles = new string[] { "ID", "buff名字", "buff类型（Global查询）", "目标类型（Global查询）", "buff激活的阶段", "buff造成的属性变化", "是否是增益buff","成功率", "buff描述" };
             string result = "";
             //添加标题
             for (int i = 0; i < titles.Length; i++)
@@ -1301,10 +1338,12 @@ namespace King.TurnBasedCombat
                 result += (int)buff.BuffActiveState + "\t";
                 result += buff.ChangeHeroProperty.ToString() + "\t";
                 result += (buff.IsBuff ? "1" : "0") + "\t";
+                result += (int)buff.SuccessChance + "\t";
                 result += buff.Description + "\r\n";
             }
             //写入数据
             System.IO.File.WriteAllText(Global.TablePath + "BuffTable.txt", result);
+            AssetDatabase.SaveAssets();
         }
 
         /// <summary>
@@ -1355,6 +1394,7 @@ namespace King.TurnBasedCombat
             }
             //写入数据
             System.IO.File.WriteAllText(Global.TablePath + "SkillTable.txt", result);
+            AssetDatabase.SaveAssets();
         }
 
 

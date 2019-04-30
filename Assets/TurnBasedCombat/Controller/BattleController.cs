@@ -169,6 +169,13 @@ namespace King.TurnBasedCombat
             CurrentBattleUI.SelectHero(_CurTurnHero);
             //接着判断一下当前回合的英雄buff或者debuff有没有起作用的，需要再次处理
             _CurTurnHero.ExcuteBuff(Global.BuffActiveState.BeforeAction);
+            //如果执行完buff操作之后，英雄死亡，则进入下一个准备开始阶段
+            if(_CurTurnHero.IsDead())
+            {
+                // BeforeAction();
+                //TODO 被debuff杀死时候需要重新下一个回合，还有是否有恢复技能未使用
+                return;
+            }
             //接着判断一下当前回合的英雄有没有回合开始前发动的技能，然后处理一下
             if (!_CurTurnHero.ExcuteSkill(Global.BuffActiveState.BeforeAction))
             {
@@ -551,6 +558,14 @@ namespace King.TurnBasedCombat
             }
             //表示这个阶段执行完毕可以进行下一阶段了
             _IsExcuteAction = false;
+        }
+
+        /// <summary>
+        /// 强制结束状态到什么状态
+        /// </summary>
+        public void AbortAction(Global.CombatSystemType state)
+        {
+            _SystemState = state;
         }
 
         /// <summary>

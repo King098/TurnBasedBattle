@@ -89,6 +89,7 @@ namespace King.TurnBasedCombat
             BuffActiveState = (Global.BuffActiveState)int.Parse(temps[offset]); offset++;
             ChangeHeroProperty = new HeroProperty(temps[offset]); offset++;
             IsBuff = temps[offset] == "0" ? false : true; offset++;
+            SuccessChance = int.Parse(temps[offset]);offset++;
             Description = temps[offset].ToString(); offset++;
             //赋值buff持续回合
             StayTurn = ChangeHeroProperty.Turn;
@@ -107,6 +108,7 @@ namespace King.TurnBasedCombat
             this.Name = buff.Name;
             this.BuffType = buff.BuffType;
             this.TargetType = buff.TargetType;
+            this.BuffActiveState = buff.BuffActiveState;
             this.StayTurn = buff.StayTurn;
             this.ChangeHeroProperty = buff.ChangeHeroProperty;
             this.IsBuff = buff.IsBuff;
