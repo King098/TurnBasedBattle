@@ -127,15 +127,6 @@ namespace King.TurnBasedCombat
                         //如果血量为0并且没有死亡触发技能，则死亡
                         OnDead();
                     }
-                    // else
-                    // {
-                    //     //如果血量为0时候，有复活技能，则使用复活技能
-                    //     ExcuteBuff(Global.BuffActiveState.IsDead);
-                    //     ExcuteSkill(Global.BuffActiveState.IsDead);
-                    //     //TODO 刷新UI上的数值变化
-                    //     BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseLife, old_value, _CurrentHero.CurrentLife);
-                    //     return;
-                    // }
                 }
                 //生命值过低时候触发的调用
                 if (_CurrentHero.CurrentLife.Value > 0 && _CurrentHero.CurrentLife.Value <= _CurrentHero.CurrentLife.Value * SystemSetting.HeroLowLifePercent)

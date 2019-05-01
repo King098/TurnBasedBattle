@@ -172,29 +172,33 @@ namespace King.TurnBasedCombat
             //如果执行完buff操作之后，英雄血量变空，则进入下一个准备开始阶段
             if(!_CurTurnHero.HasLife())
             {
-                if(_CurTurnHero.IsDead())
+                //这里先让buff执行，之后再让其他逻辑执行，让每次使用技能都有时间差
+                StartCoroutine(WaitForNext(SystemSetting.BattlePerTurnEndGapTime,()=>
                 {
-                    //TODO 被debuff杀死时候需要重新下一个回合，还有是否有恢复技能未使用
-                    BeforeAction();
-                    return;
-                }
-                else
-                {
-                    //这里是血量为空，但是又技能可以复活的时候执行
-                    _CurTurnHero.ExcuteBuff(Global.BuffActiveState.IsDead);
-                    //这里做个延迟
-                    StartCoroutine(WaitForNext(SystemSetting.BattlePerTurnEndGapTime,()=>
+                    if(_CurTurnHero.IsDead())
                     {
-                        //接着判断一下当前回合的英雄有没有回合开始前发动的技能，然后处理一下
-                        if (!_CurTurnHero.ExcuteSkill(Global.BuffActiveState.BeforeAction))
+                        //TODO 被debuff杀死时候需要重新下一个回合，还有是否有恢复技能未使用
+                        AbortAction(Global.CombatSystemType.AfterAction);
+                    }
+                    else
+                    {
+                        //这里是血量为空，但是又技能可以复活的时候执行
+                        _CurTurnHero.ExcuteBuff(Global.BuffActiveState.IsDead);
+                        _CurTurnHero.ExcuteSkill(Global.BuffActiveState.IsDead);
+                        //这里做个延迟
+                        StartCoroutine(WaitForNext(SystemSetting.BattlePerTurnEndGapTime,()=>
                         {
-                            DebugLog(LogType.INFO,"BeforeAction");
-                            //如果没有技能执行，则手动进入下一状态
-                            ToActionState();
-                        }
-                    }));
-                    return;
-                }
+                            //接着判断一下当前回合的英雄有没有回合开始前发动的技能，然后处理一下
+                            if (!_CurTurnHero.ExcuteSkill(Global.BuffActiveState.BeforeAction))
+                            {
+                                DebugLog(LogType.INFO,"BeforeAction");
+                                //如果没有技能执行，则手动进入下一状态
+                                ToActionState();
+                            }
+                        }));
+                    } 
+                }));
+                return;
             }
             //接着判断一下当前回合的英雄有没有回合开始前发动的技能，然后处理一下
             if (!_CurTurnHero.ExcuteSkill(Global.BuffActiveState.BeforeAction))
@@ -586,6 +590,8 @@ namespace King.TurnBasedCombat
         public void AbortAction(Global.CombatSystemType state)
         {
             _SystemState = state;
+            //表示这个阶段执行完毕可以进行下一阶段了
+            _IsExcuteAction = false;
         }
 
         /// <summary>
