@@ -183,7 +183,7 @@ namespace King.TurnBasedCombat
                     //这里是血量为空，但是又技能可以复活的时候执行
                     _CurTurnHero.ExcuteBuff(Global.BuffActiveState.IsDead);
                     //这里做个延迟
-                    StartCoroutine(WaitForNext(1f,()=>
+                    StartCoroutine(WaitForNext(SystemSetting.BattlePerTurnEndGapTime,()=>
                     {
                         //接着判断一下当前回合的英雄有没有回合开始前发动的技能，然后处理一下
                         if (!_CurTurnHero.ExcuteSkill(Global.BuffActiveState.BeforeAction))
