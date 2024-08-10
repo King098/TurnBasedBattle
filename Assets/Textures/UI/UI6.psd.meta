@@ -1,29 +1,54 @@
 fileFormatVersion: 2
 guid: cca035bb424f65a41a9c7e3323f56efd
-timeCreated: 1491124060
-licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: UI6_0
-    21300002: UI6_1
-    21300004: UI6_2
-    21300006: UI6_3
-    21300008: UI6_4
-    21300010: UI6_5
-    21300012: UI6_6
-    21300014: UI6_7
-    21300016: UI6_8
-    21300018: UI6_9
-    21300020: UI6_10
-    21300022: UI6_11
-  serializedVersion: 2
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: UI6_0
+  - first:
+      213: 21300002
+    second: UI6_1
+  - first:
+      213: 21300004
+    second: UI6_2
+  - first:
+      213: 21300006
+    second: UI6_3
+  - first:
+      213: 21300008
+    second: UI6_4
+  - first:
+      213: 21300010
+    second: UI6_5
+  - first:
+      213: 21300012
+    second: UI6_6
+  - first:
+      213: 21300014
+    second: UI6_7
+  - first:
+      213: 21300016
+    second: UI6_8
+  - first:
+      213: 21300018
+    second: UI6_9
+  - first:
+      213: 21300020
+    second: UI6_10
+  - first:
+      213: 21300022
+    second: UI6_11
+  externalObjects: {}
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -31,38 +56,110 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 512
   textureSettings:
-    filterMode: -1
-    aniso: -1
-    mipBias: -1
-    wrapMode: 1
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: UI6_0
+    - serializedVersion: 2
+      name: UI6_0
       rect:
         serializedVersion: 2
         x: 8
@@ -72,14 +169,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -74.5, y: 39.5}
-        - {x: -74.5, y: -39.5}
-        - {x: 70.5, y: -39.5}
-        - {x: 74.5, y: -35.5}
-        - {x: 74.5, y: 37.5}
-        - {x: 70.5, y: 39.5}
-    - name: UI6_1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI6_1
       rect:
         serializedVersion: 2
         x: 185
@@ -89,16 +190,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 67.5, y: 39}
-        - {x: -68.5, y: 39}
-        - {x: -73.5, y: 18}
-        - {x: -73.5, y: -28}
-        - {x: -66.5, y: -39}
-        - {x: 66.5, y: -39}
-        - {x: 73.5, y: -35}
-        - {x: 73.5, y: 35}
-    - name: UI6_2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI6_2
       rect:
         serializedVersion: 2
         x: 355
@@ -108,16 +211,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -54.5, y: 39.5}
-        - {x: -74.5, y: 19.5}
-        - {x: -74.5, y: -10.5}
-        - {x: -66.5, y: -39.5}
-        - {x: 57.5, y: -39.5}
-        - {x: 74.5, y: -32.5}
-        - {x: 74.5, y: 35.5}
-        - {x: 67.5, y: 39.5}
-    - name: UI6_3
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI6_3
       rect:
         serializedVersion: 2
         x: 37
@@ -127,17 +232,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9.5, y: 48.5}
-        - {x: -28.5, y: 44.5}
-        - {x: -42.5, y: 34.5}
-        - {x: -42.5, y: -39.5}
-        - {x: -36.5, y: -48.5}
-        - {x: 31.5, y: -48.5}
-        - {x: 42.5, y: -46.5}
-        - {x: 42.5, y: 35.5}
-        - {x: 38.5, y: 48.5}
-    - name: UI6_4
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI6_4
       rect:
         serializedVersion: 2
         x: 199
@@ -147,14 +253,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -39.5, y: 48.5}
-        - {x: -59.5, y: 28.5}
-        - {x: -59.5, y: -48.5}
-        - {x: 51.5, y: -48.5}
-        - {x: 59.5, y: -47.5}
-        - {x: 59.5, y: 48.5}
-    - name: UI6_5
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI6_5
       rect:
         serializedVersion: 2
         x: 369
@@ -164,14 +274,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -61, y: 56.5}
-        - {x: -61, y: -51.5}
-        - {x: -12, y: -56.5}
-        - {x: 32, y: -56.5}
-        - {x: 61, y: -42.5}
-        - {x: 61, y: 56.5}
-    - name: UI6_6
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI6_6
       rect:
         serializedVersion: 2
         x: 7
@@ -181,27 +295,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 5, y: -23.5}
-        - {x: 5, y: -36.5}
-        - {x: 6, y: -39.5}
-        - {x: 76, y: -39.5}
-        - {x: 76, y: 33.5}
-        - {x: 68, y: 39.5}
-        - {x: -76, y: 39.5}
-        - {x: -76, y: -39.5}
-        - {x: -9, y: -39.5}
-        - {x: 3, y: -32.5}
-        - {x: 4, y: -29.5}
-        - {x: 4, y: -23.5}
-        - {x: 1, y: -18.5}
-      - - {x: 72, y: 25.5}
-        - {x: 72, y: 15.5}
-        - {x: 74, y: 13.5}
-        - {x: 76, y: 14.5}
-        - {x: 76, y: 25.5}
-        - {x: 75, y: 26.5}
-    - name: UI6_7
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI6_7
       rect:
         serializedVersion: 2
         x: 171
@@ -211,15 +316,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -59.5, y: 40}
-        - {x: -75.5, y: 11}
-        - {x: -75.5, y: -21}
-        - {x: -65.5, y: -40}
-        - {x: 71.5, y: -40}
-        - {x: 75.5, y: -34}
-        - {x: 75.5, y: 40}
-    - name: UI6_8
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI6_8
       rect:
         serializedVersion: 2
         x: 350
@@ -229,16 +337,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -66, y: 38.5}
-        - {x: -76, y: 30.5}
-        - {x: -76, y: -20.5}
-        - {x: -73, y: -38.5}
-        - {x: 74, y: -38.5}
-        - {x: 76, y: -18.5}
-        - {x: 76, y: 36.5}
-        - {x: 73, y: 38.5}
-    - name: UI6_9
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI6_9
       rect:
         serializedVersion: 2
         x: 31
@@ -248,16 +358,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -43.5, y: 62}
-        - {x: -51.5, y: 53}
-        - {x: -51.5, y: -14}
-        - {x: -44.5, y: -59}
-        - {x: -42.5, y: -62}
-        - {x: 51.5, y: -62}
-        - {x: 51.5, y: 42}
-        - {x: 35.5, y: 62}
-    - name: UI6_10
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI6_10
       rect:
         serializedVersion: 2
         x: 201
@@ -267,16 +379,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -19.5, y: 61.5}
-        - {x: -19.5, y: 59.5}
-        - {x: -42.5, y: -12.5}
-        - {x: -42.5, y: -56.5}
-        - {x: -41.5, y: -61.5}
-        - {x: 42.5, y: -61.5}
-        - {x: 42.5, y: -5.5}
-        - {x: 28.5, y: 61.5}
-    - name: UI6_11
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI6_11
       rect:
         serializedVersion: 2
         x: 356
@@ -286,13 +400,41 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -70.5, y: 44.5}
-        - {x: -70.5, y: -44.5}
-        - {x: 70.5, y: -44.5}
-        - {x: 70.5, y: 44.5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
-  spritePackingTag: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      UI6_0: 21300000
+      UI6_1: 21300002
+      UI6_10: 21300020
+      UI6_11: 21300022
+      UI6_2: 21300004
+      UI6_3: 21300006
+      UI6_4: 21300008
+      UI6_5: 21300010
+      UI6_6: 21300012
+      UI6_7: 21300014
+      UI6_8: 21300016
+      UI6_9: 21300018
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

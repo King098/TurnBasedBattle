@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace King.Tools
 {
@@ -287,13 +288,13 @@ namespace King.Tools
         static IEnumerator LoadWWW<T>(string path, System.Action<T> callback) where T : Object
         {
             IsLoadingAssetBundle = true;
-            WWW www = new WWW(StreamingAssetsDataPath(true) + King.TurnBasedCombat.SystemSetting.AssetBundleName);
+            UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle(StreamingAssetsDataPath(true) + King.TurnBasedCombat.SystemSetting.AssetBundleName);
             yield return www;
-            if (string.IsNullOrEmpty(www.error))
+            if (string.IsNullOrEmpty(www.error) && www.result == UnityWebRequest.Result.Success)
             {
                 if (callback != null)
                 {
-                    AssetBundle ab = www.assetBundle;
+                    AssetBundle ab = DownloadHandlerAssetBundle.GetContent(www);
                     if (ab != null)
                     {
                         string[] str = path.Split('/');

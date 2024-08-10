@@ -1,246 +1,705 @@
 fileFormatVersion: 2
 guid: bf69601e39cd7234d8a07e509e41b419
-timeCreated: 1491124048
-licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: UI5_0
-    21300002: UI5_1
-    21300004: UI5_2
-    21300006: UI5_3
-    21300008: UI5_4
-    21300010: UI5_5
-    21300012: UI5_6
-    21300014: UI5_7
-    21300016: UI5_8
-    21300018: UI5_9
-    21300020: UI5_10
-    21300022: UI5_11
-    21300024: UI5_12
-    21300026: UI5_13
-    21300028: UI5_14
-    21300030: UI5_15
-    21300032: UI5_16
-    21300034: UI5_17
-    21300036: UI5_18
-    21300038: UI5_19
-    21300040: UI5_20
-    21300042: UI5_21
-    21300044: UI5_22
-    21300046: UI5_23
-    21300048: UI5_24
-    21300050: UI5_25
-    21300052: UI5_26
-    21300054: UI5_27
-    21300056: UI5_28
-    21300058: UI5_29
-    21300060: UI5_30
-    21300062: UI5_31
-    21300064: UI5_32
-    21300066: UI5_33
-    21300068: UI5_34
-    21300070: UI5_35
-    21300072: UI5_36
-    21300074: UI5_37
-    21300076: UI5_38
-    21300078: UI5_39
-    21300080: UI5_40
-    21300082: UI5_41
-    21300084: UI5_42
-    21300086: UI5_43
-    21300088: UI5_44
-    21300090: UI5_45
-    21300092: UI5_46
-    21300094: UI5_47
-    21300096: UI5_48
-    21300098: UI5_49
-    21300100: UI5_50
-    21300102: UI5_51
-    21300104: UI5_52
-    21300106: UI5_53
-    21300108: UI5_54
-    21300110: UI5_55
-    21300112: UI5_56
-    21300114: UI5_57
-    21300116: UI5_58
-    21300118: UI5_59
-    21300120: UI5_60
-    21300122: UI5_61
-    21300124: UI5_62
-    21300126: UI5_63
-    21300128: UI5_64
-    21300130: UI5_65
-    21300132: UI5_66
-    21300134: UI5_67
-    21300136: UI5_68
-    21300138: UI5_69
-    21300140: UI5_70
-    21300142: UI5_71
-    21300144: UI5_72
-    21300146: UI5_73
-    21300148: UI5_74
-    21300150: UI5_75
-    21300152: UI5_76
-    21300154: UI5_77
-    21300156: UI5_78
-    21300158: UI5_79
-    21300160: UI5_80
-    21300162: UI5_81
-    21300164: UI5_82
-    21300166: UI5_83
-    21300168: UI5_84
-    21300170: UI5_85
-    21300172: UI5_86
-    21300174: UI5_87
-    21300176: UI5_88
-    21300178: UI5_89
-    21300180: UI5_90
-    21300182: UI5_91
-    21300184: UI5_92
-    21300186: UI5_93
-    21300188: UI5_94
-    21300190: UI5_95
-    21300192: UI5_96
-    21300194: UI5_97
-    21300196: UI5_98
-    21300198: UI5_99
-    21300200: UI5_100
-    21300202: UI5_101
-    21300204: UI5_102
-    21300206: UI5_103
-    21300208: UI5_104
-    21300210: UI5_105
-    21300212: UI5_106
-    21300214: UI5_107
-    21300216: UI5_108
-    21300218: UI5_109
-    21300220: UI5_110
-    21300222: UI5_111
-    21300224: UI5_112
-    21300226: UI5_113
-    21300228: UI5_114
-    21300230: UI5_115
-    21300232: UI5_116
-    21300234: UI5_117
-    21300236: UI5_118
-    21300238: UI5_119
-    21300240: UI5_120
-    21300242: UI5_121
-    21300244: UI5_122
-    21300246: UI5_123
-    21300248: UI5_124
-    21300250: UI5_125
-    21300252: UI5_126
-    21300254: UI5_127
-    21300256: UI5_128
-    21300258: UI5_129
-    21300260: UI5_130
-    21300262: UI5_131
-    21300264: UI5_132
-    21300266: UI5_133
-    21300268: UI5_134
-    21300270: UI5_135
-    21300272: UI5_136
-    21300274: UI5_137
-    21300276: UI5_138
-    21300278: UI5_139
-    21300280: UI5_140
-    21300282: UI5_141
-    21300284: UI5_142
-    21300286: UI5_143
-    21300288: UI5_144
-    21300290: UI5_145
-    21300292: UI5_146
-    21300294: UI5_147
-    21300296: UI5_148
-    21300298: UI5_149
-    21300300: UI5_150
-    21300302: UI5_151
-    21300304: UI5_152
-    21300306: UI5_153
-    21300308: UI5_154
-    21300310: UI5_155
-    21300312: UI5_156
-    21300314: UI5_157
-    21300316: UI5_158
-    21300318: UI5_159
-    21300320: UI5_160
-    21300322: UI5_161
-    21300324: UI5_162
-    21300326: UI5_163
-    21300328: UI5_164
-    21300330: UI5_165
-    21300332: UI5_166
-    21300334: UI5_167
-    21300336: UI5_168
-    21300338: UI5_169
-    21300340: UI5_170
-    21300342: UI5_171
-    21300344: UI5_172
-    21300346: UI5_173
-    21300348: UI5_174
-    21300350: UI5_175
-    21300352: UI5_176
-    21300354: UI5_177
-    21300356: UI5_178
-    21300358: UI5_179
-    21300360: UI5_180
-    21300362: UI5_181
-    21300364: UI5_182
-    21300366: UI5_183
-    21300368: UI5_184
-    21300370: UI5_185
-    21300372: UI5_186
-    21300374: UI5_187
-    21300376: UI5_188
-    21300378: UI5_189
-    21300380: UI5_190
-    21300382: UI5_191
-    21300384: UI5_192
-    21300386: UI5_193
-    21300388: UI5_194
-    21300390: UI5_195
-    21300392: UI5_196
-    21300394: UI5_197
-    21300396: UI5_198
-    21300398: UI5_199
-    21300400: UI5_200
-    21300402: UI5_201
-    21300404: UI5_202
-    21300406: UI5_203
-    21300408: UI5_204
-    21300410: UI5_205
-    21300412: UI5_206
-    21300414: UI5_207
-    21300416: UI5_208
-    21300418: UI5_209
-    21300420: UI5_210
-    21300422: UI5_211
-    21300424: UI5_212
-    21300426: UI5_213
-    21300428: UI5_214
-    21300430: UI5_215
-    21300432: UI5_216
-    21300434: UI5_217
-    21300436: UI5_218
-    21300438: UI5_219
-    21300440: UI5_220
-    21300442: UI5_221
-    21300444: UI5_222
-    21300446: UI5_223
-    21300448: UI5_224
-    21300450: UI5_225
-    21300452: UI5_226
-    21300454: UI5_227
-    21300456: UI5_228
-  serializedVersion: 2
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: UI5_0
+  - first:
+      213: 21300002
+    second: UI5_1
+  - first:
+      213: 21300004
+    second: UI5_2
+  - first:
+      213: 21300006
+    second: UI5_3
+  - first:
+      213: 21300008
+    second: UI5_4
+  - first:
+      213: 21300010
+    second: UI5_5
+  - first:
+      213: 21300012
+    second: UI5_6
+  - first:
+      213: 21300014
+    second: UI5_7
+  - first:
+      213: 21300016
+    second: UI5_8
+  - first:
+      213: 21300018
+    second: UI5_9
+  - first:
+      213: 21300020
+    second: UI5_10
+  - first:
+      213: 21300022
+    second: UI5_11
+  - first:
+      213: 21300024
+    second: UI5_12
+  - first:
+      213: 21300026
+    second: UI5_13
+  - first:
+      213: 21300028
+    second: UI5_14
+  - first:
+      213: 21300030
+    second: UI5_15
+  - first:
+      213: 21300032
+    second: UI5_16
+  - first:
+      213: 21300034
+    second: UI5_17
+  - first:
+      213: 21300036
+    second: UI5_18
+  - first:
+      213: 21300038
+    second: UI5_19
+  - first:
+      213: 21300040
+    second: UI5_20
+  - first:
+      213: 21300042
+    second: UI5_21
+  - first:
+      213: 21300044
+    second: UI5_22
+  - first:
+      213: 21300046
+    second: UI5_23
+  - first:
+      213: 21300048
+    second: UI5_24
+  - first:
+      213: 21300050
+    second: UI5_25
+  - first:
+      213: 21300052
+    second: UI5_26
+  - first:
+      213: 21300054
+    second: UI5_27
+  - first:
+      213: 21300056
+    second: UI5_28
+  - first:
+      213: 21300058
+    second: UI5_29
+  - first:
+      213: 21300060
+    second: UI5_30
+  - first:
+      213: 21300062
+    second: UI5_31
+  - first:
+      213: 21300064
+    second: UI5_32
+  - first:
+      213: 21300066
+    second: UI5_33
+  - first:
+      213: 21300068
+    second: UI5_34
+  - first:
+      213: 21300070
+    second: UI5_35
+  - first:
+      213: 21300072
+    second: UI5_36
+  - first:
+      213: 21300074
+    second: UI5_37
+  - first:
+      213: 21300076
+    second: UI5_38
+  - first:
+      213: 21300078
+    second: UI5_39
+  - first:
+      213: 21300080
+    second: UI5_40
+  - first:
+      213: 21300082
+    second: UI5_41
+  - first:
+      213: 21300084
+    second: UI5_42
+  - first:
+      213: 21300086
+    second: UI5_43
+  - first:
+      213: 21300088
+    second: UI5_44
+  - first:
+      213: 21300090
+    second: UI5_45
+  - first:
+      213: 21300092
+    second: UI5_46
+  - first:
+      213: 21300094
+    second: UI5_47
+  - first:
+      213: 21300096
+    second: UI5_48
+  - first:
+      213: 21300098
+    second: UI5_49
+  - first:
+      213: 21300100
+    second: UI5_50
+  - first:
+      213: 21300102
+    second: UI5_51
+  - first:
+      213: 21300104
+    second: UI5_52
+  - first:
+      213: 21300106
+    second: UI5_53
+  - first:
+      213: 21300108
+    second: UI5_54
+  - first:
+      213: 21300110
+    second: UI5_55
+  - first:
+      213: 21300112
+    second: UI5_56
+  - first:
+      213: 21300114
+    second: UI5_57
+  - first:
+      213: 21300116
+    second: UI5_58
+  - first:
+      213: 21300118
+    second: UI5_59
+  - first:
+      213: 21300120
+    second: UI5_60
+  - first:
+      213: 21300122
+    second: UI5_61
+  - first:
+      213: 21300124
+    second: UI5_62
+  - first:
+      213: 21300126
+    second: UI5_63
+  - first:
+      213: 21300128
+    second: UI5_64
+  - first:
+      213: 21300130
+    second: UI5_65
+  - first:
+      213: 21300132
+    second: UI5_66
+  - first:
+      213: 21300134
+    second: UI5_67
+  - first:
+      213: 21300136
+    second: UI5_68
+  - first:
+      213: 21300138
+    second: UI5_69
+  - first:
+      213: 21300140
+    second: UI5_70
+  - first:
+      213: 21300142
+    second: UI5_71
+  - first:
+      213: 21300144
+    second: UI5_72
+  - first:
+      213: 21300146
+    second: UI5_73
+  - first:
+      213: 21300148
+    second: UI5_74
+  - first:
+      213: 21300150
+    second: UI5_75
+  - first:
+      213: 21300152
+    second: UI5_76
+  - first:
+      213: 21300154
+    second: UI5_77
+  - first:
+      213: 21300156
+    second: UI5_78
+  - first:
+      213: 21300158
+    second: UI5_79
+  - first:
+      213: 21300160
+    second: UI5_80
+  - first:
+      213: 21300162
+    second: UI5_81
+  - first:
+      213: 21300164
+    second: UI5_82
+  - first:
+      213: 21300166
+    second: UI5_83
+  - first:
+      213: 21300168
+    second: UI5_84
+  - first:
+      213: 21300170
+    second: UI5_85
+  - first:
+      213: 21300172
+    second: UI5_86
+  - first:
+      213: 21300174
+    second: UI5_87
+  - first:
+      213: 21300176
+    second: UI5_88
+  - first:
+      213: 21300178
+    second: UI5_89
+  - first:
+      213: 21300180
+    second: UI5_90
+  - first:
+      213: 21300182
+    second: UI5_91
+  - first:
+      213: 21300184
+    second: UI5_92
+  - first:
+      213: 21300186
+    second: UI5_93
+  - first:
+      213: 21300188
+    second: UI5_94
+  - first:
+      213: 21300190
+    second: UI5_95
+  - first:
+      213: 21300192
+    second: UI5_96
+  - first:
+      213: 21300194
+    second: UI5_97
+  - first:
+      213: 21300196
+    second: UI5_98
+  - first:
+      213: 21300198
+    second: UI5_99
+  - first:
+      213: 21300200
+    second: UI5_100
+  - first:
+      213: 21300202
+    second: UI5_101
+  - first:
+      213: 21300204
+    second: UI5_102
+  - first:
+      213: 21300206
+    second: UI5_103
+  - first:
+      213: 21300208
+    second: UI5_104
+  - first:
+      213: 21300210
+    second: UI5_105
+  - first:
+      213: 21300212
+    second: UI5_106
+  - first:
+      213: 21300214
+    second: UI5_107
+  - first:
+      213: 21300216
+    second: UI5_108
+  - first:
+      213: 21300218
+    second: UI5_109
+  - first:
+      213: 21300220
+    second: UI5_110
+  - first:
+      213: 21300222
+    second: UI5_111
+  - first:
+      213: 21300224
+    second: UI5_112
+  - first:
+      213: 21300226
+    second: UI5_113
+  - first:
+      213: 21300228
+    second: UI5_114
+  - first:
+      213: 21300230
+    second: UI5_115
+  - first:
+      213: 21300232
+    second: UI5_116
+  - first:
+      213: 21300234
+    second: UI5_117
+  - first:
+      213: 21300236
+    second: UI5_118
+  - first:
+      213: 21300238
+    second: UI5_119
+  - first:
+      213: 21300240
+    second: UI5_120
+  - first:
+      213: 21300242
+    second: UI5_121
+  - first:
+      213: 21300244
+    second: UI5_122
+  - first:
+      213: 21300246
+    second: UI5_123
+  - first:
+      213: 21300248
+    second: UI5_124
+  - first:
+      213: 21300250
+    second: UI5_125
+  - first:
+      213: 21300252
+    second: UI5_126
+  - first:
+      213: 21300254
+    second: UI5_127
+  - first:
+      213: 21300256
+    second: UI5_128
+  - first:
+      213: 21300258
+    second: UI5_129
+  - first:
+      213: 21300260
+    second: UI5_130
+  - first:
+      213: 21300262
+    second: UI5_131
+  - first:
+      213: 21300264
+    second: UI5_132
+  - first:
+      213: 21300266
+    second: UI5_133
+  - first:
+      213: 21300268
+    second: UI5_134
+  - first:
+      213: 21300270
+    second: UI5_135
+  - first:
+      213: 21300272
+    second: UI5_136
+  - first:
+      213: 21300274
+    second: UI5_137
+  - first:
+      213: 21300276
+    second: UI5_138
+  - first:
+      213: 21300278
+    second: UI5_139
+  - first:
+      213: 21300280
+    second: UI5_140
+  - first:
+      213: 21300282
+    second: UI5_141
+  - first:
+      213: 21300284
+    second: UI5_142
+  - first:
+      213: 21300286
+    second: UI5_143
+  - first:
+      213: 21300288
+    second: UI5_144
+  - first:
+      213: 21300290
+    second: UI5_145
+  - first:
+      213: 21300292
+    second: UI5_146
+  - first:
+      213: 21300294
+    second: UI5_147
+  - first:
+      213: 21300296
+    second: UI5_148
+  - first:
+      213: 21300298
+    second: UI5_149
+  - first:
+      213: 21300300
+    second: UI5_150
+  - first:
+      213: 21300302
+    second: UI5_151
+  - first:
+      213: 21300304
+    second: UI5_152
+  - first:
+      213: 21300306
+    second: UI5_153
+  - first:
+      213: 21300308
+    second: UI5_154
+  - first:
+      213: 21300310
+    second: UI5_155
+  - first:
+      213: 21300312
+    second: UI5_156
+  - first:
+      213: 21300314
+    second: UI5_157
+  - first:
+      213: 21300316
+    second: UI5_158
+  - first:
+      213: 21300318
+    second: UI5_159
+  - first:
+      213: 21300320
+    second: UI5_160
+  - first:
+      213: 21300322
+    second: UI5_161
+  - first:
+      213: 21300324
+    second: UI5_162
+  - first:
+      213: 21300326
+    second: UI5_163
+  - first:
+      213: 21300328
+    second: UI5_164
+  - first:
+      213: 21300330
+    second: UI5_165
+  - first:
+      213: 21300332
+    second: UI5_166
+  - first:
+      213: 21300334
+    second: UI5_167
+  - first:
+      213: 21300336
+    second: UI5_168
+  - first:
+      213: 21300338
+    second: UI5_169
+  - first:
+      213: 21300340
+    second: UI5_170
+  - first:
+      213: 21300342
+    second: UI5_171
+  - first:
+      213: 21300344
+    second: UI5_172
+  - first:
+      213: 21300346
+    second: UI5_173
+  - first:
+      213: 21300348
+    second: UI5_174
+  - first:
+      213: 21300350
+    second: UI5_175
+  - first:
+      213: 21300352
+    second: UI5_176
+  - first:
+      213: 21300354
+    second: UI5_177
+  - first:
+      213: 21300356
+    second: UI5_178
+  - first:
+      213: 21300358
+    second: UI5_179
+  - first:
+      213: 21300360
+    second: UI5_180
+  - first:
+      213: 21300362
+    second: UI5_181
+  - first:
+      213: 21300364
+    second: UI5_182
+  - first:
+      213: 21300366
+    second: UI5_183
+  - first:
+      213: 21300368
+    second: UI5_184
+  - first:
+      213: 21300370
+    second: UI5_185
+  - first:
+      213: 21300372
+    second: UI5_186
+  - first:
+      213: 21300374
+    second: UI5_187
+  - first:
+      213: 21300376
+    second: UI5_188
+  - first:
+      213: 21300378
+    second: UI5_189
+  - first:
+      213: 21300380
+    second: UI5_190
+  - first:
+      213: 21300382
+    second: UI5_191
+  - first:
+      213: 21300384
+    second: UI5_192
+  - first:
+      213: 21300386
+    second: UI5_193
+  - first:
+      213: 21300388
+    second: UI5_194
+  - first:
+      213: 21300390
+    second: UI5_195
+  - first:
+      213: 21300392
+    second: UI5_196
+  - first:
+      213: 21300394
+    second: UI5_197
+  - first:
+      213: 21300396
+    second: UI5_198
+  - first:
+      213: 21300398
+    second: UI5_199
+  - first:
+      213: 21300400
+    second: UI5_200
+  - first:
+      213: 21300402
+    second: UI5_201
+  - first:
+      213: 21300404
+    second: UI5_202
+  - first:
+      213: 21300406
+    second: UI5_203
+  - first:
+      213: 21300408
+    second: UI5_204
+  - first:
+      213: 21300410
+    second: UI5_205
+  - first:
+      213: 21300412
+    second: UI5_206
+  - first:
+      213: 21300414
+    second: UI5_207
+  - first:
+      213: 21300416
+    second: UI5_208
+  - first:
+      213: 21300418
+    second: UI5_209
+  - first:
+      213: 21300420
+    second: UI5_210
+  - first:
+      213: 21300422
+    second: UI5_211
+  - first:
+      213: 21300424
+    second: UI5_212
+  - first:
+      213: 21300426
+    second: UI5_213
+  - first:
+      213: 21300428
+    second: UI5_214
+  - first:
+      213: 21300430
+    second: UI5_215
+  - first:
+      213: 21300432
+    second: UI5_216
+  - first:
+      213: 21300434
+    second: UI5_217
+  - first:
+      213: 21300436
+    second: UI5_218
+  - first:
+      213: 21300438
+    second: UI5_219
+  - first:
+      213: 21300440
+    second: UI5_220
+  - first:
+      213: 21300442
+    second: UI5_221
+  - first:
+      213: 21300444
+    second: UI5_222
+  - first:
+      213: 21300446
+    second: UI5_223
+  - first:
+      213: 21300448
+    second: UI5_224
+  - first:
+      213: 21300450
+    second: UI5_225
+  - first:
+      213: 21300452
+    second: UI5_226
+  - first:
+      213: 21300454
+    second: UI5_227
+  - first:
+      213: 21300456
+    second: UI5_228
+  externalObjects: {}
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -248,38 +707,110 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
-    aniso: -1
-    mipBias: -1
-    wrapMode: 1
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: UI5_0
+    - serializedVersion: 2
+      name: UI5_0
       rect:
         serializedVersion: 2
         x: 1
@@ -289,12 +820,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_1
       rect:
         serializedVersion: 2
         x: 42
@@ -304,12 +841,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_2
       rect:
         serializedVersion: 2
         x: 83
@@ -319,12 +862,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_3
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_3
       rect:
         serializedVersion: 2
         x: 124
@@ -334,12 +883,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_4
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_4
       rect:
         serializedVersion: 2
         x: 165
@@ -349,12 +904,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_5
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_5
       rect:
         serializedVersion: 2
         x: 206
@@ -364,12 +925,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_6
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_6
       rect:
         serializedVersion: 2
         x: 247
@@ -379,12 +946,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_7
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_7
       rect:
         serializedVersion: 2
         x: 288
@@ -394,12 +967,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_8
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_8
       rect:
         serializedVersion: 2
         x: 329
@@ -409,12 +988,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_9
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_9
       rect:
         serializedVersion: 2
         x: 370
@@ -424,12 +1009,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_10
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_10
       rect:
         serializedVersion: 2
         x: 411
@@ -439,12 +1030,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_11
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_11
       rect:
         serializedVersion: 2
         x: 452
@@ -454,12 +1051,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_12
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_12
       rect:
         serializedVersion: 2
         x: 493
@@ -469,12 +1072,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_13
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_13
       rect:
         serializedVersion: 2
         x: 534
@@ -484,12 +1093,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_14
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_14
       rect:
         serializedVersion: 2
         x: 575
@@ -499,12 +1114,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_15
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_15
       rect:
         serializedVersion: 2
         x: 616
@@ -514,12 +1135,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_16
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_16
       rect:
         serializedVersion: 2
         x: 657
@@ -529,12 +1156,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_17
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_17
       rect:
         serializedVersion: 2
         x: 698
@@ -544,12 +1177,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_18
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_18
       rect:
         serializedVersion: 2
         x: 739
@@ -559,12 +1198,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_19
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_19
       rect:
         serializedVersion: 2
         x: 780
@@ -574,12 +1219,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_20
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_20
       rect:
         serializedVersion: 2
         x: 821
@@ -589,12 +1240,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_21
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_21
       rect:
         serializedVersion: 2
         x: 862
@@ -604,12 +1261,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_22
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_22
       rect:
         serializedVersion: 2
         x: 903
@@ -619,12 +1282,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_23
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_23
       rect:
         serializedVersion: 2
         x: 944
@@ -634,12 +1303,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_24
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_24
       rect:
         serializedVersion: 2
         x: 0
@@ -649,12 +1324,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -41, y: 20}
-        - {x: -41, y: -20}
-        - {x: 41, y: -20}
-        - {x: 41, y: 20}
-    - name: UI5_25
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_25
       rect:
         serializedVersion: 2
         x: 83
@@ -664,12 +1345,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_26
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_26
       rect:
         serializedVersion: 2
         x: 124
@@ -679,12 +1366,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_27
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_27
       rect:
         serializedVersion: 2
         x: 165
@@ -694,12 +1387,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_28
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_28
       rect:
         serializedVersion: 2
         x: 206
@@ -709,12 +1408,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_29
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_29
       rect:
         serializedVersion: 2
         x: 247
@@ -724,12 +1429,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_30
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_30
       rect:
         serializedVersion: 2
         x: 288
@@ -739,12 +1450,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_31
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_31
       rect:
         serializedVersion: 2
         x: 329
@@ -754,12 +1471,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_32
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_32
       rect:
         serializedVersion: 2
         x: 370
@@ -769,12 +1492,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_33
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_33
       rect:
         serializedVersion: 2
         x: 411
@@ -784,12 +1513,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_34
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_34
       rect:
         serializedVersion: 2
         x: 452
@@ -799,12 +1534,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -40.5, y: 20}
-        - {x: -40.5, y: -20}
-        - {x: 40.5, y: -20}
-        - {x: 40.5, y: 20}
-    - name: UI5_35
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_35
       rect:
         serializedVersion: 2
         x: 534
@@ -814,12 +1555,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_36
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_36
       rect:
         serializedVersion: 2
         x: 575
@@ -829,12 +1576,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_37
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_37
       rect:
         serializedVersion: 2
         x: 616
@@ -844,12 +1597,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_38
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_38
       rect:
         serializedVersion: 2
         x: 657
@@ -859,12 +1618,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_39
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_39
       rect:
         serializedVersion: 2
         x: 698
@@ -874,12 +1639,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_40
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_40
       rect:
         serializedVersion: 2
         x: 739
@@ -889,12 +1660,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_41
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_41
       rect:
         serializedVersion: 2
         x: 780
@@ -904,12 +1681,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_42
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_42
       rect:
         serializedVersion: 2
         x: 821
@@ -919,12 +1702,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -40.5, y: 20}
-        - {x: -40.5, y: -20}
-        - {x: 40.5, y: -20}
-        - {x: 40.5, y: 20}
-    - name: UI5_43
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_43
       rect:
         serializedVersion: 2
         x: 903
@@ -934,12 +1723,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_44
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67305410000000000800000000000000
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_44
       rect:
         serializedVersion: 2
         x: 944
@@ -949,12 +1744,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_45
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87305410000000000800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_45
       rect:
         serializedVersion: 2
         x: 0
@@ -964,12 +1765,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -41, y: 40.5}
-        - {x: -41, y: -40.5}
-        - {x: 41, y: -40.5}
-        - {x: 41, y: 40.5}
-    - name: UI5_46
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7305410000000000800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_46
       rect:
         serializedVersion: 2
         x: 83
@@ -979,12 +1786,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -40.5, y: 40.5}
-        - {x: -40.5, y: -40.5}
-        - {x: 40.5, y: -40.5}
-        - {x: 40.5, y: 40.5}
-    - name: UI5_47
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7305410000000000800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_47
       rect:
         serializedVersion: 2
         x: 165
@@ -994,12 +1807,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_48
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_48
       rect:
         serializedVersion: 2
         x: 206
@@ -1009,12 +1828,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_49
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08305410000000000800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_49
       rect:
         serializedVersion: 2
         x: 247
@@ -1024,12 +1849,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -40.5, y: 40.5}
-        - {x: -40.5, y: -40.5}
-        - {x: 40.5, y: -40.5}
-        - {x: 40.5, y: 40.5}
-    - name: UI5_50
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28305410000000000800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_50
       rect:
         serializedVersion: 2
         x: 329
@@ -1039,12 +1870,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_51
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_51
       rect:
         serializedVersion: 2
         x: 370
@@ -1054,12 +1891,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_52
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68305410000000000800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_52
       rect:
         serializedVersion: 2
         x: 411
@@ -1069,12 +1912,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_53
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88305410000000000800000000000000
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_53
       rect:
         serializedVersion: 2
         x: 452
@@ -1084,12 +1933,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_54
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_54
       rect:
         serializedVersion: 2
         x: 493
@@ -1099,12 +1954,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_55
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_55
       rect:
         serializedVersion: 2
         x: 534
@@ -1114,12 +1975,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_56
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_56
       rect:
         serializedVersion: 2
         x: 575
@@ -1129,12 +1996,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_57
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_57
       rect:
         serializedVersion: 2
         x: 616
@@ -1144,12 +2017,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_58
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_58
       rect:
         serializedVersion: 2
         x: 657
@@ -1159,12 +2038,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_59
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_59
       rect:
         serializedVersion: 2
         x: 698
@@ -1174,12 +2059,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_60
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_60
       rect:
         serializedVersion: 2
         x: 739
@@ -1189,12 +2080,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_61
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_61
       rect:
         serializedVersion: 2
         x: 780
@@ -1204,12 +2101,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_62
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_62
       rect:
         serializedVersion: 2
         x: 821
@@ -1219,12 +2122,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_63
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_63
       rect:
         serializedVersion: 2
         x: 862
@@ -1234,12 +2143,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_64
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_64
       rect:
         serializedVersion: 2
         x: 903
@@ -1249,12 +2164,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_65
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a305410000000000800000000000000
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_65
       rect:
         serializedVersion: 2
         x: 944
@@ -1264,12 +2185,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_66
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a305410000000000800000000000000
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_66
       rect:
         serializedVersion: 2
         x: 165
@@ -1279,12 +2206,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_67
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a305410000000000800000000000000
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_67
       rect:
         serializedVersion: 2
         x: 206
@@ -1294,12 +2227,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_68
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a305410000000000800000000000000
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_68
       rect:
         serializedVersion: 2
         x: 329
@@ -1309,12 +2248,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_69
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a305410000000000800000000000000
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_69
       rect:
         serializedVersion: 2
         x: 370
@@ -1324,12 +2269,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_70
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa305410000000000800000000000000
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_70
       rect:
         serializedVersion: 2
         x: 411
@@ -1339,12 +2290,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_71
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca305410000000000800000000000000
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_71
       rect:
         serializedVersion: 2
         x: 452
@@ -1354,12 +2311,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_72
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea305410000000000800000000000000
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_72
       rect:
         serializedVersion: 2
         x: 493
@@ -1369,12 +2332,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_73
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b305410000000000800000000000000
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_73
       rect:
         serializedVersion: 2
         x: 534
@@ -1384,12 +2353,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_74
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b305410000000000800000000000000
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_74
       rect:
         serializedVersion: 2
         x: 575
@@ -1399,12 +2374,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_75
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b305410000000000800000000000000
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_75
       rect:
         serializedVersion: 2
         x: 616
@@ -1414,12 +2395,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_76
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b305410000000000800000000000000
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_76
       rect:
         serializedVersion: 2
         x: 657
@@ -1429,12 +2416,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_77
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b305410000000000800000000000000
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_77
       rect:
         serializedVersion: 2
         x: 698
@@ -1444,12 +2437,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -40.5, y: 20}
-        - {x: -40.5, y: -20}
-        - {x: 40.5, y: -20}
-        - {x: 40.5, y: 20}
-    - name: UI5_78
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab305410000000000800000000000000
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_78
       rect:
         serializedVersion: 2
         x: 780
@@ -1459,12 +2458,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_79
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb305410000000000800000000000000
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_79
       rect:
         serializedVersion: 2
         x: 821
@@ -1474,12 +2479,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_80
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb305410000000000800000000000000
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_80
       rect:
         serializedVersion: 2
         x: 862
@@ -1489,12 +2500,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_81
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c305410000000000800000000000000
+      internalID: 21300160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_81
       rect:
         serializedVersion: 2
         x: 903
@@ -1504,12 +2521,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_82
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c305410000000000800000000000000
+      internalID: 21300162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_82
       rect:
         serializedVersion: 2
         x: 944
@@ -1519,12 +2542,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_83
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c305410000000000800000000000000
+      internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_83
       rect:
         serializedVersion: 2
         x: 1
@@ -1534,12 +2563,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_84
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c305410000000000800000000000000
+      internalID: 21300166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_84
       rect:
         serializedVersion: 2
         x: 42
@@ -1549,12 +2584,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_85
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c305410000000000800000000000000
+      internalID: 21300168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_85
       rect:
         serializedVersion: 2
         x: 83
@@ -1564,12 +2605,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_86
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac305410000000000800000000000000
+      internalID: 21300170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_86
       rect:
         serializedVersion: 2
         x: 124
@@ -1579,12 +2626,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_87
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc305410000000000800000000000000
+      internalID: 21300172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_87
       rect:
         serializedVersion: 2
         x: 165
@@ -1594,12 +2647,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_88
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec305410000000000800000000000000
+      internalID: 21300174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_88
       rect:
         serializedVersion: 2
         x: 206
@@ -1609,12 +2668,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_89
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d305410000000000800000000000000
+      internalID: 21300176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_89
       rect:
         serializedVersion: 2
         x: 247
@@ -1624,12 +2689,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_90
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d305410000000000800000000000000
+      internalID: 21300178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_90
       rect:
         serializedVersion: 2
         x: 288
@@ -1639,12 +2710,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -40.5, y: 40.5}
-        - {x: -40.5, y: -40.5}
-        - {x: 40.5, y: -40.5}
-        - {x: 40.5, y: 40.5}
-    - name: UI5_91
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d305410000000000800000000000000
+      internalID: 21300180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_91
       rect:
         serializedVersion: 2
         x: 370
@@ -1654,12 +2731,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_92
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d305410000000000800000000000000
+      internalID: 21300182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_92
       rect:
         serializedVersion: 2
         x: 411
@@ -1669,12 +2752,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_93
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d305410000000000800000000000000
+      internalID: 21300184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_93
       rect:
         serializedVersion: 2
         x: 452
@@ -1684,12 +2773,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_94
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad305410000000000800000000000000
+      internalID: 21300186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_94
       rect:
         serializedVersion: 2
         x: 493
@@ -1699,12 +2794,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_95
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd305410000000000800000000000000
+      internalID: 21300188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_95
       rect:
         serializedVersion: 2
         x: 534
@@ -1714,12 +2815,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_96
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed305410000000000800000000000000
+      internalID: 21300190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_96
       rect:
         serializedVersion: 2
         x: 575
@@ -1729,12 +2836,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_97
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e305410000000000800000000000000
+      internalID: 21300192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_97
       rect:
         serializedVersion: 2
         x: 616
@@ -1744,12 +2857,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_98
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e305410000000000800000000000000
+      internalID: 21300194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_98
       rect:
         serializedVersion: 2
         x: 657
@@ -1759,12 +2878,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_99
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e305410000000000800000000000000
+      internalID: 21300196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_99
       rect:
         serializedVersion: 2
         x: 698
@@ -1774,12 +2899,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -40.5, y: 20}
-        - {x: -40.5, y: -20}
-        - {x: 40.5, y: -20}
-        - {x: 40.5, y: 20}
-    - name: UI5_100
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e305410000000000800000000000000
+      internalID: 21300198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_100
       rect:
         serializedVersion: 2
         x: 780
@@ -1789,12 +2920,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_101
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e305410000000000800000000000000
+      internalID: 21300200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_101
       rect:
         serializedVersion: 2
         x: 821
@@ -1804,12 +2941,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_102
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae305410000000000800000000000000
+      internalID: 21300202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_102
       rect:
         serializedVersion: 2
         x: 862
@@ -1819,12 +2962,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_103
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce305410000000000800000000000000
+      internalID: 21300204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_103
       rect:
         serializedVersion: 2
         x: 903
@@ -1834,12 +2983,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_104
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee305410000000000800000000000000
+      internalID: 21300206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_104
       rect:
         serializedVersion: 2
         x: 944
@@ -1849,12 +3004,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_105
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f305410000000000800000000000000
+      internalID: 21300208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_105
       rect:
         serializedVersion: 2
         x: 1
@@ -1864,12 +3025,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_106
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f305410000000000800000000000000
+      internalID: 21300210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_106
       rect:
         serializedVersion: 2
         x: 42
@@ -1879,12 +3046,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_107
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f305410000000000800000000000000
+      internalID: 21300212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_107
       rect:
         serializedVersion: 2
         x: 83
@@ -1894,12 +3067,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_108
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f305410000000000800000000000000
+      internalID: 21300214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_108
       rect:
         serializedVersion: 2
         x: 124
@@ -1909,12 +3088,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_109
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f305410000000000800000000000000
+      internalID: 21300216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_109
       rect:
         serializedVersion: 2
         x: 165
@@ -1924,12 +3109,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_110
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af305410000000000800000000000000
+      internalID: 21300218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_110
       rect:
         serializedVersion: 2
         x: 206
@@ -1939,12 +3130,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_111
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf305410000000000800000000000000
+      internalID: 21300220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_111
       rect:
         serializedVersion: 2
         x: 247
@@ -1954,12 +3151,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_112
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef305410000000000800000000000000
+      internalID: 21300222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_112
       rect:
         serializedVersion: 2
         x: 370
@@ -1969,12 +3172,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_113
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00405410000000000800000000000000
+      internalID: 21300224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_113
       rect:
         serializedVersion: 2
         x: 411
@@ -1984,12 +3193,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_114
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20405410000000000800000000000000
+      internalID: 21300226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_114
       rect:
         serializedVersion: 2
         x: 452
@@ -1999,12 +3214,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_115
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40405410000000000800000000000000
+      internalID: 21300228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_115
       rect:
         serializedVersion: 2
         x: 493
@@ -2014,12 +3235,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_116
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60405410000000000800000000000000
+      internalID: 21300230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_116
       rect:
         serializedVersion: 2
         x: 534
@@ -2029,12 +3256,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_117
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80405410000000000800000000000000
+      internalID: 21300232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_117
       rect:
         serializedVersion: 2
         x: 575
@@ -2044,12 +3277,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_118
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0405410000000000800000000000000
+      internalID: 21300234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_118
       rect:
         serializedVersion: 2
         x: 616
@@ -2059,12 +3298,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_119
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0405410000000000800000000000000
+      internalID: 21300236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_119
       rect:
         serializedVersion: 2
         x: 657
@@ -2074,12 +3319,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_120
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0405410000000000800000000000000
+      internalID: 21300238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_120
       rect:
         serializedVersion: 2
         x: 698
@@ -2089,12 +3340,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_121
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01405410000000000800000000000000
+      internalID: 21300240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_121
       rect:
         serializedVersion: 2
         x: 739
@@ -2104,12 +3361,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_122
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21405410000000000800000000000000
+      internalID: 21300242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_122
       rect:
         serializedVersion: 2
         x: 780
@@ -2119,12 +3382,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_123
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41405410000000000800000000000000
+      internalID: 21300244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_123
       rect:
         serializedVersion: 2
         x: 821
@@ -2134,12 +3403,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_124
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61405410000000000800000000000000
+      internalID: 21300246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_124
       rect:
         serializedVersion: 2
         x: 862
@@ -2149,12 +3424,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_125
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81405410000000000800000000000000
+      internalID: 21300248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_125
       rect:
         serializedVersion: 2
         x: 903
@@ -2164,12 +3445,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_126
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1405410000000000800000000000000
+      internalID: 21300250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_126
       rect:
         serializedVersion: 2
         x: 944
@@ -2179,12 +3466,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_127
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1405410000000000800000000000000
+      internalID: 21300252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_127
       rect:
         serializedVersion: 2
         x: 1
@@ -2194,12 +3487,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_128
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1405410000000000800000000000000
+      internalID: 21300254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_128
       rect:
         serializedVersion: 2
         x: 42
@@ -2209,12 +3508,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_129
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02405410000000000800000000000000
+      internalID: 21300256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_129
       rect:
         serializedVersion: 2
         x: 83
@@ -2224,12 +3529,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_130
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22405410000000000800000000000000
+      internalID: 21300258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_130
       rect:
         serializedVersion: 2
         x: 124
@@ -2239,12 +3550,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_131
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42405410000000000800000000000000
+      internalID: 21300260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_131
       rect:
         serializedVersion: 2
         x: 165
@@ -2254,12 +3571,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_132
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62405410000000000800000000000000
+      internalID: 21300262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_132
       rect:
         serializedVersion: 2
         x: 206
@@ -2269,12 +3592,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_133
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82405410000000000800000000000000
+      internalID: 21300264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_133
       rect:
         serializedVersion: 2
         x: 247
@@ -2284,12 +3613,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_134
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2405410000000000800000000000000
+      internalID: 21300266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_134
       rect:
         serializedVersion: 2
         x: 288
@@ -2299,12 +3634,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_135
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2405410000000000800000000000000
+      internalID: 21300268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_135
       rect:
         serializedVersion: 2
         x: 329
@@ -2314,12 +3655,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_136
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2405410000000000800000000000000
+      internalID: 21300270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_136
       rect:
         serializedVersion: 2
         x: 370
@@ -2329,12 +3676,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_137
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03405410000000000800000000000000
+      internalID: 21300272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_137
       rect:
         serializedVersion: 2
         x: 411
@@ -2344,12 +3697,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_138
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23405410000000000800000000000000
+      internalID: 21300274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_138
       rect:
         serializedVersion: 2
         x: 452
@@ -2359,12 +3718,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_139
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43405410000000000800000000000000
+      internalID: 21300276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_139
       rect:
         serializedVersion: 2
         x: 493
@@ -2374,12 +3739,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_140
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63405410000000000800000000000000
+      internalID: 21300278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_140
       rect:
         serializedVersion: 2
         x: 534
@@ -2389,12 +3760,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_141
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83405410000000000800000000000000
+      internalID: 21300280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_141
       rect:
         serializedVersion: 2
         x: 575
@@ -2404,12 +3781,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_142
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3405410000000000800000000000000
+      internalID: 21300282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_142
       rect:
         serializedVersion: 2
         x: 616
@@ -2419,12 +3802,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_143
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3405410000000000800000000000000
+      internalID: 21300284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_143
       rect:
         serializedVersion: 2
         x: 657
@@ -2434,12 +3823,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_144
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3405410000000000800000000000000
+      internalID: 21300286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_144
       rect:
         serializedVersion: 2
         x: 698
@@ -2449,12 +3844,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_145
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04405410000000000800000000000000
+      internalID: 21300288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_145
       rect:
         serializedVersion: 2
         x: 739
@@ -2464,12 +3865,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_146
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24405410000000000800000000000000
+      internalID: 21300290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_146
       rect:
         serializedVersion: 2
         x: 780
@@ -2479,12 +3886,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_147
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44405410000000000800000000000000
+      internalID: 21300292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_147
       rect:
         serializedVersion: 2
         x: 821
@@ -2494,12 +3907,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_148
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64405410000000000800000000000000
+      internalID: 21300294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_148
       rect:
         serializedVersion: 2
         x: 862
@@ -2509,12 +3928,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_149
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84405410000000000800000000000000
+      internalID: 21300296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_149
       rect:
         serializedVersion: 2
         x: 903
@@ -2524,12 +3949,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_150
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4405410000000000800000000000000
+      internalID: 21300298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_150
       rect:
         serializedVersion: 2
         x: 944
@@ -2539,12 +3970,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_151
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4405410000000000800000000000000
+      internalID: 21300300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_151
       rect:
         serializedVersion: 2
         x: 1
@@ -2554,12 +3991,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_152
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4405410000000000800000000000000
+      internalID: 21300302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_152
       rect:
         serializedVersion: 2
         x: 42
@@ -2569,12 +4012,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_153
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05405410000000000800000000000000
+      internalID: 21300304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_153
       rect:
         serializedVersion: 2
         x: 83
@@ -2584,12 +4033,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_154
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25405410000000000800000000000000
+      internalID: 21300306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_154
       rect:
         serializedVersion: 2
         x: 124
@@ -2599,12 +4054,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_155
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45405410000000000800000000000000
+      internalID: 21300308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_155
       rect:
         serializedVersion: 2
         x: 165
@@ -2614,12 +4075,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_156
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65405410000000000800000000000000
+      internalID: 21300310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_156
       rect:
         serializedVersion: 2
         x: 206
@@ -2629,12 +4096,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_157
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85405410000000000800000000000000
+      internalID: 21300312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_157
       rect:
         serializedVersion: 2
         x: 247
@@ -2644,12 +4117,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_158
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5405410000000000800000000000000
+      internalID: 21300314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_158
       rect:
         serializedVersion: 2
         x: 288
@@ -2659,12 +4138,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_159
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5405410000000000800000000000000
+      internalID: 21300316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_159
       rect:
         serializedVersion: 2
         x: 329
@@ -2674,12 +4159,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_160
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5405410000000000800000000000000
+      internalID: 21300318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_160
       rect:
         serializedVersion: 2
         x: 370
@@ -2689,12 +4180,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_161
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06405410000000000800000000000000
+      internalID: 21300320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_161
       rect:
         serializedVersion: 2
         x: 411
@@ -2704,12 +4201,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_162
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26405410000000000800000000000000
+      internalID: 21300322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_162
       rect:
         serializedVersion: 2
         x: 452
@@ -2719,12 +4222,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_163
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46405410000000000800000000000000
+      internalID: 21300324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_163
       rect:
         serializedVersion: 2
         x: 493
@@ -2734,12 +4243,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_164
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66405410000000000800000000000000
+      internalID: 21300326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_164
       rect:
         serializedVersion: 2
         x: 534
@@ -2749,12 +4264,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_165
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86405410000000000800000000000000
+      internalID: 21300328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_165
       rect:
         serializedVersion: 2
         x: 575
@@ -2764,12 +4285,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_166
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6405410000000000800000000000000
+      internalID: 21300330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_166
       rect:
         serializedVersion: 2
         x: 616
@@ -2779,12 +4306,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_167
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6405410000000000800000000000000
+      internalID: 21300332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_167
       rect:
         serializedVersion: 2
         x: 657
@@ -2794,12 +4327,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_168
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6405410000000000800000000000000
+      internalID: 21300334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_168
       rect:
         serializedVersion: 2
         x: 698
@@ -2809,12 +4348,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_169
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07405410000000000800000000000000
+      internalID: 21300336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_169
       rect:
         serializedVersion: 2
         x: 739
@@ -2824,12 +4369,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 40.5}
-        - {x: -20, y: -40.5}
-        - {x: 20, y: -40.5}
-        - {x: 20, y: 40.5}
-    - name: UI5_170
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27405410000000000800000000000000
+      internalID: 21300338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_170
       rect:
         serializedVersion: 2
         x: 780
@@ -2839,12 +4390,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_171
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47405410000000000800000000000000
+      internalID: 21300340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_171
       rect:
         serializedVersion: 2
         x: 821
@@ -2854,12 +4411,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_172
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67405410000000000800000000000000
+      internalID: 21300342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_172
       rect:
         serializedVersion: 2
         x: 862
@@ -2869,12 +4432,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_173
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87405410000000000800000000000000
+      internalID: 21300344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_173
       rect:
         serializedVersion: 2
         x: 903
@@ -2884,12 +4453,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_174
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7405410000000000800000000000000
+      internalID: 21300346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_174
       rect:
         serializedVersion: 2
         x: 944
@@ -2899,12 +4474,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_175
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7405410000000000800000000000000
+      internalID: 21300348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_175
       rect:
         serializedVersion: 2
         x: 493
@@ -2914,12 +4495,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_176
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7405410000000000800000000000000
+      internalID: 21300350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_176
       rect:
         serializedVersion: 2
         x: 534
@@ -2929,12 +4516,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_177
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08405410000000000800000000000000
+      internalID: 21300352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_177
       rect:
         serializedVersion: 2
         x: 575
@@ -2944,12 +4537,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_178
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28405410000000000800000000000000
+      internalID: 21300354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_178
       rect:
         serializedVersion: 2
         x: 616
@@ -2959,12 +4558,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_179
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48405410000000000800000000000000
+      internalID: 21300356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_179
       rect:
         serializedVersion: 2
         x: 657
@@ -2974,12 +4579,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_180
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68405410000000000800000000000000
+      internalID: 21300358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_180
       rect:
         serializedVersion: 2
         x: 698
@@ -2989,12 +4600,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_181
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88405410000000000800000000000000
+      internalID: 21300360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_181
       rect:
         serializedVersion: 2
         x: 780
@@ -3004,12 +4621,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_182
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8405410000000000800000000000000
+      internalID: 21300362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_182
       rect:
         serializedVersion: 2
         x: 821
@@ -3019,12 +4642,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_183
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8405410000000000800000000000000
+      internalID: 21300364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_183
       rect:
         serializedVersion: 2
         x: 862
@@ -3034,12 +4663,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_184
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8405410000000000800000000000000
+      internalID: 21300366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_184
       rect:
         serializedVersion: 2
         x: 903
@@ -3049,12 +4684,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_185
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09405410000000000800000000000000
+      internalID: 21300368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_185
       rect:
         serializedVersion: 2
         x: 944
@@ -3064,12 +4705,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_186
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29405410000000000800000000000000
+      internalID: 21300370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_186
       rect:
         serializedVersion: 2
         x: 3
@@ -3079,14 +4726,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -19.5, y: 29}
-        - {x: -31.5, y: 17}
-        - {x: -31.5, y: -29}
-        - {x: 31.5, y: -29}
-        - {x: 31.5, y: -2}
-        - {x: 20.5, y: 29}
-    - name: UI5_187
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49405410000000000800000000000000
+      internalID: 21300372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_187
       rect:
         serializedVersion: 2
         x: 76
@@ -3096,14 +4747,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16.5, y: 28}
-        - {x: -31.5, y: 0}
-        - {x: -31.5, y: -28}
-        - {x: 31.5, y: -28}
-        - {x: 31.5, y: 9}
-        - {x: 22.5, y: 28}
-    - name: UI5_188
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69405410000000000800000000000000
+      internalID: 21300374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_188
       rect:
         serializedVersion: 2
         x: 147
@@ -3113,16 +4768,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14.5, y: 28}
-        - {x: -11.5, y: 28}
-        - {x: -17.5, y: 26}
-        - {x: -31.5, y: -5}
-        - {x: -31.5, y: -28}
-        - {x: 31.5, y: -28}
-        - {x: 31.5, y: 16}
-        - {x: 27.5, y: 23}
-    - name: UI5_189
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89405410000000000800000000000000
+      internalID: 21300376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_189
       rect:
         serializedVersion: 2
         x: 222
@@ -3132,13 +4789,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -32, y: 31}
-        - {x: -32, y: -31}
-        - {x: 32, y: -31}
-        - {x: 32, y: 7}
-        - {x: 13, y: 31}
-    - name: UI5_190
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9405410000000000800000000000000
+      internalID: 21300378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_190
       rect:
         serializedVersion: 2
         x: 302
@@ -3148,14 +4810,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13, y: 28.5}
-        - {x: -26, y: 14.5}
-        - {x: -26, y: -28.5}
-        - {x: 26, y: -28.5}
-        - {x: 26, y: 21.5}
-        - {x: 7, y: 28.5}
-    - name: UI5_191
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9405410000000000800000000000000
+      internalID: 21300380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_191
       rect:
         serializedVersion: 2
         x: 364
@@ -3165,12 +4831,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -26, y: 28}
-        - {x: -26, y: -28}
-        - {x: 26, y: -28}
-        - {x: 26, y: 28}
-    - name: UI5_192
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9405410000000000800000000000000
+      internalID: 21300382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_192
       rect:
         serializedVersion: 2
         x: 427
@@ -3180,14 +4852,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13.5, y: 28.5}
-        - {x: -24.5, y: 6.5}
-        - {x: -24.5, y: -28.5}
-        - {x: 24.5, y: -28.5}
-        - {x: 24.5, y: 20.5}
-        - {x: 13.5, y: 28.5}
-    - name: UI5_193
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a405410000000000800000000000000
+      internalID: 21300384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_193
       rect:
         serializedVersion: 2
         x: 489
@@ -3197,15 +4873,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -15.5, y: 28}
-        - {x: -29.5, y: 17}
-        - {x: -29.5, y: -28}
-        - {x: 20.5, y: -28}
-        - {x: 27.5, y: -24}
-        - {x: 29.5, y: -18}
-        - {x: 29.5, y: 28}
-    - name: UI5_194
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a405410000000000800000000000000
+      internalID: 21300386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_194
       rect:
         serializedVersion: 2
         x: 575
@@ -3215,12 +4894,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_195
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a405410000000000800000000000000
+      internalID: 21300388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_195
       rect:
         serializedVersion: 2
         x: 616
@@ -3230,12 +4915,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_196
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a405410000000000800000000000000
+      internalID: 21300390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_196
       rect:
         serializedVersion: 2
         x: 657
@@ -3245,12 +4936,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_197
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a405410000000000800000000000000
+      internalID: 21300392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_197
       rect:
         serializedVersion: 2
         x: 698
@@ -3260,12 +4957,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_198
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa405410000000000800000000000000
+      internalID: 21300394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_198
       rect:
         serializedVersion: 2
         x: 739
@@ -3275,12 +4978,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_199
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca405410000000000800000000000000
+      internalID: 21300396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_199
       rect:
         serializedVersion: 2
         x: 780
@@ -3290,12 +4999,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_200
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea405410000000000800000000000000
+      internalID: 21300398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_200
       rect:
         serializedVersion: 2
         x: 821
@@ -3305,12 +5020,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_201
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b405410000000000800000000000000
+      internalID: 21300400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_201
       rect:
         serializedVersion: 2
         x: 862
@@ -3320,12 +5041,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_202
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b405410000000000800000000000000
+      internalID: 21300402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_202
       rect:
         serializedVersion: 2
         x: 903
@@ -3335,12 +5062,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_203
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b405410000000000800000000000000
+      internalID: 21300404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_203
       rect:
         serializedVersion: 2
         x: 944
@@ -3350,12 +5083,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: 20}
-        - {x: -20, y: -20}
-        - {x: 20, y: -20}
-        - {x: 20, y: 20}
-    - name: UI5_204
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b405410000000000800000000000000
+      internalID: 21300406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_204
       rect:
         serializedVersion: 2
         x: 294
@@ -3366,7 +5105,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_205
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b405410000000000800000000000000
+      internalID: 21300408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_205
       rect:
         serializedVersion: 2
         x: 555
@@ -3376,15 +5125,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13.5, y: 30}
-        - {x: -29.5, y: 19}
-        - {x: -29.5, y: -30}
-        - {x: 28.5, y: -30}
-        - {x: 29.5, y: -29}
-        - {x: 29.5, y: 20}
-        - {x: 20.5, y: 30}
-    - name: UI5_206
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab405410000000000800000000000000
+      internalID: 21300410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_206
       rect:
         serializedVersion: 2
         x: 3
@@ -3394,15 +5146,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 4, y: 27.5}
-        - {x: -29, y: 9.5}
-        - {x: -30, y: 3.5}
-        - {x: -30, y: -27.5}
-        - {x: 30, y: -27.5}
-        - {x: 30, y: 23.5}
-        - {x: 28, y: 27.5}
-    - name: UI5_207
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb405410000000000800000000000000
+      internalID: 21300412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_207
       rect:
         serializedVersion: 2
         x: 34
@@ -3413,7 +5168,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_208
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb405410000000000800000000000000
+      internalID: 21300414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_208
       rect:
         serializedVersion: 2
         x: 72
@@ -3423,16 +5188,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24.5, y: 27.5}
-        - {x: -26.5, y: 26.5}
-        - {x: -26.5, y: -13.5}
-        - {x: -23.5, y: -27.5}
-        - {x: 18.5, y: -27.5}
-        - {x: 26.5, y: -2.5}
-        - {x: 26.5, y: 23.5}
-        - {x: 23.5, y: 27.5}
-    - name: UI5_209
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c405410000000000800000000000000
+      internalID: 21300416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_209
       rect:
         serializedVersion: 2
         x: 138
@@ -3442,15 +5209,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -27.5, y: 28}
-        - {x: -27.5, y: -5}
-        - {x: -20.5, y: -26}
-        - {x: -19.5, y: -28}
-        - {x: 19.5, y: -28}
-        - {x: 27.5, y: -3}
-        - {x: 27.5, y: 28}
-    - name: UI5_210
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c405410000000000800000000000000
+      internalID: 21300418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_210
       rect:
         serializedVersion: 2
         x: 208
@@ -3460,36 +5230,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 24.5, y: -12}
-        - {x: 19.5, y: -12}
-        - {x: 26.5, y: 1}
-        - {x: 29.5, y: 11}
-        - {x: -13.5, y: 30}
-        - {x: -28.5, y: 30}
-        - {x: -32.5, y: 27}
-        - {x: -34.5, y: 8}
-        - {x: -34.5, y: -30}
-        - {x: 29.5, y: -30}
-        - {x: 30.5, y: -26}
-        - {x: 30.5, y: -18}
-      - - {x: 2.5, y: 30}
-        - {x: 2.5, y: 29}
-        - {x: 5.5, y: 25}
-        - {x: 20.5, y: 25}
-        - {x: 25.5, y: 26}
-        - {x: 25.5, y: 30}
-      - - {x: 29.5, y: 30}
-        - {x: 29.5, y: 27}
-        - {x: 31.5, y: 25}
-        - {x: 33.5, y: 25}
-        - {x: 34.5, y: 26}
-        - {x: 34.5, y: 30}
-      - - {x: -11.5, y: 28}
-        - {x: -11.5, y: 30}
-        - {x: -16.5, y: 30}
-        - {x: -14.5, y: 27}
-    - name: UI5_211
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c405410000000000800000000000000
+      internalID: 21300420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_211
       rect:
         serializedVersion: 2
         x: 284
@@ -3499,15 +5251,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9, y: 29.5}
-        - {x: -28, y: 10.5}
-        - {x: -28, y: -29.5}
-        - {x: 27, y: -29.5}
-        - {x: 28, y: -27.5}
-        - {x: 28, y: 0.5}
-        - {x: 17, y: 29.5}
-    - name: UI5_212
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c405410000000000800000000000000
+      internalID: 21300422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_212
       rect:
         serializedVersion: 2
         x: 352
@@ -3517,12 +5272,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -32, y: 28.5}
-        - {x: -32, y: -28.5}
-        - {x: 32, y: -28.5}
-        - {x: 32, y: 28.5}
-    - name: UI5_213
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c405410000000000800000000000000
+      internalID: 21300424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_213
       rect:
         serializedVersion: 2
         x: 454
@@ -3533,7 +5294,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_214
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac405410000000000800000000000000
+      internalID: 21300426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_214
       rect:
         serializedVersion: 2
         x: 483
@@ -3544,7 +5315,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_215
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc405410000000000800000000000000
+      internalID: 21300428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_215
       rect:
         serializedVersion: 2
         x: 512
@@ -3555,7 +5336,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_216
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec405410000000000800000000000000
+      internalID: 21300430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_216
       rect:
         serializedVersion: 2
         x: 541
@@ -3566,7 +5357,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_217
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d405410000000000800000000000000
+      internalID: 21300432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_217
       rect:
         serializedVersion: 2
         x: 570
@@ -3577,7 +5378,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_218
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d405410000000000800000000000000
+      internalID: 21300434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_218
       rect:
         serializedVersion: 2
         x: 599
@@ -3588,7 +5399,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_219
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d405410000000000800000000000000
+      internalID: 21300436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_219
       rect:
         serializedVersion: 2
         x: 628
@@ -3599,7 +5420,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_220
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d405410000000000800000000000000
+      internalID: 21300438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_220
       rect:
         serializedVersion: 2
         x: 657
@@ -3610,7 +5441,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_221
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d405410000000000800000000000000
+      internalID: 21300440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_221
       rect:
         serializedVersion: 2
         x: 686
@@ -3621,7 +5462,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_222
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad405410000000000800000000000000
+      internalID: 21300442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_222
       rect:
         serializedVersion: 2
         x: 715
@@ -3632,7 +5483,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_223
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd405410000000000800000000000000
+      internalID: 21300444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_223
       rect:
         serializedVersion: 2
         x: 744
@@ -3643,7 +5504,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_224
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed405410000000000800000000000000
+      internalID: 21300446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_224
       rect:
         serializedVersion: 2
         x: 773
@@ -3654,7 +5525,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_225
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e405410000000000800000000000000
+      internalID: 21300448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_225
       rect:
         serializedVersion: 2
         x: 802
@@ -3665,7 +5546,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_226
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e405410000000000800000000000000
+      internalID: 21300450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_226
       rect:
         serializedVersion: 2
         x: 831
@@ -3676,7 +5567,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_227
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e405410000000000800000000000000
+      internalID: 21300452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_227
       rect:
         serializedVersion: 2
         x: 862
@@ -3687,7 +5588,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: UI5_228
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e405410000000000800000000000000
+      internalID: 21300454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI5_228
       rect:
         serializedVersion: 2
         x: 886
@@ -3698,8 +5609,257 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e405410000000000800000000000000
+      internalID: 21300456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
-  spritePackingTag: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      UI5_0: 21300000
+      UI5_1: 21300002
+      UI5_10: 21300020
+      UI5_100: 21300200
+      UI5_101: 21300202
+      UI5_102: 21300204
+      UI5_103: 21300206
+      UI5_104: 21300208
+      UI5_105: 21300210
+      UI5_106: 21300212
+      UI5_107: 21300214
+      UI5_108: 21300216
+      UI5_109: 21300218
+      UI5_11: 21300022
+      UI5_110: 21300220
+      UI5_111: 21300222
+      UI5_112: 21300224
+      UI5_113: 21300226
+      UI5_114: 21300228
+      UI5_115: 21300230
+      UI5_116: 21300232
+      UI5_117: 21300234
+      UI5_118: 21300236
+      UI5_119: 21300238
+      UI5_12: 21300024
+      UI5_120: 21300240
+      UI5_121: 21300242
+      UI5_122: 21300244
+      UI5_123: 21300246
+      UI5_124: 21300248
+      UI5_125: 21300250
+      UI5_126: 21300252
+      UI5_127: 21300254
+      UI5_128: 21300256
+      UI5_129: 21300258
+      UI5_13: 21300026
+      UI5_130: 21300260
+      UI5_131: 21300262
+      UI5_132: 21300264
+      UI5_133: 21300266
+      UI5_134: 21300268
+      UI5_135: 21300270
+      UI5_136: 21300272
+      UI5_137: 21300274
+      UI5_138: 21300276
+      UI5_139: 21300278
+      UI5_14: 21300028
+      UI5_140: 21300280
+      UI5_141: 21300282
+      UI5_142: 21300284
+      UI5_143: 21300286
+      UI5_144: 21300288
+      UI5_145: 21300290
+      UI5_146: 21300292
+      UI5_147: 21300294
+      UI5_148: 21300296
+      UI5_149: 21300298
+      UI5_15: 21300030
+      UI5_150: 21300300
+      UI5_151: 21300302
+      UI5_152: 21300304
+      UI5_153: 21300306
+      UI5_154: 21300308
+      UI5_155: 21300310
+      UI5_156: 21300312
+      UI5_157: 21300314
+      UI5_158: 21300316
+      UI5_159: 21300318
+      UI5_16: 21300032
+      UI5_160: 21300320
+      UI5_161: 21300322
+      UI5_162: 21300324
+      UI5_163: 21300326
+      UI5_164: 21300328
+      UI5_165: 21300330
+      UI5_166: 21300332
+      UI5_167: 21300334
+      UI5_168: 21300336
+      UI5_169: 21300338
+      UI5_17: 21300034
+      UI5_170: 21300340
+      UI5_171: 21300342
+      UI5_172: 21300344
+      UI5_173: 21300346
+      UI5_174: 21300348
+      UI5_175: 21300350
+      UI5_176: 21300352
+      UI5_177: 21300354
+      UI5_178: 21300356
+      UI5_179: 21300358
+      UI5_18: 21300036
+      UI5_180: 21300360
+      UI5_181: 21300362
+      UI5_182: 21300364
+      UI5_183: 21300366
+      UI5_184: 21300368
+      UI5_185: 21300370
+      UI5_186: 21300372
+      UI5_187: 21300374
+      UI5_188: 21300376
+      UI5_189: 21300378
+      UI5_19: 21300038
+      UI5_190: 21300380
+      UI5_191: 21300382
+      UI5_192: 21300384
+      UI5_193: 21300386
+      UI5_194: 21300388
+      UI5_195: 21300390
+      UI5_196: 21300392
+      UI5_197: 21300394
+      UI5_198: 21300396
+      UI5_199: 21300398
+      UI5_2: 21300004
+      UI5_20: 21300040
+      UI5_200: 21300400
+      UI5_201: 21300402
+      UI5_202: 21300404
+      UI5_203: 21300406
+      UI5_204: 21300408
+      UI5_205: 21300410
+      UI5_206: 21300412
+      UI5_207: 21300414
+      UI5_208: 21300416
+      UI5_209: 21300418
+      UI5_21: 21300042
+      UI5_210: 21300420
+      UI5_211: 21300422
+      UI5_212: 21300424
+      UI5_213: 21300426
+      UI5_214: 21300428
+      UI5_215: 21300430
+      UI5_216: 21300432
+      UI5_217: 21300434
+      UI5_218: 21300436
+      UI5_219: 21300438
+      UI5_22: 21300044
+      UI5_220: 21300440
+      UI5_221: 21300442
+      UI5_222: 21300444
+      UI5_223: 21300446
+      UI5_224: 21300448
+      UI5_225: 21300450
+      UI5_226: 21300452
+      UI5_227: 21300454
+      UI5_228: 21300456
+      UI5_23: 21300046
+      UI5_24: 21300048
+      UI5_25: 21300050
+      UI5_26: 21300052
+      UI5_27: 21300054
+      UI5_28: 21300056
+      UI5_29: 21300058
+      UI5_3: 21300006
+      UI5_30: 21300060
+      UI5_31: 21300062
+      UI5_32: 21300064
+      UI5_33: 21300066
+      UI5_34: 21300068
+      UI5_35: 21300070
+      UI5_36: 21300072
+      UI5_37: 21300074
+      UI5_38: 21300076
+      UI5_39: 21300078
+      UI5_4: 21300008
+      UI5_40: 21300080
+      UI5_41: 21300082
+      UI5_42: 21300084
+      UI5_43: 21300086
+      UI5_44: 21300088
+      UI5_45: 21300090
+      UI5_46: 21300092
+      UI5_47: 21300094
+      UI5_48: 21300096
+      UI5_49: 21300098
+      UI5_5: 21300010
+      UI5_50: 21300100
+      UI5_51: 21300102
+      UI5_52: 21300104
+      UI5_53: 21300106
+      UI5_54: 21300108
+      UI5_55: 21300110
+      UI5_56: 21300112
+      UI5_57: 21300114
+      UI5_58: 21300116
+      UI5_59: 21300118
+      UI5_6: 21300012
+      UI5_60: 21300120
+      UI5_61: 21300122
+      UI5_62: 21300124
+      UI5_63: 21300126
+      UI5_64: 21300128
+      UI5_65: 21300130
+      UI5_66: 21300132
+      UI5_67: 21300134
+      UI5_68: 21300136
+      UI5_69: 21300138
+      UI5_7: 21300014
+      UI5_70: 21300140
+      UI5_71: 21300142
+      UI5_72: 21300144
+      UI5_73: 21300146
+      UI5_74: 21300148
+      UI5_75: 21300150
+      UI5_76: 21300152
+      UI5_77: 21300154
+      UI5_78: 21300156
+      UI5_79: 21300158
+      UI5_8: 21300016
+      UI5_80: 21300160
+      UI5_81: 21300162
+      UI5_82: 21300164
+      UI5_83: 21300166
+      UI5_84: 21300168
+      UI5_85: 21300170
+      UI5_86: 21300172
+      UI5_87: 21300174
+      UI5_88: 21300176
+      UI5_89: 21300178
+      UI5_9: 21300018
+      UI5_90: 21300180
+      UI5_91: 21300182
+      UI5_92: 21300184
+      UI5_93: 21300186
+      UI5_94: 21300188
+      UI5_95: 21300190
+      UI5_96: 21300192
+      UI5_97: 21300194
+      UI5_98: 21300196
+      UI5_99: 21300198
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
