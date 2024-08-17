@@ -1,6 +1,124 @@
 # TurnBasedBattle
 回合制战斗逻辑
 
+# 版本更新 2024/8/17
+### 1.升级到Unity2022 LTS版本兼容
+### 2.增加Addressables系统索引加载资源
+### 3.增加阵营概念，同阵营为友方单位，不同阵营各自为敌的玩法。
+### 4.优化调整技能目标的设计，原先的设计将技能目标数量也加入进去了，不好扩展和使用。现在优化为自己队伍的目标，同阵营的目标（包含自己队伍），敌方阵营目标（所有不和自己同阵营的所有阵营目标），技能的目标数量改为在编辑器设计技能的时候配置。
+### 5.优化了友方和敌方的概念。现在同阵营都为友方，其他阵营都为敌方，敌方可能存在多个阵营，他们也可能互为敌方。比如：现在demo中的四个队伍，第一个是自己的队伍，第四个是友方队伍，他们为同阵营的单位，而第二个和第三个队伍分别为两个不同阵营，则他们互为敌对势力同时也是玩家的敌对势力。
+### 6.调整场上队伍数量，最多可以同时存在四个队伍，可以设置每个队伍在场上第几个位置，索引格子分别从0-3对应左上，右上，右下，左下四个队伍所在区域。
+### 7.增加玩家控制英雄的技能释放为可控目标选择，其他队伍为自动释放技能，自动追踪目标对象。
+### 8.优化了战斗场景的设计，原先都在UI上实现的效果。现在改为战斗场景和UI分离，战斗场景为一个单独的设计，由StageCamera渲染，操作UI使用UI部分单独渲染。方便后续的场景更换等功能的实现。
+### 9.增加了HeroTeam（数据对象），HeroTeamMono（运行的实例对象）类的实现，HeroTeam是一个队伍的概念，现在的开始战斗的接口增加重载方法如下，每个HeroTeam包含上阵的英雄Hero数据，TeamIndex上阵在场景第几个格子，TeamGroup所属阵营名字，TeamType由自己控制的队伍还是NPC控制的队伍。HeroMono则是包含生成的HeroMono对象和其他的参数缓存，也就是运行时的实例对象。
+```C Sharp
+public async void StartBattle(List<HeroTeam> teams)
+{
+    ......
+}
+```
+### 10.引入了TimerManager,EventManager重构了部分逻辑的实现代码，采用了广播的方式进行各个模块之间的调用。
+### 11.HeroMono可以继承实现自己的自定义英雄表现效果了。下面是HeroMono基类实现的默认表现效果，可以继承之后实现自定义在各个实际的英雄表现效果。
+```C Sharp
+/// <summary>
+        /// 当这个英雄被选择的时候
+        /// </summary>
+        protected virtual void OnHeroChoose()
+        {
+            this.SpriteRender.color = Color.red;
+        }
+
+        /// <summary>
+        /// 当这个英雄可以被选择的时候
+        /// </summary>
+        protected virtual void OnHeroCanChoose()
+        {
+            this.SpriteRender.color = Color.green;
+        }
+
+        /// <summary>
+        /// 当这个英雄设置为不可选择的状态的时候
+        /// </summary>
+        protected virtual void OnHeroCannotChoose()
+        {
+            this.SpriteRender.color = Color.white;
+        }
+
+        /// <summary>
+        /// 当这个英雄是当前执行的英雄的时候
+        /// </summary>
+        protected virtual void OnHeroActioning()
+        {
+
+        }
+
+        /// <summary>
+        /// 当这个英雄被攻击的时候
+        /// </summary>
+        protected virtual void OnHeroAttacked(HeroMono attacker,BaseSkill skill)
+        {
+            //防御的时候是判断技能属于物理还是防御，然后叠加，然后检测是否有技能对此攻击技能有影响，还有buff的影响
+            SkillController.Instance.DefenseSkill(attacker, this, skill);
+            if(skill.SkillType == Global.SkillType.Respwan)
+            {
+                this.SpriteRender.enabled = true;
+            }
+            else
+            {
+                //添加被击高亮
+                this.SpriteRender.color = Color.red;
+                this.regScheduleOnce((t,p)=>{
+                    this.SpriteRender.color = Color.white;
+                },0.2f);
+            }
+        }
+
+        /// <summary>
+        /// 当这个英雄添加了新的buff的时候
+        /// </summary>
+        protected virtual void OnHeroAddBuff(Buff buff)
+        {
+            this.SpriteRender.color = buff.IsBuff ? Color.green : Color.gray;
+            this.regScheduleOnce((t,p)=>{
+                this.SpriteRender.color = Color.white;
+            },0.2f);
+        }
+
+        /// <summary>
+        /// 当这个英雄移除buff的时候
+        /// </summary>
+        protected virtual void OnHeroRemoveBuff(Buff buff)
+        {
+            this.SpriteRender.color = buff.IsBuff ? Color.yellow : Color.gray;
+            this.regScheduleOnce((t,p)=>{
+                this.SpriteRender.color = Color.white;
+            },0.2f);
+        }
+
+        /// <summary>
+        /// 当英雄的buff执行效果的时候
+        /// </summary>
+        /// <param name="buff"></param>
+        protected virtual void OnHeroBuffExcute(Buff buff)
+        {
+            this.SpriteRender.color = buff.IsBuff ? Color.green : Color.red;
+            this.regScheduleOnce((t,p)=>{
+                this.SpriteRender.color = Color.white;
+            },0.2f);
+        }
+
+        /// <summary>
+        /// 当这个英雄死亡的时候
+        /// </summary>
+        protected virtual void OnHeroDead()
+        {
+            this.SpriteRender.enabled = false;
+        }
+```
+
+# demo的表现效果以现在工程中的demo为准，现在的demo和早期demo的实现和表现效果已经完全不同了。
+
+
 回合制战斗系统功能说明和一些注意事项
 
 # 1.基础介绍
