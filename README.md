@@ -10,7 +10,7 @@
 ### 6.调整场上队伍数量，最多可以同时存在四个队伍，可以设置每个队伍在场上第几个位置，索引格子分别从0-3对应左上，右上，右下，左下四个队伍所在区域。
 ### 7.增加玩家控制英雄的技能释放为可控目标选择，其他队伍为自动释放技能，自动追踪目标对象。
 ### 8.优化了战斗场景的设计，原先都在UI上实现的效果。现在改为战斗场景和UI分离，战斗场景为一个单独的设计，由StageCamera渲染，操作UI使用UI部分单独渲染。方便后续的场景更换等功能的实现。
-### 9.增加了HeroTeam（数据对象），HeroTeamMono（运行的实例对象）类的实现，HeroTeam是一个队伍的概念，现在的开始战斗的接口增加重载方法如下，每个HeroTeam包含上阵的英雄Hero数据，TeamIndex上阵在场景第几个格子，TeamGroup所属阵营名字，TeamType由自己控制的队伍还是NPC控制的队伍。HeroMono则是包含生成的HeroMono对象和其他的参数缓存，也就是运行时的实例对象。
+### 9.增加了HeroTeam（数据对象），HeroTeamMono（运行的实例对象）类的实现，HeroTeam是一个队伍的概念，现在的开始战斗的接口增加重载方法如下，每个HeroTeam包含上阵的英雄Hero数据，TeamIndex上阵在场景第几个格子，TeamGroup所属阵营名字，TeamType由自己控制的队伍还是NPC控制的队伍。HeroTeamMono则是包含生成的HeroMono对象和其他的参数缓存，也就是运行时的实例对象。
 ```C Sharp
 public async void StartBattle(List<HeroTeam> teams)
 {
