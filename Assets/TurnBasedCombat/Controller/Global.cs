@@ -12,10 +12,6 @@ namespace King.TurnBasedCombat
         /// 表格存储路径
         /// </summary>
         public static string TablePath = Application.dataPath + "/TurnBasedCombat/Table/";
-        /// <summary>
-        /// 英雄头像存储路径
-        /// </summary>
-        public static string ICOPath = Application.dataPath + "/TurnBasedCombat/Resources/ICO/";
 
         /// <summary>
         /// 星级等级的枚举，可以根据项目需求进行扩展，可用于英雄星级物品星级等
@@ -94,6 +90,34 @@ namespace King.TurnBasedCombat
             /// 被攻击时
             /// </summary>
             Attacked = 7,
+            /// <summary>
+            /// 添加buff的时候
+            /// </summary>
+            AddBuff = 8,
+            /// <summary>
+            /// 移除buff的时候
+            /// </summary>
+            RemoveBuff = 9,
+            /// <summary>
+            /// 添加debuff的时候
+            /// </summary>
+            AddDebuff = 10,
+            /// <summary>
+            /// 移除debuff的时候
+            /// </summary>
+            RemoveDebuff = 11,
+            /// <summary>
+            /// buff生效的时候
+            /// </summary>
+            BuffAction = 12,
+            /// <summary>
+            /// debuff生效的时候
+            /// </summary>
+            DebuffAction = 13,
+            /// <summary>
+            /// 被控制的时候
+            /// </summary>
+            Controlled = 14,
         }
 
         /// <summary>
@@ -187,6 +211,26 @@ namespace King.TurnBasedCombat
             /// 增加最大魔法值的buff
             /// </summary>
             IncreaseMaxMagic = 10,
+            /// <summary>
+            /// 不能添加buff
+            /// </summary>
+            CannotAddBuff = 11,
+            /// <summary>
+            /// 不能移除buff
+            /// </summary>
+            CannotRemoveBuff = 12,
+            /// <summary>
+            /// buff不生效
+            /// </summary>
+            CannotBuffAction = 13,
+            /// <summary>
+            /// 控制buff，可以使用其他阵营的英雄
+            /// </summary>
+            Control = 14,
+            /// <summary>
+            /// 跳过回合
+            /// </summary>
+            SkipTurn = 15,
         }
 
         /// <summary>
@@ -215,153 +259,57 @@ namespace King.TurnBasedCombat
             /// </summary>
             None = 0,
             /// <summary>
-            /// 随机一个敌人
+            /// 活着的敌方阵营对象
             /// </summary>
-            OneEnemy = 1,
+            AliveEnemy = 1,
             /// <summary>
-            /// 随机两个敌人
+            /// 死亡的敌方阵营对象
             /// </summary>
-            TwoEnemy = 2,
+            DeadEnemy = 2,
             /// <summary>
-            /// 随机三个敌人
+            /// 不论死活的敌方阵营对象
             /// </summary>
-            ThreeEnemy = 3,
+            Enemy = 3,
             /// <summary>
-            /// 随机四个敌人
+            /// 还活着的自己的阵营的对象
             /// </summary>
-            FourEnemy = 4,
+            AliveMine = 4,
             /// <summary>
-            /// 随机五个敌人
+            /// 死亡的自己的阵营的对象
             /// </summary>
-            FiveEnemy = 5,
+            DeadMine = 5,
             /// <summary>
-            /// 全体敌人
+            /// 不论死活的自己的阵营的对象
             /// </summary>
-            AllEnemy = 6,
+            Mine = 6,
             /// <summary>
-            /// 只能是自身，即技能发起者
+            /// 活着的友方的阵营的对象
             /// </summary>
-            Self = 7,
+            AliveFriendly = 7,
             /// <summary>
-            /// 随机一个队友
+            /// 死亡的友方的阵营对象
             /// </summary>
-            OneSelf = 8,
+            DeadFriendly = 8,
             /// <summary>
-            /// 随机两个队友
+            /// 不论死活的友方的阵营对象
             /// </summary>
-            TwoSelf = 9,
+            Friendly = 9,
             /// <summary>
-            /// 随机三个队友
+            /// 只对当前英雄生效
             /// </summary>
-            ThreeSelf = 10,
+            Self = 10,
             /// <summary>
-            /// 随机四个队友
+            /// 所有活着的英雄，不管阵营归属
             /// </summary>
-            FourSelf = 11,
+            AllAlive = 11,
             /// <summary>
-            /// 随机五个队友
+            /// 所有死亡的英雄，不管阵营归属
             /// </summary>
-            FiveSelf = 12,
+            AllDead = 12,
             /// <summary>
-            /// 全体队友
+            /// 所有的不论死活的英雄不管阵营归属
             /// </summary>
-            AllSelf = 13,
-            /// <summary>
-            /// 随机一个敌人
-            /// </summary>
-            OneEnemyWithDead = 14,
-            /// <summary>
-            /// 随机两个敌人
-            /// </summary>
-            TwoEnemyWithDead = 15,
-            /// <summary>
-            /// 随机三个敌人
-            /// </summary>
-            ThreeEnemyWithDead = 16,
-            /// <summary>
-            /// 随机四个敌人
-            /// </summary>
-            FourEnemyWithDead = 17,
-            /// <summary>
-            /// 随机五个敌人
-            /// </summary>
-            FiveEnemyWithDead = 18,
-            /// <summary>
-            /// 全体敌人
-            /// </summary>
-            AllEnemyWithDead = 19,
-            /// <summary>
-            /// 随机一个队友
-            /// </summary>
-            OneSelfWithDead = 20,
-            /// <summary>
-            /// 随机两个队友
-            /// </summary>
-            TwoSelfWithDead = 21,
-            /// <summary>
-            /// 随机三个队友
-            /// </summary>
-            ThreeSelfWithDead = 22,
-            /// <summary>
-            /// 随机四个队友
-            /// </summary>
-            FourSelfWithDead = 23,
-            /// <summary>
-            /// 随机五个队友
-            /// </summary>
-            FiveSelfWithDead = 24,
-            /// <summary>
-            /// 全体队友
-            /// </summary>
-            AllSelfWithDead = 25,
-            /// <summary>
-            /// 随机一个敌人
-            /// </summary>
-            OneDeadEnemy = 26,
-            /// <summary>
-            /// 随机两个敌人
-            /// </summary>
-            TwoDeadEnemy = 27,
-            /// <summary>
-            /// 随机三个敌人
-            /// </summary>
-            ThreeDeadEnemy = 28,
-            /// <summary>
-            /// 随机四个敌人
-            /// </summary>
-            FourDeadEnemy = 29,
-            /// <summary>
-            /// 随机五个敌人
-            /// </summary>
-            FiveDeadEnemy = 30,
-            /// <summary>
-            /// 全体敌人
-            /// </summary>
-            AllDeadEnemy = 31,
-            /// <summary>
-            /// 随机一个队友
-            /// </summary>
-            OneDeadSelf = 32,
-            /// <summary>
-            /// 随机两个队友
-            /// </summary>
-            TwoDeadSelf = 33,
-            /// <summary>
-            /// 随机三个队友
-            /// </summary>
-            ThreeDeadSelf = 34,
-            /// <summary>
-            /// 随机四个队友
-            /// </summary>
-            FourDeadSelf = 35,
-            /// <summary>
-            /// 随机五个队友
-            /// </summary>
-            FiveDeadSelf = 36,
-            /// <summary>
-            /// 全体队友
-            /// </summary>
-            AllDeadSelf = 37,
+            All = 13
         }
     }
 }

@@ -53,6 +53,10 @@ namespace King.TurnBasedCombat
         /// buff持续剩余回合数
         /// </summary>
         public int StayTurn { get; set; }
+        /// <summary>
+        /// buff的释放来源
+        /// </summary>
+        public HeroMono BuffOwner { get; set; }
 
         /// <summary>
         /// 空的构造函数
@@ -119,9 +123,10 @@ namespace King.TurnBasedCombat
         /// <summary>
         /// 可能需要的初始化函数,可以在使用buff的时候调用
         /// </summary>
-        public void Init() 
+        public void Init(HeroMono owner) 
         {
             StayTurn = this.ChangeHeroProperty.Turn;
+            BuffOwner = owner;
         }
 
         /// <summary>

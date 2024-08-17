@@ -11,26 +11,11 @@ namespace King.TurnBasedCombat
         /// </summary>
 		void Init();
 
-		/// <summary>
-        /// 创建UI上的所有参与战斗的英雄Mono对象并向BattleController注册这个对象
+        /// <summary>
+        /// 创建UI上所有参与战斗的英雄Mono对象
         /// </summary>
-        /// <param name="player">玩家队伍数据</param>
-        /// <param name="enemy">敌人队伍数据</param>
-		void CreateHeros(List<Hero> player,List<Hero> enemy);
-
-
-		/// <summary>
-        /// 注册玩家英雄UI信息
-        /// </summary>
-        /// <param name="hero">注册的英雄对象</param>
-		void RegisterPlayerHero(HeroMono hero);
-		
-
-		/// <summary>
-        /// 注册敌人英雄UI信息
-        /// </summary>
-        /// <param name="hero">注册的英雄对象</param>
-        void RegisterEnemyHero(HeroMono hero);
+        /// <param name="teams"></param>
+        void CreateHeros(List<HeroTeamMono> teams);
 
 		/// <summary>
         /// 刷新UI

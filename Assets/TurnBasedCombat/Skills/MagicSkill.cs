@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
+using System.Threading.Tasks;
 
 namespace King.TurnBasedCombat
 {
@@ -23,10 +25,10 @@ namespace King.TurnBasedCombat
     /// </summary>
     public class MagicSkill : BaseSkill
     {
-        public override void Init(Skill skill, HeroMono hero)
+        public override async Task Init(Skill skill, HeroMono hero)
         {
             // SkillEffects.Add(Resources.Load<GameObject>("SkillEffect/MagicSkill/effect"));
-            base.Init(skill, hero);
+            await base.Init(skill, hero);
         }
 
         public override bool CanUseSkill()
@@ -132,14 +134,16 @@ namespace King.TurnBasedCombat
         public override void SetSkillEffect(HeroMono attacker, List<HeroMono> targets, System.Action callback)
         {
             SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].transform.position = attacker.HeroPosition;
-            if (attacker.IsPlayerHero)
+            Vector3 scale = SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].transform.localScale;
+            if (attacker.TeamIndex == 0 || attacker.TeamIndex == 3)
             {
-                SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].transform.localScale = new Vector3(-1f, 1f, 1f);
+                scale.x = Mathf.Abs(scale.x) * -1f;
             }
             else
             {
-                SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].transform.localScale = new Vector3(1f, 1f, 1f);
+                scale.x = Mathf.Abs(scale.x);
             }
+            SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].transform.localScale = scale;
             StartCoroutine(SkillController.Instance.MagicSkillEffect(GetSkillIDAndLevel(),SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0], attacker.AttackPosition.position, targets[0].HeroPosition,3f,0f,0f, callback));
         }
     }

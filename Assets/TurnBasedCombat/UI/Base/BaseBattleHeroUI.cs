@@ -1,3 +1,4 @@
+using AUIFramework;
 using UnityEngine;
 
 namespace King.TurnBasedCombat
@@ -5,7 +6,7 @@ namespace King.TurnBasedCombat
     /// <summary>
     /// 每个英雄对应的UI上的元素存储
     /// </summary>
-    public class BaseBattleHeroUI : MonoBehaviour , IBattleHeroUI
+    public class BaseBattleHeroUI : UIComp , IBattleHeroUI
     {
         /// <summary>
         /// 战斗界面英雄UI的初始化函数

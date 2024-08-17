@@ -47,9 +47,17 @@ namespace King.TurnBasedCombat
         /// </summary>
         public Global.BuffActiveState ActiveState;
         /// <summary>
-        /// 技能的目标
+        /// 技能的目标类型
         /// </summary>
         public Global.SkillTargetType TargetType;
+        /// <summary>
+        /// 技能的目标数量
+        /// </summary>
+        public int TargetNumber;
+        /// <summary>
+        /// 目标是否包含被控的英雄对象
+        /// </summary>
+        public bool TargetContainsControlledHero;
         /// <summary>
         /// 技能等级
         /// </summary>
@@ -129,6 +137,8 @@ namespace King.TurnBasedCombat
             SkillEffectPaths.AddRange(temps[offset].ToString().Split(new string[] { "|" }, System.StringSplitOptions.RemoveEmptyEntries)); offset++;
             ActiveState = (Global.BuffActiveState)int.Parse(temps[offset]); offset++;
             TargetType = (Global.SkillTargetType)int.Parse(temps[offset]); offset++;
+            TargetNumber = int.Parse(temps[offset]); offset++;
+            TargetContainsControlledHero = temps[offset].ToString() == "0" ? false : true; offset++;
             Level = int.Parse(temps[offset]); offset++;
             CostHeroProperty = new HeroProperty(temps[offset]); offset++;
             DelayTurn = int.Parse(temps[offset]); offset++;
@@ -173,6 +183,8 @@ namespace King.TurnBasedCombat
             result += temp + "\t";
             result += (int)this.ActiveState + "\t";
             result += (int)this.TargetType + "\t";
+            result += this.TargetNumber + "\t";
+            result += (this.TargetContainsControlledHero ? "1" : "0") + "\t";
             result += this.Level + "\t";
             result += this.CostHeroProperty.ToString() + "\t";
             result += this.DelayTurn + "\t";

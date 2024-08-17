@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using King.Tools;
-using UnityEngine.UI;
+using AEventManager;
+using static King.TurnBasedCombat.EventsConst;
 
 namespace King.TurnBasedCombat
 {
@@ -28,13 +28,9 @@ namespace King.TurnBasedCombat
         }
         #endregion
         /// <summary>
-        /// 当前使用的战斗UI
+        /// 战斗场景的控制对象
         /// </summary>
-        public BaseBattleUI CurrentBattleUI;
-        /// <summary>
-        /// 当前使用的用户输入控制器
-        /// </summary>
-        public BaseInputController CurrentInputController;
+        public BattleStage BattleStage;
         /// <summary>
         /// 是否自动战斗
         /// </summary>
@@ -50,13 +46,17 @@ namespace King.TurnBasedCombat
         /// </summary>
         private Global.CombatSystemType _SystemState;
         /// <summary>
-        /// 当前进入战斗的玩家队伍信息
+        /// 所有参与到战斗中的队伍信息
         /// </summary>
-        private List<HeroMono> _PlayerTeam;
+        private List<HeroTeamMono> _AllTeams;
         /// <summary>
-        /// 当前进入战斗的敌人队伍信息
+        /// 当前参与战斗的所有阵营组数据
         /// </summary>
-        private List<HeroMono> _EnemyTeam;
+        private List<string> _AllTeamGroups;
+        /// <summary>
+        /// 当前玩家所在的阵营组
+        /// </summary>
+        private string _MineTeamGroup;
         /// <summary>
         /// 当前剩余的可进行攻击的英雄的队列
         /// </summary>
@@ -118,18 +118,9 @@ namespace King.TurnBasedCombat
         /// </summary>
         void Init()
         {
-            if (CurrentBattleUI == null)
-            {
-                CurrentBattleUI = GetComponent<BaseBattleUI>();
-                if (CurrentBattleUI == null)
-                {
-                    CurrentBattleUI = this.gameObject.AddComponent<BaseBattleUI>();
-                }
-                DebugLog(LogType.ERROR,"Not found Battle UI,Use BaseBattleUI instead!");
-            }
             _SystemState = Global.CombatSystemType.ExitSystem;
-            _PlayerTeam = new List<HeroMono>();
-            _EnemyTeam = new List<HeroMono>();
+            _AllTeams = new List<HeroTeamMono>();
+            _AllTeamGroups = new List<string>();
             _AttackList = new List<HeroMono>();
             _CurTurnHero = null;
             _IsBattling = false;
@@ -143,6 +134,8 @@ namespace King.TurnBasedCombat
         /// </summary>
         void InitSystem()
         {
+            //广播系统初始化
+            EventManager.Instance.TriggerEvent(EventsConst.OnInitSystem);
             //回合数重置
             _TurnNumber = 0;
             //播放一些开场动画之类的，或者需要穿插剧情，就在这里进行判断
@@ -165,8 +158,10 @@ namespace King.TurnBasedCombat
             GetMaxSpeedHero();
             //增加一个回合数
             _TurnNumber += 1;
+            //广播回合开始之前
+            EventManager.Instance.TriggerEvent(EventsConst.OnBeforeAction,new CommonHeroMonoEventArgs(_CurTurnHero));
             //显示当前回合英雄高亮
-            CurrentBattleUI.SelectHero(_CurTurnHero);
+            // CurrentBattleUI.SelectHero(_CurTurnHero);
             //接着判断一下当前回合的英雄buff或者debuff有没有起作用的，需要再次处理
             _CurTurnHero.ExcuteBuff(Global.BuffActiveState.BeforeAction);
             //如果执行完buff操作之后，英雄血量变空，则进入下一个准备开始阶段
@@ -214,23 +209,12 @@ namespace King.TurnBasedCombat
         /// </summary>
         void Actioning()
         {
-            //出去当前英雄的其他英雄所有技能CD和蓄力进行减少
-            //for (int i = 0; i < _PlayerTeam.Count; i++)
-            //{
-            //    if (_PlayerTeam[i] != _CurTurnHero)
-            //    {
-            //        _PlayerTeam[i].CoolDownSkillCD(1);
-            //        _PlayerTeam[i].CoolDownSkillDelay(1);
-            //    }
-            //}
-            //for (int i = 0; i < _EnemyTeam.Count; i++)
-            //{
-            //    if (_EnemyTeam[i] != _CurTurnHero)
-            //    {
-            //        _EnemyTeam[i].CoolDownSkillCD(1);
-            //        _EnemyTeam[i].CoolDownSkillDelay(1);
-            //    }
-            //}
+            //取消所有英雄的可选
+            this.DisableChooseHeroes();
+            //英雄开始执行回合
+            _CurTurnHero.HeroActioning();
+            //广播回合执行的时候
+            EventManager.Instance.TriggerEvent(EventsConst.OnActioning);
             //冷却一回合技能CD或者蓄力冷却一回合
             _CurTurnHero.CoolDownSkillCD(1);
             BaseSkill skill = _CurTurnHero.CoolDownSkillDelay(1);
@@ -251,10 +235,11 @@ namespace King.TurnBasedCombat
             {
                 //如果当前没有蓄力技能释放
                 //如果是玩家的回合,并且不是自动战斗，则将操作交给玩家
-                if (_CurTurnHero.IsPlayerHero && !IsAutoBattle)
+                if (_CurTurnHero.IsControlledByMine() && !IsAutoBattle)
                 {
                     //等待玩家的输入
-                    CurrentInputController.WaitForInput(_CurTurnHero);
+                    // CurrentInputController.WaitForInput(_CurTurnHero);
+                    EventManager.Instance.TriggerEvent(EventsConst.OnWaitingPlayerInput,new CommonHeroMonoEventArgs(_CurTurnHero));
                 }
                 else
                 {
@@ -269,6 +254,7 @@ namespace King.TurnBasedCombat
         /// </summary>
         void AfterAction()
         {
+            
             StartCoroutine(WaitForNext(SystemSetting.BattlePerTurnEndGapTime, () =>
             {
                 //首先判断一下当前回合的英雄buff或者debuff有没有起作用的，需要再次处理
@@ -277,8 +263,10 @@ namespace King.TurnBasedCombat
                 if (!_CurTurnHero.ExcuteSkill(Global.BuffActiveState.AfterAction))
                 {
                     //关闭英雄高亮
-                    CurrentBattleUI.DeselectHero(_CurTurnHero);
+                    // CurrentBattleUI.DeselectHero(_CurTurnHero);
                     DebugLog(LogType.INFO,"AfterAction");
+                    //广播回合执行完毕的时候
+                    EventManager.Instance.TriggerEvent(EventsConst.OnAfterAction,new CommonHeroMonoEventArgs(_CurTurnHero));
                     //切换状态
                     ToActionState();
                 }
@@ -290,14 +278,13 @@ namespace King.TurnBasedCombat
         /// </summary>
         void CombatEnd()
         {
-            if (CheckPlayerFailed())
+            string winTeamGroup = CheckWinTeamGroup();
+            if(!string.IsNullOrEmpty(winTeamGroup))
             {
-                DebugLog(LogType.INFO,"玩家失败");
+                DebugLog(LogType.INFO, $"小队{winTeamGroup}胜利");
             }
-            else if (CheckEnemyFailed())
-            {
-                DebugLog(LogType.INFO,"玩家胜利");
-            }
+            //广播战斗结束的时候
+            EventManager.Instance.TriggerEvent(EventsConst.OnCombatBattleEnd,new CommonCombatEndEventArgs(winTeamGroup));
             //战斗结束，根据胜利失败显示结算画面
             ToActionState();
         }
@@ -311,6 +298,8 @@ namespace King.TurnBasedCombat
             Clear();
             //并重置战斗标记
             _IsBattling = false;
+            //广播退出战斗系统的时候
+            EventManager.Instance.TriggerEvent(EventsConst.OnExitSystem);
         }
 
         void Update()
@@ -348,36 +337,226 @@ namespace King.TurnBasedCombat
         /// </summary>
         /// <param name="player">参与战斗的玩家英雄数据</param>
         /// <param name="enemy">参与战斗的敌人英雄数据</param>
-        public void StartBattle(List<Hero> player, List<Hero> enemy)
+        public async void StartBattle(List<Hero> player, List<Hero> enemy)
         {
-            //初始化BattleUI
-            CurrentBattleUI.Init();
-            //创建所有的参与战斗的英雄UI
-            CurrentBattleUI.CreateHeros(player, enemy);
+            List<HeroTeam> heroTeams = new List<HeroTeam>
+            {
+                new HeroTeam(player, HeroTeamType.Mine, 0,HeroTeam.MineTeamGroup),
+                new HeroTeam(enemy, HeroTeamType.NPC, 1,HeroTeam.EnemyTeamGroup)
+            };
+            _AllTeams.Clear();
+            _AllTeamGroups.Clear();
+            for(int i = 0;i<heroTeams.Count;i++)
+            {
+                HeroTeamMono teamMono = await this.BattleStage.LoadHeroes(heroTeams[i]);
+                this._AllTeams.Add(teamMono);
+                if(!_AllTeamGroups.Contains(teamMono.TeamGroup))
+                {
+                    _AllTeamGroups.Add(teamMono.TeamGroup);
+                }
+                if(teamMono.TeamType == HeroTeamType.Mine)
+                {
+                    _MineTeamGroup = teamMono.TeamGroup;
+                }
+            }
             //进入到战斗系统初始化阶段
             _SystemState = Global.CombatSystemType.InitSystem;
             _IsExcuteAction = false;
             _IsBattling = true;
+            //广播一场战斗开始
+            EventManager.Instance.TriggerEvent(EventsConst.OnCombatBattleStart,new CombatBattleStartEventArgs(this._AllTeams));
         }
 
         /// <summary>
-        /// 向控制器注册玩家英雄的Mono对象
+        /// 开始一场战斗，最多配置四个阵营的数据
         /// </summary>
-        /// <param name="hero"></param>
-        public void RegisterPlayerHeroMono(HeroMono hero)
+        /// <param name="teams"></param>
+        public async void StartBattle(List<HeroTeam> teams)
         {
-            _PlayerTeam.Add(hero);
+            _AllTeams.Clear();
+            _AllTeamGroups.Clear();
+            for(int i = 0;i<teams.Count;i++)
+            {
+                HeroTeamMono teamMono = await this.BattleStage.LoadHeroes(teams[i]);
+                this._AllTeams.Add(teamMono);
+                if(!_AllTeamGroups.Contains(teamMono.TeamGroup))
+                {
+                    _AllTeamGroups.Add(teamMono.TeamGroup);
+                }
+                if(teamMono.TeamType == HeroTeamType.Mine)
+                {
+                    _MineTeamGroup = teamMono.TeamGroup;
+                }
+            }
+            //进入到战斗系统初始化阶段
+            _SystemState = Global.CombatSystemType.InitSystem;
+            _IsExcuteAction = false;
+            _IsBattling = true;
+            //广播一场战斗开始
+            EventManager.Instance.TriggerEvent(EventsConst.OnCombatBattleStart,new CombatBattleStartEventArgs(this._AllTeams));
         }
-
 
         /// <summary>
-        /// 向控制器注册敌人英雄的Mono对象
+        /// 获取传入英雄是被那个阵营在操控
         /// </summary>
         /// <param name="hero"></param>
-        public void RegisterEnemyHeroMono(HeroMono hero)
+        /// <returns></returns>
+        public HeroTeamMono GetHeroControlledBy(HeroMono hero)
         {
-            _EnemyTeam.Add(hero);
+            for(int i = 0;i<_AllTeams.Count;i++)
+            {
+                if(_AllTeams[i].IsControledHero(hero))
+                {
+                    return _AllTeams[i];
+                }
+            }
+            return null;
         }
+
+        /// <summary>
+        /// 获取指定阵营组的指定阵营分类的所有阵营组列表
+        /// </summary>
+        /// <param name="teamGroup">哪个阵营的</param>
+        /// <param name="teamGroupType">什么阵营分类</param>
+        /// <returns></returns>
+        List<string> GetTeamGroups(string teamGroup,TeamGroupType teamGroupType)
+        {
+            List<string> result = new List<string>();
+            for (int i = 0; i < _AllTeams.Count; i++)
+            {
+                if((teamGroupType == TeamGroupType.SameTeamGroup && _AllTeams[i].TeamGroup == teamGroup) || teamGroupType == TeamGroupType.AllTeamGroup)
+                {
+                    result.Add(_AllTeams[i].TeamGroup);
+                }
+                else if((teamGroupType == TeamGroupType.NotSameTeamGroup && _AllTeams[i].TeamGroup != teamGroup) || teamGroupType == TeamGroupType.AllTeamGroup)
+                {
+                    result.Add(_AllTeams[i].TeamGroup);
+                }
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 获取指定阵营中所有活着的英雄对象
+        /// </summary>
+        /// <param name="teamGroups">目标阵营类型</param>
+        /// <param name="containOther">是否包含被控制的其他角色</param>
+        /// <returns></returns>
+        List<HeroMono> GetTeamsAlive(List<string> teamGroups,bool containOther = true)
+        {
+            List<HeroMono> result = new List<HeroMono>();
+            for (int i = 0; i < _AllTeams.Count; i++)
+            {
+                if(teamGroups.Contains(_AllTeams[i].TeamGroup))
+                {
+                    List<HeroMono> heroes = _AllTeams[i].GetTeamAlive(containOther);
+                    for(int j = 0; j < heroes.Count; j++)
+                    {
+                        if(!result.Contains(heroes[j]))
+                        {
+                            result.Add(heroes[j]);
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 获取所有友方包含自己队列中剩余的存活英雄对象
+        /// </summary>
+        /// <returns></returns>
+        List<HeroMono> GetFriendlyTeamsAlive(string teamGroup,bool containOther = true)
+        {
+            List<string> groups = GetTeamGroups(teamGroup,TeamGroupType.SameTeamGroup);
+            return GetTeamsAlive(groups,containOther);
+        }
+
+        /// <summary>
+        /// 获取敌方队伍中诉讼有剩余的存货英雄
+        /// </summary>
+        /// <param name="containOther">是否包含被控的英雄</param>
+        /// <returns></returns>
+        List<HeroMono> GetEnemyTeamsAlive(string teamGroup,bool containOther = true)
+        {
+            List<string> groups = GetTeamGroups(teamGroup,TeamGroupType.NotSameTeamGroup);
+            return GetTeamsAlive(groups,containOther);
+        }
+
+        /// <summary>
+        /// 获取指定阵营死亡的英雄
+        /// </summary>
+        /// <param name="teamTypes"></param>
+        /// <param name="containOther">是否包含其他阵营被控制的英雄</param>
+        /// <returns></returns>
+        List<HeroMono> GetTeamsDead(List<string> teamGroups,bool containOther = true)
+        {
+            List<HeroMono> result = new List<HeroMono>();
+            for (int i = 0; i < _AllTeams.Count; i++)
+            {
+                if(teamGroups.Contains(_AllTeams[i].TeamGroup))
+                {
+                    List<HeroMono> heroes = _AllTeams[i].GetTeamDead(containOther);
+                    for(int j = 0; j < heroes.Count; j++)
+                    {
+                        if(!result.Contains(heroes[j]))
+                        {
+                            result.Add(heroes[j]);
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 获取友方包含自己阵营的死亡英雄
+        /// </summary>
+        /// <param name="containOther"></param>
+        /// <returns></returns>
+        List<HeroMono> GetFriendlyTeamsDead(string teamGroup,bool containOther = true)
+        {
+            List<string> groups = GetTeamGroups(teamGroup,TeamGroupType.SameTeamGroup);
+            return GetTeamsDead(groups,containOther);
+        }
+
+        /// <summary>
+        /// 获取敌方阵营的死亡英雄
+        /// </summary>
+        /// <param name="containOther"></param>
+        /// <returns></returns>
+        List<HeroMono> GetEnemyTeamsDead(string teamGroup,bool containOther = true)
+        {
+            List<string> groups = GetTeamGroups(teamGroup,TeamGroupType.SameTeamGroup);
+            return GetTeamsDead(groups,containOther);
+        }
+
+        /// <summary>
+        /// 获取指定阵营的不论生死的英雄列表
+        /// </summary>
+        /// <param name="teamTypes"></param>
+        /// <param name="containOther"></param>
+        /// <returns></returns>
+        List<HeroMono> GetTeamsHero(List<string> teamGroups, bool containOther = true)
+        {
+            List<HeroMono> result = new List<HeroMono>();
+            for (int i = 0; i < _AllTeams.Count; i++)
+            {
+                if(teamGroups.Contains(_AllTeams[i].TeamGroup))
+                {
+                    List<HeroMono> heroes = _AllTeams[i].GetTeamHero(containOther);
+                    for(int j = 0; j < heroes.Count; j++)
+                    {
+                        if(!result.Contains(heroes[j]))
+                        {
+                            result.Add(heroes[j]);
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
 
         /// <summary>
         /// 获取当前技能的目标对象列表
@@ -385,168 +564,130 @@ namespace King.TurnBasedCombat
         /// <param name="attacker">技能发起者</param>
         /// <param name="skillTarget">技能目标类型</param>
         /// <returns>返回目标对象列表</returns>
-        public List<HeroMono> SkillTarget(HeroMono attacker, Global.SkillTargetType skillTarget)
+        public List<HeroMono> SkillTarget(HeroMono attacker, Global.SkillTargetType skillTarget,int targetNumber,bool containsOther)
         {
             List<HeroMono> result = new List<HeroMono>();
+            HeroTeamMono heroTeam = GetHeroControlledBy(attacker);
             switch (skillTarget)
             {
                 case Global.SkillTargetType.None:
                     break;
-                case Global.SkillTargetType.OneEnemy:
-                    result.AddRange(GetAliveTarget(!attacker.IsPlayerHero, 1));
+                case Global.SkillTargetType.AliveEnemy:
+                    result.AddRange(GetAliveTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.NotSameTeamGroup),targetNumber,containsOther));
                     break;
-                case Global.SkillTargetType.TwoEnemy:
-                    result.AddRange(GetAliveTarget(!attacker.IsPlayerHero, 2));
+                case Global.SkillTargetType.DeadEnemy:
+                    result.AddRange(GetDeadTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.NotSameTeamGroup),targetNumber,containsOther));
                     break;
-                case Global.SkillTargetType.ThreeEnemy:
-                    result.AddRange(GetAliveTarget(!attacker.IsPlayerHero, 3));
+                case Global.SkillTargetType.Enemy:
+                    result.AddRange(GetTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.NotSameTeamGroup),targetNumber,containsOther));
                     break;
-                case Global.SkillTargetType.FourEnemy:
-                    result.AddRange(GetAliveTarget(!attacker.IsPlayerHero, 4));
+                case Global.SkillTargetType.AliveMine:
+                    result.AddRange(GetAliveTargetByHeroTeam(heroTeam,targetNumber,containsOther));
                     break;
-                case Global.SkillTargetType.FiveEnemy:
-                    result.AddRange(GetAliveTarget(!attacker.IsPlayerHero, 5));
+                case Global.SkillTargetType.DeadMine:
+                    result.AddRange(GetDeadTargetByHeroTeam(heroTeam,targetNumber,containsOther));
                     break;
-                case Global.SkillTargetType.AllEnemy:
-                    if (attacker.IsPlayerHero)
-                    {
-                        result.AddRange(GetEnemyTeamAlive());
-                    }
-                    else
-                    {
-                        result.AddRange(GetPlayerTeamAlive());
-                    }
+                case Global.SkillTargetType.Mine:
+                    result.AddRange(GetTargetHerosByHeroTeam(heroTeam,targetNumber,containsOther));
+                    break;
+                case Global.SkillTargetType.AliveFriendly:
+                    result.AddRange(GetAliveTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.SameTeamGroup),targetNumber,containsOther));
+                    break;
+                case Global.SkillTargetType.DeadFriendly:
+                    result.AddRange(GetDeadTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.SameTeamGroup),targetNumber,containsOther));
+                    break;
+                case Global.SkillTargetType.Friendly:
+                    result.AddRange(GetTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.SameTeamGroup),targetNumber,containsOther));
                     break;
                 case Global.SkillTargetType.Self:
                     result.Add(attacker);
                     break;
-                case Global.SkillTargetType.OneSelf:
-                    result.AddRange(GetAliveTarget(attacker.IsPlayerHero, 1));
+                case Global.SkillTargetType.AllAlive:
+                    result.AddRange(GetAliveTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.AllTeamGroup),targetNumber,containsOther));
                     break;
-                case Global.SkillTargetType.TwoSelf:
-                    result.AddRange(GetAliveTarget(attacker.IsPlayerHero, 2));
+                case Global.SkillTargetType.AllDead:
+                    result.AddRange(GetDeadTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.AllTeamGroup),targetNumber,containsOther));
                     break;
-                case Global.SkillTargetType.ThreeSelf:
-                    result.AddRange(GetAliveTarget(attacker.IsPlayerHero, 3));
-                    break;
-                case Global.SkillTargetType.FourSelf:
-                    result.AddRange(GetAliveTarget(attacker.IsPlayerHero, 4));
-                    break;
-                case Global.SkillTargetType.FiveSelf:
-                    result.AddRange(GetAliveTarget(attacker.IsPlayerHero, 5));
-                    break;
-                case Global.SkillTargetType.AllSelf:
-                    if (attacker.IsPlayerHero)
-                    {
-                        result.AddRange(GetPlayerTeamAlive());
-                    }
-                    else
-                    {
-                        result.AddRange(GetEnemyTeamAlive());
-                    }
-                    break;
-                case Global.SkillTargetType.OneEnemyWithDead:
-                    result.AddRange(GetTarget(!attacker.IsPlayerHero, 1));
-                    break;
-                case Global.SkillTargetType.TwoEnemyWithDead:
-                    result.AddRange(GetTarget(!attacker.IsPlayerHero, 2));
-                    break;
-                case Global.SkillTargetType.ThreeEnemyWithDead:
-                    result.AddRange(GetTarget(!attacker.IsPlayerHero, 3));
-                    break;
-                case Global.SkillTargetType.FourEnemyWithDead:
-                    result.AddRange(GetTarget(!attacker.IsPlayerHero, 4));
-                    break;
-                case Global.SkillTargetType.FiveEnemyWithDead:
-                    result.AddRange(GetTarget(!attacker.IsPlayerHero, 5));
-                    break;
-                case Global.SkillTargetType.AllEnemyWithDead:
-                    if (!attacker.IsPlayerHero)
-                    {
-                        result.AddRange(_PlayerTeam);
-                    }
-                    else
-                    {
-                        result.AddRange(_EnemyTeam);
-                    }
-                    break;
-                case Global.SkillTargetType.OneSelfWithDead:
-                    result.AddRange(GetTarget(attacker.IsPlayerHero, 1));
-                    break;
-                case Global.SkillTargetType.TwoSelfWithDead:
-                    result.AddRange(GetTarget(attacker.IsPlayerHero, 2));
-                    break;
-                case Global.SkillTargetType.ThreeSelfWithDead:
-                    result.AddRange(GetTarget(attacker.IsPlayerHero, 3));
-                    break;
-                case Global.SkillTargetType.FourSelfWithDead:
-                    result.AddRange(GetTarget(attacker.IsPlayerHero, 4));
-                    break;
-                case Global.SkillTargetType.FiveSelfWithDead:
-                    result.AddRange(GetTarget(attacker.IsPlayerHero, 5));
-                    break;
-                case Global.SkillTargetType.AllSelfWithDead:
-                    if (attacker.IsPlayerHero)
-                    {
-                        result.AddRange(_PlayerTeam);
-                    }
-                    else
-                    {
-                        result.AddRange(_EnemyTeam);
-                    }
-                    break;
-                case Global.SkillTargetType.OneDeadEnemy:
-                    result.AddRange(GetDeadTarget(!attacker.IsPlayerHero, 1));
-                    break;
-                case Global.SkillTargetType.TwoDeadEnemy:
-                    result.AddRange(GetDeadTarget(!attacker.IsPlayerHero, 2));
-                    break;
-                case Global.SkillTargetType.ThreeDeadEnemy:
-                    result.AddRange(GetDeadTarget(!attacker.IsPlayerHero, 3));
-                    break;
-                case Global.SkillTargetType.FourDeadEnemy:
-                    result.AddRange(GetDeadTarget(!attacker.IsPlayerHero, 4));
-                    break;
-                case Global.SkillTargetType.FiveDeadEnemy:
-                    result.AddRange(GetDeadTarget(!attacker.IsPlayerHero, 5));
-                    break;
-                case Global.SkillTargetType.AllDeadEnemy:
-                    if (!attacker.IsPlayerHero)
-                    {
-                        result.AddRange(GetPlayerTeamDead());
-                    }
-                    else
-                    {
-                        result.AddRange(GetEnemyTeamDead());
-                    }
-                    break;
-                case Global.SkillTargetType.OneDeadSelf:
-                    result.AddRange(GetDeadTarget(attacker.IsPlayerHero, 1));
-                    break;
-                case Global.SkillTargetType.TwoDeadSelf:
-                    result.AddRange(GetDeadTarget(attacker.IsPlayerHero, 2));
-                    break;
-                case Global.SkillTargetType.ThreeDeadSelf:
-                    result.AddRange(GetDeadTarget(attacker.IsPlayerHero, 3));
-                    break;
-                case Global.SkillTargetType.FourDeadSelf:
-                    result.AddRange(GetDeadTarget(attacker.IsPlayerHero, 4));
-                    break;
-                case Global.SkillTargetType.FiveDeadSelf:
-                    result.AddRange(GetDeadTarget(attacker.IsPlayerHero, 5));
-                    break;
-                case Global.SkillTargetType.AllDeadSelf:
-                    if (attacker.IsPlayerHero)
-                    {
-                        result.AddRange(GetPlayerTeamDead());
-                    }
-                    else
-                    {
-                        result.AddRange(GetEnemyTeamDead());
-                    }
+                case Global.SkillTargetType.All:
+                    result.AddRange(GetTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.AllTeamGroup),targetNumber,containsOther));
                     break;
             }
             return result;
+        }
+
+        /// <summary>
+        /// 高亮某个英雄使用技能的所有可选目标
+        /// </summary>
+        /// <param name="attacker"></param>
+        /// <param name="skillTarget"></param>
+        /// <param name="targetNumber"></param>
+        /// <param name="containsOther"></param>
+        public void HighlightTargets(HeroMono attacker, Global.SkillTargetType skillTarget,bool containsOther)
+        {
+            List<HeroMono> result = new List<HeroMono>();
+            HeroTeamMono heroTeam = GetHeroControlledBy(attacker);
+            switch (skillTarget)
+            {
+                case Global.SkillTargetType.None:
+                    break;
+                case Global.SkillTargetType.AliveEnemy:
+                    result.AddRange(GetAliveTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.NotSameTeamGroup),99999,containsOther));
+                    break;
+                case Global.SkillTargetType.DeadEnemy:
+                    result.AddRange(GetDeadTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.NotSameTeamGroup),99999,containsOther));
+                    break;
+                case Global.SkillTargetType.Enemy:
+                    result.AddRange(GetTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.NotSameTeamGroup),99999,containsOther));
+                    break;
+                case Global.SkillTargetType.AliveMine:
+                    result.AddRange(GetAliveTargetByHeroTeam(heroTeam,99999,containsOther));
+                    break;
+                case Global.SkillTargetType.DeadMine:
+                    result.AddRange(GetDeadTargetByHeroTeam(heroTeam,99999,containsOther));
+                    break;
+                case Global.SkillTargetType.Mine:
+                    result.AddRange(GetTargetHerosByHeroTeam(heroTeam,99999,containsOther));
+                    break;
+                case Global.SkillTargetType.AliveFriendly:
+                    result.AddRange(GetAliveTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.SameTeamGroup),99999,containsOther));
+                    break;
+                case Global.SkillTargetType.DeadFriendly:
+                    result.AddRange(GetDeadTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.SameTeamGroup),99999,containsOther));
+                    break;
+                case Global.SkillTargetType.Friendly:
+                    result.AddRange(GetTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.SameTeamGroup),99999,containsOther));
+                    break;
+                case Global.SkillTargetType.Self:
+                    result.Add(attacker);
+                    break;
+                case Global.SkillTargetType.AllAlive:
+                    result.AddRange(GetAliveTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.AllTeamGroup),99999,containsOther));
+                    break;
+                case Global.SkillTargetType.AllDead:
+                    result.AddRange(GetDeadTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.AllTeamGroup),99999,containsOther));
+                    break;
+                case Global.SkillTargetType.All:
+                    result.AddRange(GetTarget(GetTeamGroups(heroTeam.TeamGroup,TeamGroupType.AllTeamGroup),99999,containsOther));
+                    break;
+            }
+            for(int i = 0;i<result.Count;i++)
+            {
+                result[i].HeroCanChoose();
+            }
+        }
+
+        /// <summary>
+        /// 取消所有英雄的高亮效果
+        /// </summary>
+        public void DisableChooseHeroes()
+        {
+            for(int i = 0;i<_AllTeams.Count;i++)
+            {
+                for(int j = 0;j<_AllTeams[i].Heros.Count;j++)
+                {
+                    _AllTeams[i].Heros[j].HeroCannotChoose();
+                }
+            }
         }
 
         /// <summary>
@@ -567,7 +708,7 @@ namespace King.TurnBasedCombat
                     _SystemState = Global.CombatSystemType.AfterAction;
                     break;
                 case Global.CombatSystemType.AfterAction:
-                    if (CheckPlayerFailed() || CheckEnemyFailed())
+                    if (!string.IsNullOrEmpty(CheckWinTeamGroup()))
                     {
                         _SystemState = Global.CombatSystemType.CombatEnd;
                     }
@@ -595,75 +736,6 @@ namespace King.TurnBasedCombat
         }
 
         /// <summary>
-        /// 获取玩家队列中剩余的存活英雄对象
-        /// </summary>
-        /// <returns></returns>
-        List<HeroMono> GetPlayerTeamAlive()
-        {
-            List<HeroMono> result = new List<HeroMono>();
-            for (int i = 0; i < _PlayerTeam.Count; i++)
-            {
-                if (!_PlayerTeam[i].IsDead())
-                {
-                    result.Add(_PlayerTeam[i]);
-                }
-            }
-            return result;
-        }
-
-
-        /// <summary>
-        /// 获取玩家队列中死亡英雄对象
-        /// </summary>
-        /// <returns></returns>
-        List<HeroMono> GetPlayerTeamDead()
-        {
-            List<HeroMono> result = new List<HeroMono>();
-            for (int i = 0; i < _PlayerTeam.Count; i++)
-            {
-                if (_PlayerTeam[i].IsDead())
-                {
-                    result.Add(_PlayerTeam[i]);
-                }
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// 获取敌人队列中剩余的存活英雄对象
-        /// </summary>
-        /// <returns></returns>
-        List<HeroMono> GetEnemyTeamAlive()
-        {
-            List<HeroMono> result = new List<HeroMono>();
-            for (int i = 0; i < _EnemyTeam.Count; i++)
-            {
-                if (!_EnemyTeam[i].IsDead())
-                {
-                    result.Add(_EnemyTeam[i]);
-                }
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// 获取敌人队列中死亡英雄对象
-        /// </summary>
-        /// <returns></returns>
-        List<HeroMono> GetEnemyTeamDead()
-        {
-            List<HeroMono> result = new List<HeroMono>();
-            for (int i = 0; i < _EnemyTeam.Count; i++)
-            {
-                if (_EnemyTeam[i].IsDead())
-                {
-                    result.Add(_EnemyTeam[i]);
-                }
-            }
-            return result;
-        }
-
-        /// <summary>
         /// 计算当前剩余的可行动的英雄
         /// </summary>
         /// <returns></returns>
@@ -684,8 +756,28 @@ namespace King.TurnBasedCombat
             //最后判断一下是否行动列表已经为空,为空则重置行动列表
             if (_AttackList.Count == 0)
             {
-                _AttackList.AddRange(GetEnemyTeamAlive());
-                _AttackList.AddRange(GetPlayerTeamAlive());
+                List<HeroMono> beforeList = new List<HeroMono>();
+                List<HeroMono> afterList = new List<HeroMono>();
+                List<string> hasAddTeamGroup = new List<string>();
+                for(int i = 0;i<_AllTeams.Count;i++)
+                {
+                    if(hasAddTeamGroup.Contains(_AllTeams[i].TeamGroup))
+                    {
+                        continue;
+                    }
+                    if(_AllTeams[i].TeamType == HeroTeamType.NPC)
+                    {
+                        beforeList.AddRange(GetFriendlyTeamsAlive(_AllTeams[i].TeamGroup,false));
+                        hasAddTeamGroup.Add(_AllTeams[i].TeamGroup);
+                    }
+                    else
+                    {
+                        afterList.AddRange(GetFriendlyTeamsAlive(_AllTeams[i].TeamGroup,false));
+                        hasAddTeamGroup.Add(_AllTeams[i].TeamGroup);
+                    }
+                }
+                _AttackList.AddRange(beforeList);
+                _AttackList.AddRange(afterList);
             }
         }
 
@@ -732,28 +824,20 @@ namespace King.TurnBasedCombat
         /// <summary>
         /// 获取一定数量的活着的目标
         /// </summary>
-        /// <param name="playerTeam">是否从玩家队列中获取</param>
+        /// <param name="teamTypes">从指定的阵营类型取英雄</param>
         /// <param name="number">获取的数量</param>
         /// <returns>返回目标列表</returns>
-        List<HeroMono> GetAliveTarget(bool playerTeam, int number)
+        List<HeroMono> GetAliveTarget(List<string> groupTyps, int number,bool containsOther = true)
         {
-            List<HeroMono> alive = new List<HeroMono>();
-            if (playerTeam)
-            {
-                alive.AddRange(GetPlayerTeamAlive());
-            }
-            else
-            {
-                alive.AddRange(GetEnemyTeamAlive());
-            }
+            List<HeroMono> alive = GetTeamsAlive(groupTyps,containsOther);
             List<HeroMono> result = new List<HeroMono>();
             for (int i = 0; i < (alive.Count > number ? number : alive.Count); i++)
             {
-                int r = Random.Range(0, alive.Count);
+                int r = UnityEngine.Random.Range(0, alive.Count);
                 HeroMono hero = alive[r];
                 while (result.Contains(hero))
                 {
-                    r = Random.Range(0, alive.Count);
+                    r = UnityEngine.Random.Range(0, alive.Count);
                     hero = alive[r];
                 }
                 result.Add(alive[r]);
@@ -764,28 +848,20 @@ namespace King.TurnBasedCombat
         /// <summary>
         /// 获取一定数量的死亡的目标
         /// </summary>
-        /// <param name="playerTeam">是否从玩家队列中获取</param>
+        /// <param name="teamTypes">指定的阵营类型</param>
         /// <param name="number">获取的数量</param>
         /// <returns>返回目标列表</returns>
-        List<HeroMono> GetDeadTarget(bool playerTeam, int number)
+        List<HeroMono> GetDeadTarget(List<string> teamGroups, int number,bool containsOther = true)
         {
-            List<HeroMono> dead = new List<HeroMono>();
-            if (playerTeam)
-            {
-                dead.AddRange(GetPlayerTeamDead());
-            }
-            else
-            {
-                dead.AddRange(GetEnemyTeamDead());
-            }
+            List<HeroMono> dead = GetTeamsDead(teamGroups,containsOther);
             List<HeroMono> result = new List<HeroMono>();
             for (int i = 0; i < (dead.Count > number ? number : dead.Count); i++)
             {
-                int r = Random.Range(0, dead.Count);
+                int r = UnityEngine.Random.Range(0, dead.Count);
                 HeroMono hero = dead[r];
                 while (result.Contains(hero))
                 {
-                    r = Random.Range(0, dead.Count);
+                    r = UnityEngine.Random.Range(0, dead.Count);
                     hero = dead[r];
                 }
                 result.Add(dead[r]);
@@ -796,28 +872,20 @@ namespace King.TurnBasedCombat
         /// <summary>
         /// 获取一定数量的目标
         /// </summary>
-        /// <param name="playerTeam">是否从玩家队列中获取</param>
+        /// <param name="teamTypes">指定的阵营类型</param>
         /// <param name="number">获取的数量</param>
         /// <returns>返回目标列表</returns>
-        List<HeroMono> GetTarget(bool playerTeam, int number)
+        List<HeroMono> GetTarget(List<string> teamGroups, int number,bool containOther = true)
         {
-            List<HeroMono> dead = new List<HeroMono>();
-            if (playerTeam)
-            {
-                dead.AddRange(_PlayerTeam);
-            }
-            else
-            {
-                dead.AddRange(_EnemyTeam);
-            }
+            List<HeroMono> dead = GetTeamsHero(teamGroups,containOther);
             List<HeroMono> result = new List<HeroMono>();
             for (int i = 0; i < (dead.Count > number ? number : dead.Count); i++)
             {
-                int r = Random.Range(0, dead.Count);
+                int r = UnityEngine.Random.Range(0, dead.Count);
                 HeroMono hero = dead[r];
                 while (result.Contains(hero))
                 {
-                    r = Random.Range(0, dead.Count);
+                    r = UnityEngine.Random.Range(0, dead.Count);
                     hero = dead[r];
                 }
                 result.Add(dead[r]);
@@ -826,32 +894,142 @@ namespace King.TurnBasedCombat
         }
 
         /// <summary>
-        /// 检测玩家是否挑战失败
+        /// 从指定的阵营中获取活着的目标
         /// </summary>
-        /// <returns>如果玩家队列全部阵亡则返回true，否则返回false</returns>
-        public bool CheckPlayerFailed()
+        /// <param name="team"></param>
+        /// <param name="number"></param>
+        /// <param name="containOther"></param>
+        /// <returns></returns>
+        List<HeroMono> GetAliveTargetByHeroTeam(HeroTeamMono team,int number,bool containOther = true)
         {
-            for (int i = 0; i < _PlayerTeam.Count; i++)
+            List<HeroMono> dead = team.GetTeamAlive(containOther);
+            List<HeroMono> result = new List<HeroMono>();
+            for (int i = 0; i < (dead.Count > number ? number : dead.Count); i++)
             {
-                if (!_PlayerTeam[i].IsDead())
+                int r = UnityEngine.Random.Range(0, dead.Count);
+                HeroMono hero = dead[r];
+                while (result.Contains(hero))
+                {
+                    r = UnityEngine.Random.Range(0, dead.Count);
+                    hero = dead[r];
+                }
+                result.Add(dead[r]);
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 从指定的阵营中获取死亡的目标
+        /// </summary>
+        /// <param name="team"></param>
+        /// <param name="number"></param>
+        /// <param name="containOther"></param>
+        /// <returns></returns>
+        List<HeroMono> GetDeadTargetByHeroTeam(HeroTeamMono team,int number,bool containOther = true)
+        {
+            List<HeroMono> dead = team.GetTeamDead(containOther);
+            List<HeroMono> result = new List<HeroMono>();
+            for (int i = 0; i < (dead.Count > number ? number : dead.Count); i++)
+            {
+                int r = UnityEngine.Random.Range(0, dead.Count);
+                HeroMono hero = dead[r];
+                while (result.Contains(hero))
+                {
+                    r = UnityEngine.Random.Range(0, dead.Count);
+                    hero = dead[r];
+                }
+                result.Add(dead[r]);
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 从指定的阵营中获取不论死活的目标
+        /// </summary>
+        /// <param name="team"></param>
+        /// <param name="number"></param>
+        /// <param name="containOther"></param>
+        /// <returns></returns>
+        List<HeroMono> GetTargetHerosByHeroTeam(HeroTeamMono team,int number,bool containOther = true)
+        {
+            List<HeroMono> dead = team.GetTeamHero(containOther);
+            List<HeroMono> result = new List<HeroMono>();
+            for (int i = 0; i < (dead.Count > number ? number : dead.Count); i++)
+            {
+                int r = UnityEngine.Random.Range(0, dead.Count);
+                HeroMono hero = dead[r];
+                while (result.Contains(hero))
+                {
+                    r = UnityEngine.Random.Range(0, dead.Count);
+                    hero = dead[r];
+                }
+                result.Add(dead[r]);
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 判断是否阵营已经失败了,如果失败了返回这个阵营组，否则返回空字符串
+        /// </summary>
+        /// <returns></returns>
+        public string CheckHasTeamGroupFailed()
+        {
+            for (int i = 0; i < _AllTeamGroups.Count; i++)
+            {
+                string teamGroup = _AllTeamGroups[i];
+                if(CheckTeamGroupFailed(teamGroup))
+                {
+                    return teamGroup;
+                }
+            }
+            return "";
+        }
+
+        /// <summary>
+        /// 判断指定阵营组是否已经完全失败了
+        /// </summary>
+        /// <param name="teamGroup"></param>
+        /// <returns></returns>
+        public bool CheckTeamGroupFailed(string teamGroup)
+        {
+            for (int j = 0; j < _AllTeams.Count; j++)
+            {
+                if (_AllTeams[j].TeamGroup == teamGroup && !_AllTeams[j].CheckIsFailed())
                     return false;
             }
             return true;
         }
 
+        /// <summary>
+        /// 获取还有战斗能力的阵营组列表
+        /// </summary>
+        /// <returns></returns>
+        public List<string> CheckAliveTeamGroups()
+        {
+            List<string> result = new List<string>();
+            for (int i = 0; i < _AllTeamGroups.Count; i++)
+            {
+                string teamGroup = _AllTeamGroups[i];
+                if(!CheckTeamGroupFailed(teamGroup))
+                {
+                    result.Add(teamGroup);
+                }
+            }
+            return result;
+        }
 
         /// <summary>
-        /// 检测敌人是否挑战失败
+        /// 检测最终获胜的阵营组
         /// </summary>
-        /// <returns>如果敌人队列全部阵亡则返回true，否则返回false</returns>
-        public bool CheckEnemyFailed()
+        /// <returns></returns>
+        public string CheckWinTeamGroup()
         {
-            for (int i = 0; i < _EnemyTeam.Count; i++)
+            List<string> aliveTeamGroups = CheckAliveTeamGroups();
+            if(aliveTeamGroups.Count == 1)
             {
-                if (!_EnemyTeam[i].IsDead())
-                    return false;
+                return aliveTeamGroups[0];
             }
-            return true;
+            return "";
         }
 
         /// <summary>
@@ -859,16 +1037,14 @@ namespace King.TurnBasedCombat
         /// </summary>
         public void Clear()
         {
-            //清除玩家队列对象
-            _PlayerTeam.Clear();
-            //清除敌人队列对象
-            _EnemyTeam.Clear();
+            //清除所有阵营的对象
+            _AllTeams.Clear();
             //清除行动列表
             _AttackList.Clear();
+            //清空Stage
+            BattleStage.Clear();
             //清除当前回合英雄引用
             _CurTurnHero = null;
-            //清除BattleUI
-            CurrentBattleUI.Clear();
             //清除技能控制器
             SkillController.Instance.Clear();
         }

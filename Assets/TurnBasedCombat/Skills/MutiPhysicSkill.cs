@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace King.TurnBasedCombat
@@ -18,13 +19,13 @@ namespace King.TurnBasedCombat
 
     public class MutiPhysicSkill : PhysicSkill
     {
-        public override void Init(Skill skill, HeroMono hero)
+        public override async Task Init(Skill skill, HeroMono hero)
         {
             // for (int i = 0; i < 6; i++)
             // {
             //     SkillEffects.Add(Resources.Load<GameObject>("SkillEffect/PhysicalSkill/effect"));
             // }
-            base.Init(skill, hero);
+            await base.Init(skill, hero);
         }
 
         public override bool CanUseSkill()
@@ -159,24 +160,19 @@ namespace King.TurnBasedCombat
             for (int i = 0; i < targets.Count; i++)
             {
                 SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][i].transform.position = targets[i].HeroPosition;
-                if (attacker.IsPlayerHero)
+                Vector3 scale = SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][i].transform.localScale;
+                if (attacker.TeamIndex == 0 || attacker.TeamIndex == 3)
                 {
-                    SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][i].transform.localScale = new Vector3(-1f, 1f, 1f);
+                    scale.x = Mathf.Abs(scale.x) * -1f;
                 }
                 else
                 {
-                    SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][i].transform.localScale = new Vector3(1f, 1f, 1f);
+                    scale.x = Mathf.Abs(scale.x);
                 }
+                SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][i].transform.localScale = scale;
                 SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][i].gameObject.SetActive(true);
                 SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][i].GetComponent<Animator>().SetTrigger("show");
             }
-            // StartCoroutine(SkillController.Instance.WaitForTime(0.5f, () =>
-            // {
-            //     for (int i = 0; i < SkillController.Instance.SkillEffect[GetSkillIDAndLevel()].Count; i++)
-            //     {
-            //         SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][i].gameObject.SetActive(false);
-            //     }
-            // }));
         }
     }
 }

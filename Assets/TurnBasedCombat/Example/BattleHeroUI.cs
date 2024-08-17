@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using AUIFramework;
 
 namespace King.TurnBasedCombat
 {
@@ -16,13 +17,7 @@ namespace King.TurnBasedCombat
         {
             ChooseImg.enabled = false;
             TextName.text = hero.Name;
-            King.Tools.UnityStaticTool.LoadResources<Sprite>(hero.Hero.Ico, (img) =>
-             {
-                 if (img != null)
-                 {
-                     HeroIco.sprite = img;
-                 }
-             });
+            this.SetSprite(HeroIco,hero.Hero.Ico);
             TextHP.text = hero.CurrentLife + "/" + hero.CurrentMaxLife;
             TextMP.text = hero.CurrentMagic + "/" + hero.CurrentMaxMagic;
         }

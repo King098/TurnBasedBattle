@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using AEventManager;
 using UnityEngine;
+using static King.TurnBasedCombat.EventsConst;
 
 namespace King.TurnBasedCombat
 {
@@ -28,6 +31,22 @@ namespace King.TurnBasedCombat
         public virtual void WaitForInput(HeroMono hero)
         {
             _IsWaitingInput = true;
+        }
+        
+        protected virtual void OnDisable()
+        {
+            EventManager.Instance.RemoveEvent(EventsConst.OnWaitingPlayerInput, _OnWaitPlayerInput);
+        }
+
+        protected virtual void OnEnable()
+        {
+            EventManager.Instance.AddEvent(EventsConst.OnWaitingPlayerInput,_OnWaitPlayerInput);
+        }
+
+        private void _OnWaitPlayerInput(object sender, EventArgs e)
+        {
+            CommonHeroMonoEventArgs args = e as CommonHeroMonoEventArgs;
+            this.WaitForInput(args.hero);
         }
     }
 }

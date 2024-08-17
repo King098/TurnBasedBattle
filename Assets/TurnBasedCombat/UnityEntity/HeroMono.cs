@@ -3,6 +3,10 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using King.Tools;
+using AEventManager;
+using static King.TurnBasedCombat.EventsConst;
+using UnityEngine.EventSystems;
+using AUIFramework;
 
 namespace King.TurnBasedCombat
 {
@@ -32,7 +36,7 @@ namespace King.TurnBasedCombat
     /// <summary>
     /// 英雄的Mono类，记录数据和战斗状态
     /// </summary>
-    public class HeroMono : MonoBehaviour
+    public class HeroMono : UIComp,IPointerClickHandler
     {
         /// <summary>
         /// 英雄的数据
@@ -71,6 +75,34 @@ namespace King.TurnBasedCombat
         /// </summary>
         private List<Buff> _DebuffList;
 
+        /// <summary>
+        /// 英雄所属的原本的阵营
+        /// </summary>
+        private HeroTeamMono _OrignalTeam;
+        public HeroTeamMono OrignalTeam
+        {
+            get
+            {
+                return _OrignalTeam;
+            }
+        }
+
+        /// <summary>
+        /// 当前被哪个阵营操控
+        /// </summary>
+        private HeroTeamMono _ControledTeam;
+        public HeroTeamMono ControledTeam
+        {
+            get
+            {
+                return _ControledTeam;
+            }
+            set
+            {
+                _ControledTeam = value;
+            }
+        }
+
         public string ID { get { return _Hero.ID; } }
         public string Name
         {
@@ -97,7 +129,8 @@ namespace King.TurnBasedCombat
                     _CurrentHero.MaxLife.Value = 0;
                 }
                 //TODO 刷新UI
-                BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseMaxLife, old_value, _CurrentHero.MaxLife);
+                // BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseMaxLife, old_value, _CurrentHero.MaxLife);
+                EventManager.Instance.TriggerEvent(EventsConst.OnHeroPropertyChanged,new HeroPropertyEventArgs(this,Global.BuffType.IncreaseMaxLife,old_value,_CurrentHero.MaxLife));
             }
         }
         public long CurrentLife
@@ -135,7 +168,8 @@ namespace King.TurnBasedCombat
                     ExcuteSkill(Global.BuffActiveState.LifeLow);
                 }
                 //TODO 刷新UI上的数值变化
-                BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseLife, old_value, _CurrentHero.CurrentLife);
+                // BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseLife, old_value, _CurrentHero.CurrentLife);
+                EventManager.Instance.TriggerEvent(EventsConst.OnHeroPropertyChanged,new HeroPropertyEventArgs(this,Global.BuffType.IncreaseLife,old_value,_CurrentHero.CurrentLife));
             }
         }
         public long CurrentMaxMagic
@@ -153,7 +187,8 @@ namespace King.TurnBasedCombat
                     _CurrentHero.MaxMagic.Value = 0;
                 }
                 //TODO 刷新UI数据
-                BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseMaxMagic, old_value, _CurrentHero.MaxMagic);
+                // BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseMaxMagic, old_value, _CurrentHero.MaxMagic);
+                EventManager.Instance.TriggerEvent(EventsConst.OnHeroPropertyChanged,new HeroPropertyEventArgs(this,Global.BuffType.IncreaseMaxMagic, old_value, _CurrentHero.MaxMagic));
             }
         }
         public long CurrentMagic
@@ -181,7 +216,8 @@ namespace King.TurnBasedCombat
                     ExcuteSkill(Global.BuffActiveState.MagicLow);
                 }
                 //TODO 刷新UI上的数值变化
-                BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseMagic, old_value, _CurrentHero.CurrentMagic);
+                // BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseMagic, old_value, _CurrentHero.CurrentMagic);
+                EventManager.Instance.TriggerEvent(EventsConst.OnHeroPropertyChanged,new HeroPropertyEventArgs(this,Global.BuffType.IncreaseMagic,old_value,_CurrentHero.CurrentMagic));
             }
         }
         public long CurrentAttack
@@ -199,7 +235,8 @@ namespace King.TurnBasedCombat
                     _CurrentHero.Attack.Value = 0;
                 }
                 //TODO 刷新UI上的数值变化
-                BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseAttack, old_value, _CurrentHero.Attack);
+                // BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseAttack, old_value, _CurrentHero.Attack);
+                EventManager.Instance.TriggerEvent(EventsConst.OnHeroPropertyChanged,new HeroPropertyEventArgs(this,Global.BuffType.IncreaseAttack,old_value,_CurrentHero.Attack));
             }
         }
         public long CurrentDefense
@@ -217,7 +254,8 @@ namespace King.TurnBasedCombat
                     _CurrentHero.Defense.Value = 0;
                 }
                 //TODO 刷新UI上的数值变化
-                BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseDefense, old_value, _CurrentHero.Defense);
+                // BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseDefense, old_value, _CurrentHero.Defense);
+                EventManager.Instance.TriggerEvent(EventsConst.OnHeroPropertyChanged,new HeroPropertyEventArgs(this,Global.BuffType.IncreaseDefense,old_value,_CurrentHero.Defense));
             }
         }
         public long CurrentMagicAttack
@@ -235,7 +273,8 @@ namespace King.TurnBasedCombat
                     _CurrentHero.MagicAttack.Value = 0;
                 }
                 //TODO 刷新UI上的数值变化
-                BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseMagicAttack, old_value, _CurrentHero.MagicAttack);
+                // BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseMagicAttack, old_value, _CurrentHero.MagicAttack);
+                EventManager.Instance.TriggerEvent(EventsConst.OnHeroPropertyChanged,new HeroPropertyEventArgs(this,Global.BuffType.IncreaseMagicAttack,old_value,_CurrentHero.MagicAttack));
             }
         }
         public long CurrentMagicDefense
@@ -253,7 +292,8 @@ namespace King.TurnBasedCombat
                     _CurrentHero.MagicDefense.Value = 0;
                 }
                 //TODO 刷新UI上的数值变化
-                BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseMagicDefense, old_value, _CurrentHero.MagicDefense);
+                // BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseMagicDefense, old_value, _CurrentHero.MagicDefense);
+                EventManager.Instance.TriggerEvent(EventsConst.OnHeroPropertyChanged,new HeroPropertyEventArgs(this,Global.BuffType.IncreaseMagicDefense,old_value,_CurrentHero.MagicDefense));
             }
         }
         public long CurrentSpeed
@@ -271,7 +311,8 @@ namespace King.TurnBasedCombat
                     _CurrentHero.Speed.Value = 0;
                 }
                 //TODO 刷新UI上的数值变化
-                BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseSpeed, old_value, _CurrentHero.Speed);
+                // BattleController.Instance.CurrentBattleUI.RefreshUI(this, Global.BuffType.IncreaseSpeed, old_value, _CurrentHero.Speed);
+                EventManager.Instance.TriggerEvent(EventsConst.OnHeroPropertyChanged,new HeroPropertyEventArgs(this,Global.BuffType.IncreaseSpeed,old_value,_CurrentHero.Speed));
             }
         }
         public int CurrentTurnLast
@@ -303,7 +344,11 @@ namespace King.TurnBasedCombat
         /// <summary>
         /// 是否是玩家的所属英雄
         /// </summary>
-        public bool IsPlayerHero { get; set; }
+        public HeroTeamType TeamType { get; set; }
+        /// <summary>
+        /// 阵营所在的阵营位置
+        /// </summary>
+        public int TeamIndex { get; set; }
         /// <summary>
         /// 这个英雄当前所在的位置
         /// </summary>
@@ -323,7 +368,7 @@ namespace King.TurnBasedCombat
         /// <summary>
         /// 用于显示英雄图像的对象
         /// </summary>
-        public Image Img { get; set; }
+        public SpriteRenderer SpriteRender { get; set; }
 
         /// <summary>
         /// 英雄的各种战斗提示预制体
@@ -335,25 +380,33 @@ namespace King.TurnBasedCombat
         public Transform AttackPosition;
         #endregion
 
-        public void Init(Hero hero, bool isPlayer)
+        /// <summary>
+        /// 是否可以被选择
+        /// </summary>
+        private bool CanBeChosen = false;
+
+        public async void Init(Hero hero, HeroTeamMono heroTeam)
         {
             _Hero = hero;
             //获取动画控制器
             Animator = GetComponent<Animator>();
             //获取英雄的图像
-            Img = GetComponentInChildren<Image>();
+            SpriteRender = GetComponentInChildren<SpriteRenderer>();
             CurrentTargets = new List<HeroMono>();
-            IsPlayerHero = isPlayer;
+            TeamType = heroTeam.TeamType;
+            TeamIndex = heroTeam.TeamIndex;
+            _OrignalTeam = heroTeam;
+            _ControledTeam = heroTeam;
             //翻转对象
-            if (IsPlayerHero)
+            if (TeamIndex == 1 || TeamIndex == 2)
             {
                 //AttackPosition.localPosition = new Vector3(AttackPosition.localPosition.x * -1f, AttackPosition.localPosition.y, AttackPosition.localPosition.z);
-                Img.transform.localScale = new Vector3(-1f, 1f, 1f);
+                SpriteRender.flipX = true;
             }
             else
             {
                 //AttackPosition.localPosition = new Vector3(AttackPosition.localPosition.x * -1f, AttackPosition.localPosition.y, AttackPosition.localPosition.z);
-                Img.transform.localScale = new Vector3(1f, 1f, 1f);
+                SpriteRender.flipX = false;
             }
             //初始化buff debuff列表
             _BuffList = new List<Buff>();
@@ -362,20 +415,11 @@ namespace King.TurnBasedCombat
             _CurrentHero = new HeroProperty(_Hero, SystemSetting.HeroSpeedMix);
             //创建一个血量和提示变化用的对象池
             ObjectPool.Instance.InitComponentPools<BattleHeroHub>(Name + "_Hub", HeroHubPrefab, 1);
-            //注册这个英雄的UI信息
-            if (IsPlayerHero)
-            {
-                BattleController.Instance.CurrentBattleUI.RegisterPlayerHero(this);
-            }
-            else
-            {
-                BattleController.Instance.CurrentBattleUI.RegisterEnemyHero(this);
-            }
             //向SkillController注册技能
             _Skills = new Dictionary<Global.SkillType, BaseSkill>();
             for (int i = 0; i < _Hero.Skills.Count; i++)
             {
-                BaseSkill skill = SkillController.Instance.CreateSkillTo(_Hero.Skills[i], this);
+                BaseSkill skill = await SkillController.Instance.CreateSkillTo(_Hero.Skills[i], this);
                 if (skill != null)
                 {
                     _Skills.Add(_Hero.Skills[i].SkillType, skill);
@@ -388,7 +432,7 @@ namespace King.TurnBasedCombat
         /// </summary>
         /// <param name="skill">使用的技能</param>
         /// <param name="isDelay">是否要蓄力，默认不需要</param>
-        public void Attack(Global.SkillType skill)
+        public void Attack(Global.SkillType skill,List<HeroMono> targets = null)
         {
             //判断技能是否可以释放
             if (!_Skills[skill].CanUseSkill())
@@ -415,7 +459,15 @@ namespace King.TurnBasedCombat
                     }
                     else
                     {
-                        _Skills[skill].ExcuteSkill(BattleController.Instance.SkillTarget(this, _Skills[skill].TargetType));
+                        if(targets != null)
+                        {
+                            //表示是玩家选择的攻击目标，则应该使用这个目标
+                            _Skills[skill].ExcuteSkill(targets);
+                        }
+                        else
+                        {
+                            _Skills[skill].ExcuteSkill(BattleController.Instance.SkillTarget(this, _Skills[skill].TargetType,_Skills[skill].TargetNumber,_Skills[skill].TargetContainsControlledHero));
+                        }
                     }
                 }
             }
@@ -427,7 +479,7 @@ namespace King.TurnBasedCombat
         /// <param name="skill"></param>
         public void ExcuteSkill(Global.SkillType skill)
         {
-            _Skills[skill].ExcuteSkill(BattleController.Instance.SkillTarget(this, _Skills[skill].TargetType));
+            _Skills[skill].ExcuteSkill(BattleController.Instance.SkillTarget(this, _Skills[skill].TargetType,_Skills[skill].TargetNumber,_Skills[skill].TargetContainsControlledHero));
         }
 
         /// <summary>
@@ -437,8 +489,7 @@ namespace King.TurnBasedCombat
         /// <param name="attacker">攻击者</param>
         public void Defense(Global.SkillType skill, HeroMono attacker)
         {
-            //防御的时候是判断技能属于物理还是防御，然后叠加，然后检测是否有技能对此攻击技能有影响，还有buff的影响
-            SkillController.Instance.DefenseSkill(attacker, this, attacker._Skills[skill]);
+            this.OnHeroAttacked(attacker,attacker._Skills[skill]);
         }
 
         /// <summary>
@@ -519,6 +570,48 @@ namespace King.TurnBasedCombat
             if (CurrentLife <= 0 && !HasIsDeadSkill())
                 return true;
             return false;
+        }
+
+        /// <summary>
+        /// 这个英雄当前是否是被自身阵营控制的
+        /// </summary>
+        /// <returns></returns>
+        public bool IsControlledBySelf()
+        {
+            if(ControledTeam == null)
+            {
+                return true;
+            }
+            else
+            {
+                return ControledTeam.IsControledHero(this);
+            }
+        }
+
+        /// <summary>
+        /// 是否是被当前玩家阵营控制的
+        /// </summary>
+        /// <returns></returns>
+        public bool IsControlledByMine()
+        {
+            if(ControledTeam.IsControledHero(this))
+            {
+                return ControledTeam.TeamType == HeroTeamType.Mine;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// 当前英雄当前被哪个阵营控制着
+        /// </summary>
+        /// <returns></returns>
+        public HeroTeamMono IsControllerBy()
+        {
+            if(ControledTeam != null)
+            {
+                return ControledTeam;
+            }
+            return OrignalTeam;
         }
 
         /// <summary>
@@ -609,42 +702,78 @@ namespace King.TurnBasedCombat
         }
 
         /// <summary>
+        /// 是否在buff列表中是否存在指定类型的buff
+        /// </summary>
+        /// <param name="buff_list"></param>
+        /// <param name="buffType"></param>
+        /// <returns></returns>
+        public Buff CheckBuffExist(List<Buff> buff_list,Global.BuffType buffType)
+        {
+            for (int i = 0; i < buff_list.Count; i++)
+            {
+                if (buff_list[i].BuffType == buffType)
+                {
+                    return buff_list[i];
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
         /// 给英雄添加一个增益或者负面状态
         /// </summary>
         /// <param name="buff">状态</param>
-        public void AddBuff(Buff buff)
+        public void AddBuff(HeroMono owner,Buff buff)
         {
             if (buff.IsBuff)
             {
+                //先判断是否有cannotAddBuff的buff类型
+                if(CheckBuffExist(_BuffList,Global.BuffType.CannotAddBuff) != null)
+                {
+                    //有不能添加buff的buff
+                    return;
+                }
+
                 if (CheckBuffExist(_BuffList, buff) == null)
                 {
-                    buff.Init();
+                    buff.Init(owner);
                     _BuffList.Add(buff);
+                    this.OnHeroAddBuff(buff);
                 }
                 else
                 {
                     buff = CheckBuffExist(_BuffList, buff);
                     _BuffList.Remove(buff);
-                    buff.Init();
+                    buff.Init(owner);
                     _BuffList.Add(buff);
+                    this.OnHeroAddBuff(buff);
                 }
             }
             else
             {
+                //先判断是否有cannotAdddeBuff的buff类型
+                if(CheckBuffExist(_DebuffList,Global.BuffType.CannotAddBuff) != null)
+                {
+                    //有不能添加buff的buff
+                    return;
+                }
                 if (CheckBuffExist(_DebuffList, buff) == null)
                 {
-                    buff.Init();
+                    buff.Init(owner);
                     _DebuffList.Add(buff);
+                    this.OnHeroAddBuff(buff);
                 }
                 else
                 {
                     buff = CheckBuffExist(_DebuffList, buff);
                     _DebuffList.Remove(buff);
-                    buff.Init();
+                    buff.Init(owner);
                     _DebuffList.Add(buff);
+                    this.OnHeroAddBuff(buff);
                 }
             }
-            BattleController.Instance.CurrentBattleUI.OnAddBuff(this, buff);
+            // BattleController.Instance.CurrentBattleUI.OnAddBuff(this, buff);
+            EventManager.Instance.TriggerEvent(EventsConst.OnAddBuff,new CommonHeroBuffEventArgs(this,buff));
         }
 
         /// <summary>
@@ -655,13 +784,28 @@ namespace King.TurnBasedCombat
         {
             if (buff.IsBuff)
             {
+                //先判断是否有cannotremoveBuff的buff类型
+                if(CheckBuffExist(_BuffList,Global.BuffType.CannotRemoveBuff) != null)
+                {
+                    //有不能添加buff的buff
+                    return;
+                }
                 _BuffList.Remove(buff);
+                this.OnHeroRemoveBuff(buff);
             }
             else
             {
+                //先判断是否有cannotremoveBuff的buff类型
+                if(CheckBuffExist(_DebuffList,Global.BuffType.CannotRemoveBuff) != null)
+                {
+                    //有不能添加buff的buff
+                    return;
+                }
                 _DebuffList.Remove(buff);
+                this.OnHeroRemoveBuff(buff);
             }
-            BattleController.Instance.CurrentBattleUI.OnRemoveBuff(this, buff);
+            // BattleController.Instance.CurrentBattleUI.OnRemoveBuff(this, buff);
+            EventManager.Instance.TriggerEvent(EventsConst.OnRemoveBuff,new CommonHeroBuffEventArgs(this,buff));
         }
 
         /// <summary>
@@ -673,17 +817,32 @@ namespace King.TurnBasedCombat
             if (IsDead() && buffState != Global.BuffActiveState.IsDead)
                 return;
             //执行增益状态
+            //先判断是否有cannotremoveBuff的buff类型
+            if(CheckBuffExist(_BuffList,Global.BuffType.CannotBuffAction) != null)
+            {
+                //有不能添加buff的buff
+                return;
+            }
+            //先判断是否有cannotremoveBuff的buff类型
+            if(CheckBuffExist(_DebuffList,Global.BuffType.CannotBuffAction) != null)
+            {
+                //有不能添加buff的buff
+                return;
+            }
             for (int i = 0; i < _BuffList.Count; i++)
             {
                 if (buffState == _BuffList[i].BuffActiveState)
                 {
                     SkillController.Instance.ExcuteBuff(this, _BuffList[i]);
                     BuffTurnCost(_BuffList[i]);
-                    BattleController.Instance.CurrentBattleUI.OnBuffAction(this, _BuffList[i]);
+                    this.OnHeroBuffExcute(_BuffList[i]);
+                    // BattleController.Instance.CurrentBattleUI.OnBuffAction(this, _BuffList[i]);
+                    EventManager.Instance.TriggerEvent(EventsConst.OnBuffAction,new CommonHeroBuffEventArgs(this,_BuffList[i]));
                     if (_BuffList[i].StayTurn <= 0)
                     {
                         //表示这个buff已经结束了，需要移除
                         RemoveBuff(_BuffList[i]);
+                        this.OnHeroRemoveBuff(_BuffList[i]);
                     }
                 }
             }
@@ -694,14 +853,39 @@ namespace King.TurnBasedCombat
                 {
                     SkillController.Instance.ExcuteBuff(this, _DebuffList[i]);
                     BuffTurnCost(_DebuffList[i]);
-                    BattleController.Instance.CurrentBattleUI.OnBuffAction(this, _DebuffList[i]);
+                    this.OnHeroBuffExcute(_DebuffList[i]);
+                    // BattleController.Instance.CurrentBattleUI.OnBuffAction(this, _DebuffList[i]);
+                    EventManager.Instance.TriggerEvent(EventsConst.OnBuffAction,new CommonHeroBuffEventArgs(this,_DebuffList[i]));
                     if (_DebuffList[i].StayTurn <= 0)
                     {
                         //表示这个buff已经结束了，需要移除
                         RemoveBuff(_DebuffList[i]);
+                        this.OnHeroRemoveBuff(_DebuffList[i]);
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// 执行当前英雄被其他阵营控制
+        /// </summary>
+        /// <param name="team"></param>
+        public void ControlledByHeroTeam(HeroTeamMono team)
+        {
+            //先判断是否有cannotremoveBuff的buff类型
+            if(CheckBuffExist(_BuffList,Global.BuffType.Control) != null)
+            {
+                //已经被控的时候，不能再次被控
+                return;
+            }
+            //先判断是否有cannotremoveBuff的buff类型
+            if(CheckBuffExist(_DebuffList,Global.BuffType.Control) != null)
+            {
+                //已经被控的时候，不能再次被控
+                return;
+            }
+            team.ControlHero(this);
+            EventManager.Instance.TriggerEvent(EventsConst.OnHeroMonoControlled,new CommonHeroMonoEventArgs(this));
         }
 
         /// <summary>
@@ -745,7 +929,8 @@ namespace King.TurnBasedCombat
         {
             for (int i = 0; i < _BuffList.Count; i++)
             {
-                BattleController.Instance.CurrentBattleUI.OnRemoveBuff(this, _BuffList[i]);
+                // BattleController.Instance.CurrentBattleUI.OnRemoveBuff(this, _BuffList[i]);
+                EventManager.Instance.TriggerEvent(EventsConst.OnRemoveBuff,new CommonHeroBuffEventArgs(this,_BuffList[i]));
             }
             _BuffList.Clear();
         }
@@ -758,7 +943,8 @@ namespace King.TurnBasedCombat
         {
             for (int i = 0; i < _DebuffList.Count; i++)
             {
-                BattleController.Instance.CurrentBattleUI.OnRemoveBuff(this, _DebuffList[i]);
+                // BattleController.Instance.CurrentBattleUI.OnRemoveBuff(this, _DebuffList[i]);
+                EventManager.Instance.TriggerEvent(EventsConst.OnRemoveBuff,new CommonHeroBuffEventArgs(this,_DebuffList[i]));
             }
             _DebuffList.Clear();
         }
@@ -794,7 +980,9 @@ namespace King.TurnBasedCombat
             if (!IsDeath)
             {
                 IsDeath = true;
-                BattleController.Instance.CurrentBattleUI.HeroDead(this);
+                this.OnHeroDead();
+                // BattleController.Instance.CurrentBattleUI.HeroDead(this);
+                EventManager.Instance.TriggerEvent(EventsConst.OnHeroDead,new CommonHeroMonoEventArgs(this));
             }
         }
 
@@ -853,6 +1041,145 @@ namespace King.TurnBasedCombat
                 }
             }
             BattleController.Instance.DebugLog(LogType.ERROR,"Not found hero:" + Name + " float animation:" + SystemSetting.HeroAnimationParameters[animation]);
+        }
+
+        /// <summary>
+        /// 将当前英雄设置为可选择的状态
+        /// </summary>
+        public void HeroCanChoose()
+        {
+            this.CanBeChosen = true;
+            this.OnHeroCanChoose();
+        }
+
+        /// <summary>
+        /// 选择这个英雄
+        /// </summary>
+        public void HeroChoose()
+        {
+            this.CanBeChosen = false;
+            this.OnHeroChoose();
+        }
+
+        /// <summary>
+        /// 设置这个英雄为不可选择的状态
+        /// </summary>
+        public void HeroCannotChoose()
+        {
+            this.CanBeChosen = false;
+            this.OnHeroCannotChoose();
+        }
+
+        /// <summary>
+        /// 英雄开始执行回合
+        /// </summary>
+        public void HeroActioning()
+        {
+            this.OnHeroActioning();
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if(this.CanBeChosen)
+            {
+                EventManager.Instance.TriggerEvent(EventsConst.OnHeroTargetChoosed,new CommonHeroMonoEventArgs(this));
+            }
+        }
+
+
+        /// <summary>
+        /// 当这个英雄被选择的时候
+        /// </summary>
+        protected virtual void OnHeroChoose()
+        {
+            this.SpriteRender.color = Color.red;
+        }
+
+        /// <summary>
+        /// 当这个英雄可以被选择的时候
+        /// </summary>
+        protected virtual void OnHeroCanChoose()
+        {
+            this.SpriteRender.color = Color.green;
+        }
+
+        /// <summary>
+        /// 当这个英雄设置为不可选择的状态的时候
+        /// </summary>
+        protected virtual void OnHeroCannotChoose()
+        {
+            this.SpriteRender.color = Color.white;
+        }
+
+        /// <summary>
+        /// 当这个英雄是当前执行的英雄的时候
+        /// </summary>
+        protected virtual void OnHeroActioning()
+        {
+
+        }
+
+        /// <summary>
+        /// 当这个英雄被攻击的时候
+        /// </summary>
+        protected virtual void OnHeroAttacked(HeroMono attacker,BaseSkill skill)
+        {
+            //防御的时候是判断技能属于物理还是防御，然后叠加，然后检测是否有技能对此攻击技能有影响，还有buff的影响
+            SkillController.Instance.DefenseSkill(attacker, this, skill);
+            if(skill.SkillType == Global.SkillType.Respwan)
+            {
+                this.SpriteRender.enabled = true;
+            }
+            else
+            {
+                //添加被击高亮
+                this.SpriteRender.color = Color.red;
+                this.regScheduleOnce((t,p)=>{
+                    this.SpriteRender.color = Color.white;
+                },0.2f);
+            }
+        }
+
+        /// <summary>
+        /// 当这个英雄添加了新的buff的时候
+        /// </summary>
+        protected virtual void OnHeroAddBuff(Buff buff)
+        {
+            this.SpriteRender.color = buff.IsBuff ? Color.green : Color.gray;
+            this.regScheduleOnce((t,p)=>{
+                this.SpriteRender.color = Color.white;
+            },0.2f);
+        }
+
+        /// <summary>
+        /// 当这个英雄移除buff的时候
+        /// </summary>
+        protected virtual void OnHeroRemoveBuff(Buff buff)
+        {
+            this.SpriteRender.color = buff.IsBuff ? Color.yellow : Color.gray;
+            this.regScheduleOnce((t,p)=>{
+                this.SpriteRender.color = Color.white;
+            },0.2f);
+        }
+
+        /// <summary>
+        /// 当英雄的buff执行效果的时候
+        /// </summary>
+        /// <param name="buff"></param>
+        protected virtual void OnHeroBuffExcute(Buff buff)
+        {
+            this.SpriteRender.color = buff.IsBuff ? Color.green : Color.red;
+            this.regScheduleOnce((t,p)=>{
+                this.SpriteRender.color = Color.white;
+            },0.2f);
+        }
+
+        /// <summary>
+        /// 当这个英雄死亡的时候
+        /// </summary>
+        protected virtual void OnHeroDead()
+        {
+            this.SpriteRender.enabled = false;
         }
     }
 }

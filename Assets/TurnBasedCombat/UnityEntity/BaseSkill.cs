@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using AUIFramework;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using System.Threading.Tasks;
 
 namespace King.TurnBasedCombat
 {
@@ -61,6 +64,14 @@ namespace King.TurnBasedCombat
         /// 技能目标
         /// </summary>
         public Global.SkillTargetType TargetType { get { return _Skill.TargetType; } }
+        /// <summary>
+        /// 技能的目标数量
+        /// </summary>
+        public int TargetNumber { get { return _Skill.TargetNumber; } }
+        /// <summary>
+        /// 是否包含被控的英雄对象
+        /// </summary>
+        public bool TargetContainsControlledHero { get { return _Skill.TargetContainsControlledHero; }}
         /// <summary>
         /// 技能等级
         /// </summary>
@@ -157,34 +168,33 @@ namespace King.TurnBasedCombat
         public List<GameObject> SkillEffects = new List<GameObject>();
 
         /// <summary>
+        /// 缓存handle的对象
+        /// </summary>
+        private List<AsyncOperationHandle> handles  = new List<AsyncOperationHandle>();
+
+        /// <summary>
         /// 初始化这个技能数据
         /// </summary>
         /// <param name="skill">技能数据</param>
         /// <param name="hero">技能所属英雄数据</param>
-        public virtual void Init(Skill skill, HeroMono hero)
+        public virtual async Task Init(Skill skill, HeroMono hero)
         {
             _Skill = skill;
             _Hero = hero;
+            handles.Clear();
             for (int i = 0; i < skill.SkillEffectPaths.Count; i++)
             {
-                if (i == skill.SkillEffectPaths.Count - 1)
+                AsyncOperationHandle handle = await ResourcesManager.LoadAsync<GameObject>(skill.SkillEffectPaths[i]);
+                if(handle.Status == AsyncOperationStatus.Succeeded)
                 {
-                    King.Tools.UnityStaticTool.LoadResources<GameObject>(skill.SkillEffectPaths[i], (obj) =>
-                    {
-                        SkillEffects.Add(obj);
-                        //全部加载完成
-                        //向技能控制其中添加技能所需要的特效对象
-                        SkillController.Instance.RegisterSkillEffect(this);
-                    });
-                }
-                else
-                {
-                    King.Tools.UnityStaticTool.LoadResources<GameObject>(skill.SkillEffectPaths[i], (obj) =>
-                    {
-                        SkillEffects.Add(obj);
-                    });
+                    handles.Add(handle);
+                    GameObject obj = handle.Result as GameObject;
+                    SkillEffects.Add(obj);
                 }
             }
+            //全部加载完成
+            //向技能控制其中添加技能所需要的特效对象
+            SkillController.Instance.RegisterSkillEffect(this);
         }
 
         /// <summary>
@@ -361,11 +371,11 @@ namespace King.TurnBasedCombat
                     BattleController.Instance.DebugLog(LogType.INFO,"添加一个buff");
                     if (_Skill.SkillBuff[i].TargetType == Global.BuffTargetType.Attacker)
                     {
-                        attacker.AddBuff(_Skill.SkillBuff[i]);
+                        attacker.AddBuff(attacker,_Skill.SkillBuff[i]);
                     }
                     else if(_Skill.SkillBuff[i].TargetType == Global.BuffTargetType.Defenser)
                     {
-                        defender.AddBuff(_Skill.SkillBuff[i]);
+                        defender.AddBuff(attacker,_Skill.SkillBuff[i]);
                     }
                 }
             }
@@ -404,7 +414,7 @@ namespace King.TurnBasedCombat
             }
             //进行buff判断
             AddSkillBuff(attacker,defender);
-            Debug.Log((attacker.IsPlayerHero ? "玩家的" : "敌人的") + attacker.Name + "使用技能" + this.Name + "对" + defender.Name + "造成" + hurt + "点伤害");
+            Debug.Log((attacker.TeamType != HeroTeamType.NPC ? "NPC的" : "玩家的") + attacker.Name + "使用技能" + this.Name + "对" + defender.Name + "造成" + hurt + "点伤害");
         }
 
         /// <summary>
@@ -413,6 +423,15 @@ namespace King.TurnBasedCombat
         public virtual void SetSkillEffect(HeroMono attacker, List<HeroMono> targets, System.Action callback)
         {
 
+        }
+
+        protected virtual void OnDestroy()
+        {
+            for(int i = 0;i<handles.Count;i++)
+            {
+                ResourcesManager.ReleaseHandle(handles[i]);
+            }
+            handles.Clear();
         }
     }
 }

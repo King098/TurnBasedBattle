@@ -9,7 +9,9 @@ public class TestCombat : MonoBehaviour
     public List<string> PlayerIds;
     public List<string> EnemyIds;
     public List<Hero> Players;
-    public List<Hero> Enemys;
+    public List<Hero> Firendly;
+    public List<Hero> Enemys1;
+    public List<Hero> Enemys2;   
 
     void Start()
     {
@@ -39,7 +41,13 @@ public class TestCombat : MonoBehaviour
         }
         else
         {
-            BattleController.Instance.StartBattle(Players, Enemys);
+            List<HeroTeam> teams = new List<HeroTeam>(){
+                new HeroTeam(Players,HeroTeamType.Mine,0,HeroTeam.MineTeamGroup),
+                new HeroTeam(Enemys1,HeroTeamType.NPC,1,"Enemy1"),
+                new HeroTeam(Enemys2,HeroTeamType.NPC,2,"Enemy2"),
+                new HeroTeam(Firendly,HeroTeamType.NPC,3,HeroTeam.MineTeamGroup)
+            };
+            BattleController.Instance.StartBattle(teams);
         }
     }
 }

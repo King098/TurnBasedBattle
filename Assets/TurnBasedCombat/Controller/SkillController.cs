@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using King.Tools;
+using System.Threading.Tasks;
 
 
 namespace King.TurnBasedCombat
@@ -74,7 +75,7 @@ namespace King.TurnBasedCombat
             }
             else
             {
-                BattleController.Instance.DebugLog(LogType.ERROR,"Skill effect register failed! No effect found or effect is exist!");
+                BattleController.Instance.DebugLog(LogType.ERROR,"Skill effec register failed! No effect found or effect is exist!");
             }
         }
 
@@ -84,7 +85,7 @@ namespace King.TurnBasedCombat
         /// <param name="skill">要添加的技能</param>
         /// <param name="hero">技能所属的英雄对象</param>
         /// <returns>返回创建的技能对象</returns>
-        public BaseSkill CreateSkillTo(Skill skill, HeroMono hero)
+        public async Task<BaseSkill> CreateSkillTo(Skill skill, HeroMono hero)
         {
             BaseSkill result = null;
             System.Type type = System.Reflection.Assembly.GetExecutingAssembly().GetType("King.TurnBasedCombat." + skill.SkillMono);
@@ -94,7 +95,7 @@ namespace King.TurnBasedCombat
                 BattleController.Instance.DebugLog(LogType.ERROR,skill.SkillMono + " Can't find,Please Check SkillMono is vaild or not!");
                 return null;
             }
-            result.Init(skill, hero);
+            await result.Init(skill, hero);
             return result;
         }
 
@@ -230,6 +231,17 @@ namespace King.TurnBasedCombat
                 case Global.BuffType.ActiveTurn:
                     hero.CurrentTurnLast += buff.ChangeHeroProperty.Turn;
                     BattleController.Instance.DebugLog(LogType.INFO,hero.Name + "回合数增加:" + buff.ChangeHeroProperty.Turn);
+                    break;
+                case Global.BuffType.CannotAddBuff:
+                    break;
+                case Global.BuffType.CannotRemoveBuff:
+                    break;
+                case Global.BuffType.CannotBuffAction:
+                    break;
+                case Global.BuffType.Control:
+                    hero.ControlledByHeroTeam(buff.BuffOwner.IsControllerBy());
+                    break;
+                case Global.BuffType.SkipTurn:
                     break;
             }
         }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace King.TurnBasedCombat
 {
@@ -20,10 +21,10 @@ namespace King.TurnBasedCombat
     /// </summary>
     public class RespawSkill : BaseSkill
     {
-        public override void Init(Skill skill, HeroMono hero)
+        public override async Task Init(Skill skill, HeroMono hero)
         {
             // SkillEffects.Add(Resources.Load<GameObject>("SkillEffect/RespwanSkill/effect"));
-            base.Init(skill, hero);
+            await base.Init(skill, hero);
         }
 
 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace King.TurnBasedCombat
 {
@@ -21,10 +22,10 @@ namespace King.TurnBasedCombat
     /// </summary>
     public class PhysicSkill : BaseSkill
     {
-        public override void Init(Skill skill, HeroMono hero)
+        public override async Task Init(Skill skill, HeroMono hero)
         {
             // SkillEffects.Add(Resources.Load<GameObject>("SkillEffect/PhysicalSkill/effect"));
-            base.Init(skill, hero);
+            await base.Init(skill, hero);
         }
 
         public override bool CanUseSkill()
@@ -147,14 +148,16 @@ namespace King.TurnBasedCombat
         public override void SetSkillEffect(HeroMono attacker, List<HeroMono> targets, System.Action callback)
         {
             SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].transform.position = targets[0].HeroPosition;
-            if (attacker.IsPlayerHero)
+            Vector3 scale = SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].transform.localScale;
+            if (attacker.TeamIndex == 0 || attacker.TeamIndex == 3)
             {
-                SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].transform.localScale = new Vector3(-1f, 1f, 1f);
+                scale.x = Mathf.Abs(scale.x) * -1f;
             }
             else
             {
-                SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].transform.localScale = new Vector3(1f, 1f, 1f);
+                scale.x = Mathf.Abs(scale.x);
             }
+            SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].transform.localScale = scale;
             SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].gameObject.SetActive(true);
             SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].GetComponent<Animator>().SetTrigger("show");
             //StartCoroutine(SkillController.Instance.WaitForTime(0.5f, () => { SkillController.Instance.SkillEffect[GetSkillIDAndLevel()][0].gameObject.SetActive(false); }));

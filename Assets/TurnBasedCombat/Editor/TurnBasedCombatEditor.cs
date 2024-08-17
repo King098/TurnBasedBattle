@@ -737,6 +737,24 @@ namespace King.TurnBasedCombat
                                 GUILayout.EndHorizontal();
                                 //分隔
                                 GUILayout.Space(10f);
+                                //技能目标
+                                GUILayout.BeginHorizontal();
+                                {
+                                    GUILayout.Label("技能目标数量 : ", GUILayout.Width(SkillTableLabelWidth));
+                                    skill.TargetNumber = EditorGUILayout.IntField(skill.TargetNumber);
+                                }
+                                GUILayout.EndHorizontal();
+                                //分隔
+                                GUILayout.Space(10f);
+                                //技能目标
+                                GUILayout.BeginHorizontal();
+                                {
+                                    GUILayout.Label("目标包含其他被控的角色 : ", GUILayout.Width(SkillTableLabelWidth));
+                                    skill.TargetContainsControlledHero = EditorGUILayout.Toggle(skill.TargetContainsControlledHero);
+                                }
+                                GUILayout.EndHorizontal();
+                                //分隔
+                                GUILayout.Space(10f);
                                 //技能蓄力回合
                                 GUILayout.BeginHorizontal();
                                 {
@@ -1369,7 +1387,7 @@ namespace King.TurnBasedCombat
         /// </summary>
         void SaveSkilTable()
         {
-            string[] titles = new string[] { "ID", "技能名字", "技能图标", "技能类型（Global查询）", "技能控制脚本", "是否是被动技能", "技能特效路径", "如果是被动技能的激活状态", "技能目标", "技能等级", "技能消耗使用者的属性值", "技能蓄力回合数", "技能对于除了伤害的属性值变化", "技能造成的攻击伤害", "技能暴击几率", "技能的buff或者debuff", "技能描述" };
+            string[] titles = new string[] { "ID", "技能名字", "技能图标", "技能类型（Global查询）", "技能控制脚本", "是否是被动技能", "技能特效路径", "如果是被动技能的激活状态", "技能目标","技能目标数量","是否包含其他阵营被控角色", "技能等级", "技能消耗使用者的属性值", "技能蓄力回合数", "技能对于除了伤害的属性值变化", "技能造成的攻击伤害", "技能暴击几率", "技能的buff或者debuff", "技能描述" };
             string result = "";
             //添加标题
             for (int i = 0; i < titles.Length; i++)
